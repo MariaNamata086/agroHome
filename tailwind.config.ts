@@ -7,6 +7,11 @@ const config: Config = {
       colors: {
         primaryGreen: { DEFAULT: '#96CA2D' },
         primaryOrange: { DEFAULT: '#FFD449' },
+        forestGreen: { DEFAULT: '#384D48' },
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'],
+        gochi: ['var(--font-gochi)', 'cursive'],
       },
     },
 

@@ -1,11 +1,21 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
 /* Your global styles */
+
+:root {
+  --color-primaryGreen: #96CA2D;
+  --color-primaryBrown: #FFD449;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-@theme{
-  --color-primaryGreen: #96CA2D;
-  --color-primaryBrown: #FFD449;
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+

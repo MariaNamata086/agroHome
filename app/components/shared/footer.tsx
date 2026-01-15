@@ -1,16 +1,14 @@
-import React from 'react';
-import footerBackground from '@/public/poultryCage2.webp';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faPhone, faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-interface FooterContactDetails {
-  icon: IconDefinition;
-  contactInfo: string;
-}
+import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faLocationPin } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import Logo from '@assets/logo.svg';
+
+import footerBackground from '@/public/poultryCage2.webp';
 
 interface FooterContactDetails {
   icon: IconDefinition;
@@ -45,7 +43,11 @@ export default function Footer() {
         <div className='flex flex-col md:flex-row md:items-center'>
           <section className='flex flex-col gap-2 '>
             <div className='flex items-center gap-2 md:gap-3'>
-              {/* logo */}
+              <Image
+                src={Logo}
+                alt='StJosephFarms Logo'
+                className='w-10 h-10'
+              />
               <span className='text-2xl'>
                 StJoseph<b>Farms</b>
               </span>

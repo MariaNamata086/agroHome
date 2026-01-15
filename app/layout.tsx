@@ -1,19 +1,24 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Poppins, Gochi_Hand } from 'next/font/google';
 import './globals.css';
+import React from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+
 config.autoAddCss = false;
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-
+const gochiHand = Gochi_Hand({
   subsets: ['latin'],
+  weight: '400',
+  variable: '--font-gochi',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,14 +28,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${poppins.variable} ${gochiHand.variable}`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>
