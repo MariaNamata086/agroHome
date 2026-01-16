@@ -1,3 +1,4 @@
+import AboutUsBrief from './components/page-specific/home/AboutUsBrief';
 import CoreAreasSection from './components/page-specific/home/CoreAreasSection';
 import HeroSection from './components/page-specific/home/HeroSection';
 import HorizontalLine from './components/shared/HorizontalLine';
@@ -28,6 +29,7 @@ export default function Home() {
           <HorizontalLine />
         </div>
       </div>
+      <AboutUsBrief />
     </main>
   );
 }

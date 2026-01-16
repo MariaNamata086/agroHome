@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import { Poppins, Gochi_Hand } from 'next/font/google';
 import './globals.css';
 import React from 'react';
+// eslint-disable-next-line import/order
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import Footer from './components/shared/footer';
+import Navbar from './components/shared/navbar';
 
 config.autoAddCss = false;
 
@@ -33,8 +36,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${gochiHand.variable}`}>
+      {/* we'll need to add a head tag here */}
       <body className="antialiased">
-        {children}
+        <div className="bg-white">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
