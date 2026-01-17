@@ -25,10 +25,7 @@ const AboutUsBrief = () => {
         />
       </div>
       <div className="flex flex-col gap-3 tracking-wider">
-        <h4 className="flex items-center text-stone-400 gap-1.5">
-          <span className="flex h-1 w-1.5 bg-primaryGreen rounded-full" />
-          Who We Are
-        </h4>
+       
         <h2 className="font-bold text-black">
           Rooted in Diversity and Sustainability{' '}
         </h2>
