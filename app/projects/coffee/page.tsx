@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import ImageBg from '@/app/components/shared/ImageBg';
 import ProjectHeroSection from '@/app/components/shared/ProjectHeroSection';
 import coffeeHeroImage from '@/public/assets/coffeeHarvesting.jpg';
-import ImageBg from '@/app/components/shared/ImageBg';
 
 const CoffeeProject = () => {
   // const organicbyDesignData = [
@@ -110,7 +110,12 @@ const CoffeeProject = () => {
         </div>
       </section>
       <section className="flex flex-col gap-6">
-        <ImageBg src='' alt='a picture of the project background' componentContent={projectOutComesData} componentHeading='Project Outcomes'/>
+        <ImageBg
+          src=""
+          alt="a picture of the project background"
+          componentContent={projectOutComesData}
+          componentHeading="Project Outcomes"
+        />
       </section>
     </main>
   );
