@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
 interface ImageBgProps {
-  src: string;
+  src: StaticImageData;
   alt: string;
   componentHeading?: string;
   componentSubheading?: string;
@@ -17,8 +17,13 @@ const ImageBg = ({
   componentContent,
 }: ImageBgProps) => {
   return (
-    <div className="relative">
-      <Image src={src} alt={alt} className="w-full h-full object-cover" />
+    <div className="flex relative">
+      <Image
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover"
+        style={{ objectFit: 'contain' }}
+      />
       <div className="absolute inset-0 bg-black/20 flex gap-2 flex-col items-center justify-center text-white p-4">
         {componentHeading && (
           <h2 className="text-2xl font-bold mb-2">{componentHeading}</h2>

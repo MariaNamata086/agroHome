@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
-import decemberRainArticleImage from '../../../public/newsArticles/lwevuzeCoffeeRains.png';
-import millionsFromCoffeeArticleImage from '../../../public/newsArticles/millionsFromCoffee.png';
-import coffeeMintingMoneyArticleImage from '../../../public/newsArticles/mintingMoneyArticleImage.png';
-import papalKnightArticleImage from '../../../public/newsArticles/papalKnight.png';
-import poultryManureArticleImage from '../../../public/newsArticles/poultryManure.png';
-import newsHeroImage from '../../../public/projectHeroImages/newsHeroImage.png';
+import decemberRainArticleImage from '../../../public/assets/lwevuzeCoffeeRains.png';
+import millionsFromCoffeeArticleImage from '../../../public/assets/millionsFromCoffee.png';
+import coffeeMintingMoneyArticleImage from '../../../public/assets/mintingMoneyArticleImage.png';
+import newsHeroImage from '../../../public/assets/newsHeroImage.png';
+import papalKnightArticleImage from '../../../public/assets/papalKnight.png';
+import poultryManureArticleImage from '../../../public/assets/poultryManure.png';
 import NewsArcticle from '../components/page-specific/news/NewsArcticle';
 import VideoComponent from '../components/page-specific/news/VideoComponent';
 import ProjectHeroSection from '../components/shared/ProjectHeroSection';
