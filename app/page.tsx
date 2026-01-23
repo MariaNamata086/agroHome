@@ -2,13 +2,11 @@ import AboutUsBrief from './components/page-specific/home/AboutUsBrief';
 import CoreAreasSection from './components/page-specific/home/CoreAreasSection';
 import HeroSection from './components/page-specific/home/HeroSection';
 import HorizontalLine from './components/shared/HorizontalLine';
-import Navbar from './components/shared/navbar';
 
 export default function Home() {
   return (
-    <main className="flex flex-col md:gap-5 items-center bg-white -mt-30">
+    <main className="flex flex-col md:gap-5 items-center bg-white ">
       <div className="flex flex-col">
-        <Navbar />
         <HeroSection />
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <CoreAreasSection
@@ -30,6 +28,7 @@ export default function Home() {
         </div>
       </div>
       <AboutUsBrief />
+      {/* media and recognition section will contain a splide of 'partners' logos, and news teaser cards below' */}
     </main>
   );
 }

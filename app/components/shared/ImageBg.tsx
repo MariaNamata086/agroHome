@@ -7,6 +7,7 @@ interface ImageBgProps {
   componentHeading?: string;
   componentSubheading?: string;
   componentContent?: string[];
+  componentMoreInfo?: string;
 }
 
 const ImageBg = ({
@@ -15,6 +16,7 @@ const ImageBg = ({
   componentHeading,
   componentSubheading,
   componentContent,
+  componentMoreInfo
 }: ImageBgProps) => {
   return (
     <div className="flex relative">
@@ -24,7 +26,7 @@ const ImageBg = ({
         className="w-full h-full object-cover"
         style={{ objectFit: 'contain' }}
       />
-      <div className="absolute inset-0 bg-black/20 flex gap-2 flex-col items-center justify-center text-white p-4">
+      <div className="flex h-full items-center px-3 py-6 z-10 absolute bg-linear-to-r from-white/10 via-white/60 to-transparent text-white tracking-wider leading-loose">
         {componentHeading && (
           <h2 className="text-2xl font-bold mb-2">{componentHeading}</h2>
         )}
@@ -40,6 +42,7 @@ const ImageBg = ({
             ))}
           </ul>
         )}
+        {componentMoreInfo && <p className="text-center">{componentMoreInfo}</p>}
       </div>
     </div>
   );
