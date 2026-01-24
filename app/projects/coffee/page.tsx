@@ -62,7 +62,7 @@ const CoffeeProject = () => {
       <ProjectHeroSection
         heroImage={coffeeHeroImage}
         projectHeading="Organic Coffee Farming"
-        projectTagline="From soil to cup -- profitable, organic, and sustainable"
+        projectTagline="From soil to cup &#8212; profitable, organic, and sustainable"
       />
       <section className="flex flex-col gap-10">
         <div className="flex flex-col gap-5 md:gap-8 tracking-wider leading-loose">

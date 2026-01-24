@@ -55,8 +55,16 @@ const ContactUs = () => {
               here to assist you. Reach out to us through any of the following
               methods, and we'll get back to you as soon as possible.
             </p>
-            <div className="flex flex-col gap-3 md:gap-5">
-              {/* put here a div which lists partners */}
+            <div className="flex flex-col gap-3.5 md:gap-5">
+              <h2 className="text-lg font-bold">Interested in:</h2>
+              <ul>
+                {interestsData.map((item, index) => (
+                  <li key={index} className="list-disc gap-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
               <p className="">
                 We welcome individuals, groups, schools, NGOs and development
                 partners

@@ -15,7 +15,7 @@ function page() {
       title:
         'Mid-December rain brings hope to farmers battered by November dry spells',
       articleExcerpt:
-        'Farmers also expect to pick some grains from sections of gardens where crops had stunted and got stressed by the intense sun heat, which could yield some fruit.',
+        'How resilience, irrigation, and soil regeneration protected farmers during climate stress.',
       publicationHouse: `Daily Monitor + ${''} - National`,
       publicationDate: ` January 10,$nbsp; 2026`,
       link: 'https://www.monitor.co.ug/uganda/news/national/mid-december-rain-brings-hope-to-farmers-battered-by-november-dry-spells--5322458',
@@ -24,7 +24,7 @@ function page() {
     {
       title: 'Poultry manure: The soil nutrient fixer',
       articleExcerpt:
-        'Poultry farmers out to diversify on their respective incomes with crop cultivation are now finding good soil nutrient fixers from the chicken droppings fermented at the garden manure pits',
+        'Turning poultry waste into rich organic fertilizer for coffee and crops.',
       publicationHouse: `Daily Monitor + ${''} - Farming`,
       publicationDate: 'January 11,$nbsp; 2025',
       link: 'https://www.monitor.co.ug/uganda/magazines/farming/poultry-manure-the-soil-nutrient-fixer-4885556#story',
@@ -33,7 +33,7 @@ function page() {
     {
       title: 'How Lwevuze is minting money from coffee',
       articleExcerpt:
-        'The farmer recently acquired a solar-powered irrigation system and a high-horsepower generatoe to enhance irrigation on his 10-acre coffee farm.',
+        'Solar-powered irrigation and smart farming strategies transforming coffee production.',
       publicationHouse: `Daily Monitor + ${''} - National`,
       publicationDate: 'November 1,$nbsp;2024',
       link: 'https://www.monitor.co.ug/uganda/news/national/how-lwevuze-is-minting-money-from-coffee-4807914',
@@ -42,7 +42,7 @@ function page() {
     {
       title: 'Katikamu farmer bags millions from organic coffee, bananas',
       articleExcerpt:
-        'Lwevuze harvests 100 bags of coffee weighing 80kg per season. Simple mathematics put his earnings between Shs 40M and Shs 50M per season.',
+        'Organic coffee and banana farming proving profitable and sustainable.',
       publicationHouse: `Daily Monitor + ${''} - Farming`,
       publicationDate: 'October 5,$nbsp;2018',
       link: 'https://www.monitor.co.ug/uganda/magazines/farming/katikamu-farmer-bags-millions-from-organic-coffee-bananas-1782266',
@@ -52,7 +52,7 @@ function page() {
       title:
         'The Papal knight who has trained more then 4,000 farmers at his farm',
       articleExcerpt:
-        'From his farm in Ntangala village in Katikamu Sub-county, Luweero District, Joseph Lwevuze has not only used modern farming practices, but also taught them to other farmers.',
+        'A legacy of faith-driven farming and farmer education across Uganda.',
       publicationHouse: `Daily Monitor + ${''} - Farming`,
       publicationDate: 'December 1,$nbsp;2015',
       link: 'https://www.monitor.co.ug/uganda/magazines/farming/the-papal-knight-who-has-trained-more-than-4-000-farmers-at-his-farm-1632668',
