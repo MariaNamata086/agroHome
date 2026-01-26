@@ -25,13 +25,12 @@ const AboutUsBrief = () => {
         />
       </div>
       <div className="flex flex-col gap-3 tracking-wider">
-       
         <h2 className="font-bold text-black">
           Rooted in Diversity and Sustainability{' '}
         </h2>
         <p className="leading-loose">
           We are a diversified commercial agricultural enterprise based in
-          Luwero District, Uganda, specializing in layer poultry production,
+          Luweero District, Uganda, specializing in layer poultry production,
           Robusta coffe farming, banana farming and plantation forestry. Our
           work blends <b>modern techology</b>, <b>organic farming principles</b>{' '}
           and a deep cpmmitment to <b>educating fellow farmers</b> on
