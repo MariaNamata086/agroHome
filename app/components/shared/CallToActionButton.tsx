@@ -11,8 +11,13 @@ const CallToActionButton = ({
   href,
 }: CallToActionButtonProps) => {
   return (
-    <button className="flex px-2.5 md:px-2 py-2 md:py-2.5 w-5 bg-primaryBrown hover:bg-[#6E7271]  text-black hover:text-white rounded-full">
-      <Link href={href}>{callToAction}</Link>
+    <button className="flex p-2.5 bg-amber-300 w-1/3 md:px-6.5 py-2 md:py-4  bg-primaryBrown hover:bg-gray-700  text-black hover:text-white rounded-full">
+      <Link
+        href={href}
+        className="flex text-sm font-semibold justify-center  items-center"
+      >
+        {callToAction}
+      </Link>
     </button>
   );
 };

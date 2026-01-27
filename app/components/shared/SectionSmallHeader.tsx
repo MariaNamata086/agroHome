@@ -2,8 +2,8 @@ import React from 'react';
 
 function SectionSmallHeader({ headingContent }: { headingContent: string }) {
   return (
-    <h4 className="flex items-center  text-stone-400 gap-1.5">
-      <span className="flex h-1 w-1.5 bg-primaryGreen rounded-full" />
+    <h4 className="flex items-center font-gochi text-sm  text-gray-600 gap-2">
+      <span className="flex h-1 w-8  bg-[#96CA2D] rounded-full" />
       {headingContent}
     </h4>
   );

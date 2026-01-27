@@ -12,22 +12,20 @@ const Different = () => {
         className="w-full"
         fill
       />
-      <div className="absolute w-full z-10 bg-black/20 bg-linear-to-r flex py-3 md:py-10 tracking-wider">
-        <h2 className="font-bold text-lg md:text-2xl text-white">
+      <div className="absolute w-full z-10 bg-black/20 flex py-3 gap-2 md:gap-3.5 md:py-10 tracking-wider leading-loose">
+        <h2 className="font-bold text-lg md:text-2xl mt-6 md:mt-10 text-white">
           Discover Modern Agriculture
         </h2>
-        <p className="tracking-wider">
+        <p className="text-[15px] md:text-[19px]">
           Malesuada elit laoreet quisque facilisi vivamus fringilla. Augue felis
           nostra posuere urna si mattis ultrices natoque nulla curabitur
           laoreet. Laculis ligula hendrerit millis eqestas vulputate inceptos
           hac massa
         </p>
-        <span className="mt-2">
-          <CallToActionButton
-            callToAction="Discover More"
-            href="/app/projects"
-          />{' '}
-        </span>
+        <CallToActionButton
+          callToAction="Discover More"
+          href="/app/projects"
+        />{' '}
       </div>
     </div>
   );

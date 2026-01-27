@@ -9,11 +9,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-
+import footerBackground from '@/public/assets/poultryCage2.webp';
 import Logo from '@assets/logo.svg';
-
-import footerBackground from '@/public/poultryCage2.webp';
 
 interface FooterContactDetails {
   icon: IconDefinition;

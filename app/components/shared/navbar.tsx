@@ -1,4 +1,4 @@
-'useClient';
+'use client';
 
 import {
   faBars,
@@ -28,25 +28,22 @@ function Navbar() {
     { name: 'News', href: '/news' },
   ];
   return (
-    <nav className="flex justify-between align-center bg-white px-2 py-4 h-auto shadow-sm">
+    <nav className="flex justify-between align-center sticky top-0 z-50 bg-white px-10 py-4 h-30 shadow-md text-black">
       <div className="flex gap-1 items-center">
-        <Link
-          href="/"
-          className="w-22.5 h-22 mt-5 ml-10 bg-white rounded-full mb-2"
-        >
+        <Link href="/" className="w-36 rounded-full ">
           <Image
             src={logo}
             alt="company logo"
             style={{ objectFit: 'cover' }}
-            className="rounded-full"
+            className="rounded-full bg-white"
           />
         </Link>
-        <span className="">
+        <span className="text-x md:text-[20px] tracking-wider">
           St Joseph <b>Farms</b>
         </span>
       </div>
-      <div className="hidden md:flex justify-between items-center">
-        <div className=" items-center justify-between">
+      <div className="hidden md:flex justify-between gap-10 items-center">
+        <div className=" flex items-center justify-between gap-12 font-semibold ">
           {navLinks.map((link) => {
             const isActive = pathName === link.href;
 
@@ -54,7 +51,7 @@ function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`${isActive ? 'text-emerald-400' : 'black'} text-sm`}
+                className={`${isActive ? 'text-[#96CA2D]' : 'black'} text-md`}
               >
                 {link.name}
               </Link>
@@ -63,13 +60,13 @@ function Navbar() {
         </div>
         <Link
           href={'/app/contact-us'}
-          className="flex items-center text-black hover:text-white justify-around p-1 rounded-full w-[1/4] by-amber-300 hover:bg-stone-500"
+          className="flex items-center text-black gap-2 hover:text-white justify-around p-3.5 rounded-full w-[1/4] bg-amber-300 hover:bg-stone-500"
         >
-          <span className="">Get in touch</span>
+          <span className="text-sm">Get in touch</span>
           <FontAwesomeIcon icon={faEnvelopeOpenText} />
         </Link>
       </div>
-      <div className="flex md:hidden flex-col gap-2.5 p-2 ">
+      <div className="flex md:hidden flex-col gap-3 p-2.5 ">
         <button
           type="button"
           className="text-4xl px-10"
@@ -91,7 +88,7 @@ function Navbar() {
             menuVisible ? 'flex' : 'hidden'
           } flex-col gap-5 bg-white shadow-md shadow-sky-200 w-[65%] self-end h-auto text-black p-8 rounded-xl -mt-5`}
         >
-          <Link href={'/app/aboutUs'} className="flex hover:text-primaryGreen">
+          <Link href={'/aboutUs'} className="flex hover:text-primaryGreen">
             About us
           </Link>
           <div className="flex flex-col font-medium relative group text-[13px]">
@@ -100,7 +97,7 @@ function Navbar() {
               onClick={() => setMobileProjectsVisible(!mobileProjectsVisible)}
             >
               <button type="button" className=" hover:text-primary text-start">
-                Our Services
+                Projects
               </button>
               <span>
                 {mobileProjectsVisible ? <PiCaretUp /> : <PiCaretDown />}
@@ -127,7 +124,7 @@ function Navbar() {
                 href={'/app/projects/poultry'}
                 className="flex hover:text-primaryGreen"
               >
-                Poulrty project
+                Poultry project
               </Link>
               <Link
                 href={'/app/projects/coffee'}

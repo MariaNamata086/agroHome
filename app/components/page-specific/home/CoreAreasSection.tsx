@@ -13,13 +13,17 @@ const CoreAreasSection = ({
   moreInfo,
 }: coreAreasSectionProps) => {
   return (
-    <div className="flex gap-1">
-      <span className=" bg-primaryGreen rounded-full p-[16.5px] w-5 h-5">
-        <FontAwesomeIcon icon={icon} color="#96CA2D" size="lg" />
+    <div className="flex flex-col gap- shadow-md p-2 rounded-md h-60  w-1/3">
+      <span className="flex bg-[rgb(150,202,45)] items-center md:ml-40 justify-center shadow-md rounded-full p-[16.5px] w-10 md:w-18 h-10 md:h-24">
+        <FontAwesomeIcon icon={icon} color="#FFFFFF" size="2xl" />
       </span>
-      <div className="flex flex-col gap-1">
-        <h2 className="font-bold text-lg md:text-xl">{heading}</h2>
-        <p className="text-stone-400 text-[13px] md:text-[16px]">{moreInfo}</p>
+      <div className="flex flex-col justify-center p-4 md:p-7 gap-1 md:gap-3">
+        <h2 className="font-bold text-lg md:text-xl text-center text-black tracking-wider leading-relaxed">
+          {heading}
+        </h2>
+        <p className="text-stone-500 text-[13px] text-center md:text-[14px] tracking-wider leading-relaxed">
+          {moreInfo}
+        </p>
       </div>
     </div>
   );
