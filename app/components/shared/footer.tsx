@@ -34,40 +34,54 @@ export default function Footer() {
   ];
 
   const footerContactDetails: FooterContactDetails[] = [
-    { icon: faLocationPin, contactInfo: '' },
+    { icon: faLocationPin, contactInfo: 'Katikamu-Luweero' },
     { icon: faEnvelope, contactInfo: 'hello@stjosephfarm.com' },
     { icon: faPhone, contactInfo: '+256772628600' },
   ];
 
   return (
-    <div className="relative flex flex-col h-auto bg-local">
+    <div className="relative flex flex-col mb-2">
       <Image
         src={footerBackground}
         alt="footer background image"
         className="absolute top-0 left-0 object-cover h-full w-full "
       />
-      <div className="relative flex flex-col h-full z-10 bg-black/30 text-white  p-2 md:p-4 justify-center md:justify-between tracking-wider">
-        <div className="flex flex-col md:flex-row md:items-center">
-          <section className="flex flex-col gap-2 ">
+      <div className="relative flex flex-col h-full z-10 inset-0 bg-black/60 text-white  p-8 md:px-10 md:py-12 justify-center md:justify-around tracking-wider">
+        <div className="flex flex-col justify-between md:flex-row md:items-center">
+          <section className="flex flex-col md:w-1/3 gap-6 ">
             <div className="flex items-center gap-2 md:gap-3">
               <Image
                 src={Logo}
                 alt="StJosephFarms Logo"
-                className="w-10 h-10"
+                className="w-23 h-23 rounded-full"
               />
-              <span className="text-2xl">
-                StJoseph<b>Farms</b>
-              </span>
+              <p className="text-2xl font-semibold">
+                St Joseph <b>Farms</b>
+              </p>
             </div>
-            <p className="">Enkulakulana Ejja Lwampaka </p>
-            <div className="flex flex-col gap-1.5">
+
+            <div className="tracking-wider text-left text-[11px] md:text-[12.5px] leading-loose">
+              St. Joseph Ntangala Agricultural Training Centre is a model
+              integrated farm and training hub in Luweero District, Uganda,
+              dedicated to advancing modern, sustainable, and profitable
+              agriculture while empowering farmers and communities.
+            </div>
+            <p className="text-lime-300 text-xl font-semibold tracking-widest">
+              'Enkulakulana Ejja Lwampaka'{' '}
+            </p>
+            <div className="flex flex-col gap-4">
               {footerContactDetails.map(({ icon, contactInfo }, index) => {
                 return (
-                  <div className="flex items-center gap-1" key={index}>
+                  <div className="flex items-center gap-4" key={index}>
                     {
                       <>
-                        <FontAwesomeIcon icon={icon} className="" />
-                        <span className="">{contactInfo}</span>
+                        <FontAwesomeIcon
+                          icon={icon}
+                          className="text-[#96CA2D]"
+                        />
+                        <span className="text-[11px] md:text-[12px]">
+                          {contactInfo}
+                        </span>
                       </>
                     }
                   </div>
@@ -75,70 +89,83 @@ export default function Footer() {
               })}
             </div>
           </section>
-          <div className="tracking-wider text-left text-[11px] leading-relaxed">
-            St. Joseph Ntangala Agricultural Training Centre is a model
-            integrated farm and training hub in Luweero District, Uganda,
-            dedicated to advancing modern, sustainable, and profitable
-            agriculture while empowering farmers and communities.
-          </div>
-          <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">Quick Links</h3>
-            <div className="flex flex-col gap-1 md:gap-2 align-left">
+
+          <div className="flex flex-col gap-3 md:gap-4 tracking-wider">
+            <h3 className="text-md md:text-[15px] font-semibold">
+              Quick Links
+            </h3>
+            <div className="flex flex-col gap-1 md:gap-3 align-left">
               {footerPagesLinksData.map(({ href, name }, index) => {
                 return (
-                  <Link href={href} key={index} className="">
+                  <Link
+                    href={href}
+                    key={index}
+                    className="hover:text-sky-500 text-[13px] hover:scale-105 hover:underline"
+                  >
                     {name}
                   </Link>
                 );
               })}
             </div>
           </div>
-          <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">Our Projects</h3>
+          <div className="flex flex-col gap-3 md:gap-4 ">
+            <h3 className="font-semibold tracking-wider text-md md:text-[15px]">
+              Our Projects
+            </h3>
             <div className="flex flex-col gap-1 md:gap-2 align-left">
               {footerProjectsPagesLinksData.map(({ href, name }, index) => {
                 return (
-                  <Link href={href} key={index} className="">
+                  <Link
+                    href={href}
+                    key={index}
+                    className="hover:text-sky-500 text-[13px] hover:scale-105 hover:underline"
+                  >
                     {name}
                   </Link>
                 );
               })}
             </div>
           </div>
-          <div className="flex flex-col gap-6.25">
-            <span className="text-md lg:text-[15px] tracking-wider font-semibold">
+          <div className="flex flex-col gap-3 md:gap-4  justify-center md:-ml-7 items-center">
+            <span className="text-md md:text-[15px] tracking-wider font-semibold">
               Contact Us
             </span>
-            <p className="flex gap-3 items-center justify-around w-[60%]">
-              <FontAwesomeIcon icon={faMapLocationDot} fontSize={15} />
-              <span className="flex text-[11.5px]">
+            <p className="flex gap-3 md:gap-5 items-center justify-around">
+              <FontAwesomeIcon
+                icon={faMapLocationDot}
+                fontSize={24}
+                className="text-[#96CA2D]"
+              />
+              <span className="flex text-[13px]">
                 Ntangala Village, Katikamu Sub-county <br /> Luweero District,
                 Uganda
               </span>
             </p>
-            <p className="flex gap-3 items-center  w-[60%]">
-              <FontAwesomeIcon icon={faPhoneVolume} fontSize={15} />
-              <span className="flex text-[11.5px]">
+            <p className="flex gap-3 items-center ">
+              <FontAwesomeIcon
+                icon={faPhoneVolume}
+                fontSize={24}
+                className="text-[#96CA2D]"
+              />
+              <span className="flex text-[13px]">
                 +256772628600 | +256741327070
               </span>
             </p>
-            <p className="flex gap-3 items-center w-[60%]">
-              <FontAwesomeIcon icon={faEnvelope} />
-              <span className="flex text-[11.5px]">
+            <p className="flex gap-3 items-center ">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                fontSize={26}
+                className="text-[#96CA2D]"
+              />
+              <span className="flex text-[13px]">
                 stjosephfarms086@gmail.com
               </span>
             </p>
           </div>
         </div>
-        <div className="h-1 bg-primarygreen md:mt-2" />
-        <div className="flex flex-col md:flex-row mb-2 md:justify-between">
-          <Link href={'/app/contact-us'} className="flex md:hidden">
-            {/* icon of phone */}
-            <span className="">Call us today!</span>
-          </Link>
-          <div className="flex w-full items-center justify-center -mt-5 md:mt-0">
-            &#169; 2026 &nbsp; StJoseph Farms. {''} All rights reserved.
-          </div>
+        <div className="h-px bg-white rounded-full mt-8 z-20" />
+        <div className="flex w-full items-center justify-center text-sm text-gray-200 mt-4 -mb-4">
+          &#169; 2026 &nbsp; StJoseph Farms. {''} All rights reserved.
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { faHandPointRight } from '@fortawesome/free-regular-svg-icons';
 import {
   faArrowTrendUp,
   faEgg,
@@ -7,7 +8,6 @@ import {
   faMugHot,
   faTree,
 } from '@fortawesome/free-solid-svg-icons';
-import { faHandPointLeft } from '@fortawesome/free-solid-svg-icons/faHandPointLeft';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -77,21 +77,21 @@ export default function Home() {
         <HorizontalLine />
         <AboutUsBrief />
         <Different />
-        <div className=" flex flex-col gap-3 md:gap-5 tracking-wider leading-loose">
-          <h2 className="flex items-center gap-1.5">
-            <FontAwesomeIcon icon={faArrowTrendUp} size="sm" />
+        <div className=" flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
+            <FontAwesomeIcon icon={faArrowTrendUp} size="lg" />
             <span>Our Impact</span>
           </h2>
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-3.5 md:gap-6">
             {impacthighlightsData.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex items-center gap-1 h-auto shadow-sm rounded-md"
+                  className="flex items-center gap-4 md:gap-6 h-22 px-5 md:px-14 shadow-sm rounded-b-md"
                 >
                   <FontAwesomeIcon
-                    icon={faHandPointLeft}
-                    size="lg"
+                    icon={faHandPointRight}
+                    size="xl"
                     color="#96CA2D"
                   />
                   <span className="text-gray-600 text-[14px] md:text-[18px]">
@@ -102,42 +102,53 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-3 ">
-          <h2 className="flex text-[20px]">Heard / Read About Us &128522;?</h2>
-          <div className="flex flex-col gap-2 bg-black/30 absolute z-10 tracking-wider leading-loose">
+        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-87.5 md:h-150 md:mb-5">
+          <Image
+            src={featuredInSectionImage}
+            alt="Deep litter poultry house"
+            fill
+            className="object-cover"
+            priority
+          />
+          <h2 className="flex text-2xl md:text-4xl font-bold tracking-widest justify-center text-white z-20 mt-8 ">
+            Heard / Read About Us &#128522;?
+          </h2>
+          <div className="grid grid-cols-2 absolute justify-center items-center gap-4 md:gap-10 p-4 md:p-16 bg-black/40  z-10 tracking-wider leading-loose">
             {featuredInData.map(({ logo, name }, index) => {
               return (
-                <div
-                  className="flex flex-col md:flex-row h-auto md:items-center p-2"
+                <Link
+                  href={'/app/news'}
+                  className="flex flex-col md:flex-row gap-5 mt-14 h-auto md:items-center p-5 md:px-8"
                   key={index}
                 >
                   <Image
                     src={logo}
                     alt="Image showing partner logo"
-                    className="w-1/2"
-                    fill
+                    className="w-30 h-30"
                   />
-                  <span className="flex text-black ">{name}</span>
-                </div>
+                  <span className="flex text-white font-semibold tracking-widest ">
+                    {name}
+                  </span>
+                </Link>
               );
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-3">
-          <p className="flext font-semibold text-xl md:text-2xl">
+        <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
+          <p className="flext font-semibold text-md md:text-lg ">
             Want to learn modern farming techniques or partner with us?
           </p>
-          <div className="flex itmes-center gap-1">
+          <div className="flex items-center gap-3">
             <Link
               href={'/contactUs'}
-              className="text-blck hover:text-primaryGreen hover:scale-105"
+              className="hover:text-sky-500 text-sm hover:scale-105"
             >
               Contact Us
             </Link>
             <span className="font-bold">|</span>
             <Link
               href={'/projects'}
-              className="text-blck hover:text-primaryGreen hover:scale-105"
+              className="hover:text-sky-500 text-sm hover:scale-105"
             >
               Learn More
             </Link>

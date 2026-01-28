@@ -1,9 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import backgroundImage from '@assets/poultryCage2.webp';
 import CallToActionButton from '../../shared/CallToActionButton';
 
 const Different = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   return (
     <section className="relative mt-5 md:mt-9 w-full h-87.5 md:h-125">
       <Image
@@ -18,7 +25,13 @@ const Different = () => {
         <h2 className="font-bold text-xl text-left md:text-4xl">
           Discover Modern Agriculture
         </h2>
-        <p className="text-sm md:text-[17px] max-w-xl  text-left leading-relaxed">
+        <p
+          ref={ref}
+          className={`text-sm md:text-[17px] max-w-xl text-left leading-relaxed
+        transform transition-all duration-700 ease-out
+        ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
+      `}
+        >
           Malesuada elit laoreet quisque facilisi vivamus fringilla. Augue felis
           nostra posuere urna si mattis ultrices natoque nulla curabitur
           laoreet. Laculis ligula hendrerit millis eqestas vulputate inceptos
