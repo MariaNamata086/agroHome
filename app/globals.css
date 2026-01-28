@@ -1,6 +1,6 @@
  @import "tailwindcss";
 
-:root {
+@theme {
   --color-primaryGreen: #96CA2D;
   --color-primaryBrown: #FFD449;
 }
