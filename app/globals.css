@@ -1,7 +1,5 @@
  @import "tailwindcss";
 
-/* Your global styles */
-
 :root {
   --color-primaryGreen: #96CA2D;
   --color-primaryBrown: #FFD449;
