@@ -102,13 +102,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col relative ">
-          <Image
-            src={featuredInSectionImage}
-            alt="Image of Lwevuze featured in NTV article"
-            className="w-full h-full object-cover"
-            style={{ objectFit: 'contain' }}
-          />
+        <div className="flex flex-col gap-3 ">
           <h2 className="flex text-[20px]">Heard / Read About Us &128522;?</h2>
           <div className="flex flex-col gap-2 bg-black/30 absolute z-10 tracking-wider leading-loose">
             {featuredInData.map(({ logo, name }, index) => {
