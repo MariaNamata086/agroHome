@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+import fontFamily from 'tailwindcss/defaultTheme';
+
 const config: Config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -17,7 +19,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'sans-serif'],
-        gochi: ['var(--font-gochi)', 'cursive'],
+        gochi: ['var(--font-gochi-hand)', 'cursive'],
       },
     },
 

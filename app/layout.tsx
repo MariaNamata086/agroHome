@@ -20,7 +20,7 @@ const poppins = Poppins({
 const gochiHand = Gochi_Hand({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-gochi',
+  variable: '--font-gochi-hand',
   display: 'swap',
 });
 
@@ -35,9 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${gochiHand.variable}`}>
-      {/* we'll need to add a head tag here */}
-      <body className="antialiased">
+    <html lang="en">
+      <body className={`${poppins.variable} antialiased ${gochiHand.variable}`}>
         <div className="bg-white">
           <Navbar />
           {children}
