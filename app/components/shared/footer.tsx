@@ -77,7 +77,7 @@ export default function Footer() {
                       <>
                         <FontAwesomeIcon
                           icon={icon}
-                          className="text-[#96CA2D]"
+                          className="text-primaryGreen"
                         />
                         <span className="text-[11px] md:text-[12px]">
                           {contactInfo}
@@ -134,7 +134,7 @@ export default function Footer() {
               <FontAwesomeIcon
                 icon={faMapLocationDot}
                 fontSize={24}
-                className="text-[#96CA2D]"
+                className="text-primaryGreen"
               />
               <span className="flex text-[13px]">
                 Ntangala Village, Katikamu Sub-county <br /> Luweero District,
@@ -145,7 +145,7 @@ export default function Footer() {
               <FontAwesomeIcon
                 icon={faPhoneVolume}
                 fontSize={24}
-                className="text-[#96CA2D]"
+                className="text-primaryGreen"
               />
               <span className="flex text-[13px]">
                 +256772628600 | +256741327070
@@ -155,7 +155,7 @@ export default function Footer() {
               <FontAwesomeIcon
                 icon={faEnvelope}
                 fontSize={26}
-                className="text-[#96CA2D]"
+                className="text-primaryGreen"
               />
               <span className="flex text-[13px]">
                 stjosephfarms086@gmail.com

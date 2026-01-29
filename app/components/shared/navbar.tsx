@@ -22,7 +22,7 @@ function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: '/aboutUs' },
     { name: 'Projects', href: '/projects' },
     { name: 'Contact us', href: '/contactUs' },
     { name: 'News', href: '/news' },
@@ -51,7 +51,7 @@ function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`${isActive ? 'text-[#96CA2D]' : 'black'} text-md`}
+                className={`${isActive ? 'text-primaryGreen' : 'black'} text-md`}
               >
                 {link.name}
               </Link>

@@ -6,7 +6,7 @@ import {
   faEgg,
   faGraduationCap,
   faMugHot,
-  faTree,
+  // faTree,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
