@@ -14,6 +14,7 @@ import { useInView } from 'react-intersection-observer';
 import familyFaithImage from '@assets/faithFamily.jpg';
 import farmingPhilosophyImage from '@assets/farmingPhilosophy.png';
 import proprietorImage from '@assets/lwevuzePortrait.jpg';
+import headerBannerImage from '@assets/Sustainable-Agriculture.png';
 import WayOfFarmingCard from '../components/page-specific/aboutUs/FarmingPhilosophyCard';
 import HeaderBanner from '../components/shared/HeaderBanner';
 import ImageBg from '../components/shared/ImageBg';
@@ -67,6 +68,7 @@ const Aboutus = () => {
   return (
     <main className="flex flex-col gap-10 text-black bg-white">
       <HeaderBanner
+        src={headerBannerImage}
         page="About Us"
         pageHeading="Building a legacy of profitable, sustainable farming &mdash; and sharing it. "
       />
