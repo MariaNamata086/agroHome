@@ -8,8 +8,8 @@ import CallToActionButton from '../../shared/CallToActionButton';
 
 const Different = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
+    triggerOnce: false,
+    threshold: 0.4,
   });
   return (
     <section className="relative mt-5 md:mt-9 w-full h-87.5 md:h-125">
