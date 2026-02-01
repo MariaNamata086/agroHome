@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
 interface VideoComponentProps {
   videoSrc: string;
@@ -6,8 +6,15 @@ interface VideoComponentProps {
 
 const VideoComponent = ({ videoSrc }: VideoComponentProps) => {
   return (
-    <div className="flex h-50 md:h-auto w-full">
-      <iframe src={videoSrc} className="w-full h-full" loading='lazy' allowFullScreen />
+    <div className="flex h-80 md:h-120 w-full">
+      <iframe
+        src={videoSrc}
+        className="w-full h-full rounded-xl"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Farm YouTube Video"
+      />
     </div>
   );
 };
