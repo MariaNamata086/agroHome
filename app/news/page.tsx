@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
-import decemberRainArticleImage from '../../../public/assets/lwevuzeCoffeeRains.png';
-import millionsFromCoffeeArticleImage from '../../../public/assets/millionsFromCoffee.png';
-import coffeeMintingMoneyArticleImage from '../../../public/assets/mintingMoneyArticleImage.png';
-import newsHeroImage from '../../../public/assets/newsHeroImage.png';
-import papalKnightArticleImage from '../../../public/assets/papalKnight.png';
-import poultryManureArticleImage from '../../../public/assets/poultryManure.png';
+import decemberRainArticleImage from '@assets/lwevuzeCoffeeRains.png';
+import millionsFromCoffeeArticleImage from '@assets/millionsFromCoffee.png';
+import coffeeMintingMoneyArticleImage from '@assets/mintingMoneyArticle.png';
+import newsHeroImage from '@assets/newsHeroImage.png';
+import papalKnightArticleImage from '@assets/papalKnight.png';
+import poultryManureArticleImage from '@assets/poultryManure.png';
 import NewsArcticle from '../components/page-specific/news/NewsArcticle';
 import VideoComponent from '../components/page-specific/news/VideoComponent';
 import ProjectHeroSection from '../components/shared/ProjectHeroSection';
@@ -66,65 +66,69 @@ function page() {
     'https://youtu.be/14QDc7Z8Zzg?si=_gCUkG9IpQLrTBS7',
   ];
   return (
-    <main className="flex flex-col gap-15 md:gap-20 p-20">
-      <ProjectHeroSection
+    <main className="flex flex-col md:gap-5 items-center bg-white ">
+           <ProjectHeroSection
         heroImage={newsHeroImage}
         projectHeading="News & Media"
         projectTagline="Our journey, milestones, and national recognition"
       />
-      <div className="flex flex-col gap-10 tracking-wider leading-loose">
-        <h1 className="">Be inspired with the events going on at our farm </h1>
-        <p className="">Intro text here</p>
-        <div className="flex flex-col gap-6">
-          {newsArticlesData.map(
-            (
-              {
-                title,
-                articleExcerpt,
-                publicationHouse,
-                publicationDate,
-                link,
-                imageSrc,
+      <div className="flex flex-col gap-7 md:gap-13 p-5 md:px-12">
+        <div className="flex flex-col gap-10 tracking-wider leading-loose">
+          <h1 className="">
+            Be inspired with the events going on at our farm{' '}
+          </h1>
+          <p className="">Intro text here</p>
+          <div className="flex flex-col gap-6">
+            {newsArticlesData.map(
+              (
+                {
+                  title,
+                  articleExcerpt,
+                  publicationHouse,
+                  publicationDate,
+                  link,
+                  imageSrc,
+                },
+                index,
+              ) => {
+                return (
+                  <NewsArcticle
+                    key={index}
+                    title={title}
+                    articleExcerpt={articleExcerpt}
+                    publicationHouse={publicationHouse}
+                    publicationDate={publicationDate}
+                    link={link}
+                    imageSrc={imageSrc}
+                  />
+                );
               },
-              index,
-            ) => {
-              return (
-                <NewsArcticle
-                  key={index}
-                  title={title}
-                  articleExcerpt={articleExcerpt}
-                  publicationHouse={publicationHouse}
-                  publicationDate={publicationDate}
-                  link={link}
-                  imageSrc={imageSrc}
-                />
-              );
-            },
-          )}
+            )}
+          </div>
         </div>
+        <section className="flex flex-col gap-2">
+          <h3 className="text-xl font-bold tracking-wider">
+            Check us out on YouTube
+          </h3>
+          <p className="tracking-wider leading-loose">
+            We bring you a close up view of both what was and is happening at
+            our farm.
+          </p>
+          <div className="flex">
+            <Suspense
+              fallback={
+                <div className="flex bg-green-300 text-center text-white tracking-wider">
+                  Loading video...
+                </div>
+              }
+            >
+              {YoutubeVideosSrcData.map((src, index) => {
+                return <VideoComponent videoSrc={src} key={index} />;
+              })}
+            </Suspense>
+          </div>
+        </section>
       </div>
-      <section className="flex flex-col gap-2">
-        <h3 className="text-xl font-bold tracking-wider">
-          Check us out on YouTube
-        </h3>
-        <p className="tracking-wider leading-loose">
-          We bring you a close up view of both what was and is happening at our
-          farm.
-        </p>
-        <div className="flex">
-          <Suspense
-            fallback={
-              <div className="flex bg-green-300 text-center text-white tracking-wider">
-                Loading video...
-              </div>
-            }
-          >
-            {YoutubeVideosSrcData.map((src, index) => {
-              return <VideoComponent videoSrc={src} key={index} />;
-            })}
-          </Suspense>
-        </div>
-      </section>
     </main>
   );
 }
