@@ -1,6 +1,11 @@
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 import React from 'react';
+import bananasProjectImage from '@assets/bananasHero.webp';
+import coffeeProjectImage from '@assets/coffeeHarvesting.jpg';
+import poultryProjectImage from '@assets/deeplitterHouse.jpeg';
+import plantationForestryImage from '@assets/eucalyptusTrees.jpg';
 import headerBannerImage from '@assets/poultryCage2.webp';
 import ProjectCard from '../components/page-specific/projects/ProjectCard';
 import HeaderBanner from '../components/shared/HeaderBanner';
@@ -11,7 +16,7 @@ function OurProjects() {
       projectName: 'Coffee Farming',
       shortDescription:
         'Organic robusta coffee grown using farm nurtured cuttings seedlings and poultry manure ',
-      image: '',
+      image: coffeeProjectImage,
       alt: 'picture of coffee farm project',
       href: '/app/projects/coffee',
     },
@@ -19,7 +24,7 @@ function OurProjects() {
       projectName: 'Bananas Farming',
       shortDescription:
         'Medium scale cooking bananas farming, interspersed with Juice, Gonja and Ndiizi bananas',
-      image: '',
+      image: bananasProjectImage,
       alt: 'picture of bananas farm project',
       href: '/app/projects/bananas',
     },
@@ -27,7 +32,7 @@ function OurProjects() {
       projectName: 'Poultry Production',
       shortDescription:
         'Large-scale layers production using advanced battery cage systems',
-      image: '',
+      image: poultryProjectImage,
       alt: 'picture of poultry house',
       href: '/app/projects/poultry',
     },
@@ -35,7 +40,7 @@ function OurProjects() {
       projectName: 'Plantation Forestry',
       shortDescription:
         'Commercial Eucalyptus forestry for pole and timber production',
-      image: '',
+      image: plantationForestryImage,
       alt: 'picture of the eucalptus garden project',
       href: '/app/projects/plantationForestry',
     },
@@ -58,7 +63,7 @@ function OurProjects() {
           Our projects reflect our commitment to excellence, sustainability, and
           innovation across Uganda's agricultural value chain.
         </p>
-        <div className="flex flex-col gap-3">
+        <div className="grid md:grid-cols-2 gap-3 p-3 md:gap-8">
           {projectsData.map(
             ({ projectName, shortDescription, image, alt, href }, index) => {
               return (
@@ -73,6 +78,26 @@ function OurProjects() {
               );
             },
           )}
+        </div>
+      </div>
+      <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
+        <p className="flext font-semibold text-md md:text-lg ">
+          Want to learn modern farming techniques or partner with us?
+        </p>
+        <div className="flex items-center gap-3">
+          <Link
+            href={'/contactUs'}
+            className="hover:text-sky-500 text-sm hover:scale-105"
+          >
+            Contact Us
+          </Link>
+          <span className="font-bold">|</span>
+          <Link
+            href={'/projects'}
+            className="hover:text-sky-500 text-sm hover:scale-105"
+          >
+            Learn More
+          </Link>
         </div>
       </div>
     </main>
