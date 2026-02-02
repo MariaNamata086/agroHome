@@ -1,6 +1,6 @@
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React,{ ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export type ButtonProps = {
   children?: ReactNode;
@@ -30,10 +30,10 @@ export default function Button({
       disabled={loading || disabled}
       type={type}
       {...props}
-      className={`h-[40px] border-none w-full bg-primary color-white justify-center items-center hover:bg-[rgb(71,199,250)] py-[8px] px-[16px] rounded-md ${textColor}`}
+      className={`h-10 font-semibold border-none w-[60%] color-white justify-center items-center bg-primaryBrown py-2 px-4 rounded-full hover:scale-105 hover:bg-gray-700 text-black hover:text-white ${textColor}`}
       style={{
         cursor: disabled ? 'not-allowed' : 'pointer',
-        fontSize: size === 'small' ? 10 : 12,
+        fontSize: size === 'small' ? 10 : 14,
       }}
     >
       {loading ? (

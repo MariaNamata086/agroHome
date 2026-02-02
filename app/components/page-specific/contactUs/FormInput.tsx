@@ -48,12 +48,15 @@ function FormInput(props: InputProps) {
     }
   };
 
-  const borderColor = error ? '#e53e3e' : '#e9e8e6';
+  const borderColor = error ? '#e53e3e' : 'oklch(87.2% 0.01 258.338)';
 
   return (
-    <div className="flex flex-col gap-[8px] w-full">
+    <div className="flex flex-col gap-2 w-full">
       {label && (
-        <label htmlFor={id} className="pl-[4px] text-slate-600 text-[11px] md:text-[13px]">
+        <label
+          htmlFor={id}
+          className="pl-1 text-slate-600 text-[12px] md:text-[15px]"
+        >
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}
@@ -61,16 +64,7 @@ function FormInput(props: InputProps) {
         {' '}
         {/* Wrap the input and the icon in a div */}
         <input
-          style={{
-            borderWidth: '0.5px',
-            borderStyle: 'solid',
-            borderColor:'oklch(20.8% 0.042 265.755)',
-            backgroundColor: '#e9e8e690',
-            borderRadius: '3px',
-            width: '100%',
-            fontSize: '12px',
-          }}
-          className={`flex transition-all duration-75 focus:border-[0.5px] focus:outline outline-primaryGreen focus:shadow-sm focus:${borderColor} px-2.5 h-10`}
+          className={`flex transition-all duration-700 w-full text-[13px] bg-[#e6e7e990] rounded-2xl focus:shadow-sm focus:${borderColor} px-3.5 focus:border focus:border-gray-300 md:p-6 h-10`}
           type={
             type === 'password'
               ? passwordVisible

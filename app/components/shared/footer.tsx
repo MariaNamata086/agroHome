@@ -130,7 +130,7 @@ export default function Footer() {
             <span className="text-md md:text-[15px] tracking-wider font-semibold">
               Contact Us
             </span>
-            <p className="flex gap-3 md:gap-5 items-center justify-around">
+            <p className="flex w-full max-w-md gap-3 md:gap-5 items-center justify-around">
               <FontAwesomeIcon
                 icon={faMapLocationDot}
                 fontSize={24}
@@ -141,7 +141,7 @@ export default function Footer() {
                 Uganda
               </span>
             </p>
-            <p className="flex gap-3 items-center ">
+            <p className="flex w-full max-w-md gap-3 items-center ">
               <FontAwesomeIcon
                 icon={faPhoneVolume}
                 fontSize={24}
@@ -151,7 +151,7 @@ export default function Footer() {
                 +256772628600 | +256741327070
               </span>
             </p>
-            <p className="flex gap-3 items-center ">
+            <p className="flex w-full max-w-md gap-3 items-center ">
               <FontAwesomeIcon
                 icon={faEnvelope}
                 fontSize={26}

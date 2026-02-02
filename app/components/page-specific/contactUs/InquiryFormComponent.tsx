@@ -1,6 +1,6 @@
 import {
-  faAngleDown,
-  faAngleUp,
+  // faAngleDown,
+  // faAngleUp,
   faCircleExclamation,
   faCircleInfo,
 } from '@fortawesome/free-solid-svg-icons';
@@ -51,18 +51,19 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
       } finally {
         setLoading(false);
         formik.resetForm();
-        setTimeout(() => setSuccessMessage(null), 4000);
+         setTimeout(() => setLoading(false), 2500);
+        setTimeout(() => setSuccessMessage(null), 5000);
         setTimeout(() => setErrorMessage(null), 4000);
       }
     },
   });
   return (
-    <div className="flex flex-col gap-6 justify-center p-2 w-full h-auto">
+    <div className="flex flex-col gap-4 justify-center p-2 w-full h-auto">
       <div
         className="flex justify-between items-center"
         // onClick={() => setVisible(!visible)}
       >
-        <span className="flex text-sm md:text-lg text-slate-800 font-semibold tracking-wider">
+        <span className="flex text-sm md:text-[22px] text-slate-800 font-semibold tracking-widest p-5 md:p-8 md:-mb-7">
           {formName}
         </span>
         {/* {visible ? (
@@ -80,7 +81,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             <div
               className={`flex w-full border ${
                 successMessage
-                  ? 'bg-[#f7fee7] text-[#65a30d] border-[#65a30d]'
+                  ? 'bg-[#f7fee7] text-primaryGreen border-primaryGreen'
                   : 'border-[#fbdad0] bg-[rgb(251,218,208)] text-[#853236]'
               } rounded text-[11px] px-4 py-2 gap-3 items-center mb-3`}
             >
@@ -93,7 +94,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
           ))}
         <form
           onSubmit={formik.handleSubmit}
-          className=" text-slate-800 rounded-md border border-gray-200 p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 w-full "
+          className=" text-slate-800 rounded-md p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 md:gap-6 w-full "
         >
           <FormInput
             name="name"
@@ -153,6 +154,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             loading={loading}
             disabled={loading}
             type="submit"
+            textColor="text-black"
             // onClick={() => console.log('button clicked')}
           >
             Send Message
