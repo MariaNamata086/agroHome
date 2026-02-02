@@ -1,4 +1,4 @@
-import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faStarHalfStroke } from '@fortawesome/free-solid-svg-icons/faStarHalfStroke';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Suspense } from 'react';
@@ -11,7 +11,6 @@ import poultryManureArticleImage from '@assets/poultryManure.png';
 import NewsArcticle from '../components/page-specific/news/NewsArcticle';
 import VideoComponent from '../components/page-specific/news/VideoComponent';
 import ProjectHeroSection from '../components/shared/ProjectHeroSection';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function page() {
   const newsArticlesData = [
@@ -125,7 +124,7 @@ function page() {
           </div>
         </div>
         <section className="flex flex-col justify-center items-center gap-5 mb-10">
-         <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center items-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4 ">
+          <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center items-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4 ">
             <FontAwesomeIcon
               icon={faYoutube}
               size="xl"

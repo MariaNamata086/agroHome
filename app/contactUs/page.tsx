@@ -1,27 +1,37 @@
 'use client';
 
+import { faLocationDot, faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons/faEnvelopeCircleCheck';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import contactUsHeroImage from '@assets/contact-us.jpg';
+import backgroundImage from '@assets/cookingBananas.jpeg';
 import InquiryFormComponent from '../components/page-specific/contactUs/InquiryFormComponent';
 import HeaderBanner from '../components/shared/HeaderBanner';
 import ImageBg from '../components/shared/ImageBg';
 import SectionSmallHeader from '../components/shared/SectionSmallHeader';
 
 const ContactUs = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.4,
+  });
   const contactData = [
     {
-      icon: '',
+      icon: faLocationDot,
       locationHeading: 'Our Location',
       contactInfo:
         'Ntangala Village, Katikamu Sub-county, Luweero District, Uganda',
     },
     {
-      icon: '',
+      icon: faEnvelopeCircleCheck,
       locationHeading: 'Mail Us',
       contactInfo: 'namatamaria086@gmail.com',
     },
     {
-      icon: '',
+      icon: faPhoneFlip,
       locationHeading: 'Call Us',
       contactInfo: '+256 772 628 600 || +256 775 628 600',
     },
@@ -36,52 +46,62 @@ const ContactUs = () => {
 
   return (
     <main className="flex flex-col gap-10 md:gap-20">
-      <HeaderBanner page="Contact Us" pageHeading="GET IN TOUCH" />
-      <ImageBg
-        src={}
-        alt="image of get in touch with us"
-        componentMoreInfo="Visit, learn, partner, and grow with us"
+      <HeaderBanner
+        page="Contact Us"
+        pageHeading="Visit, learn, partner, and grow with us"
+        src={contactUsHeroImage}
       />
       <div className="flex flex-col p-5 md:px-20 gap-8 md:gap-16.25 tracking-wider leading-loose">
-        <section className="flex flex-col md:flex-row gap-4 md:gap-2">
-          <div className="flex flex-col gaop-3 md:gap-6 p-3">
+        <section className="flex flex-col md:flex-row gap-4 md:gap-5">
+          <div className="flex flex-col gap-3 w-full md:w-1/2 md:gap-6 p-3">
             <SectionSmallHeader headingContent="Get In Touch" />
-            <h1 className="">
+            <h1 className="text-gray-800 tracking-wider font-semibold text-xl md:text-3xl leading-relaxed">
               Questions, ideas or projects? We're ready to help
             </h1>
-            <p className="text-slate-800">
+            <p className="text-slate-700 tracking-wider">
               Whether you're looking for more information about our services,
               have a specific project in mind, or just want to say hello, we're
               here to assist you. Reach out to us through any of the following
               methods, and we'll get back to you as soon as possible.
             </p>
-            <div className="flex flex-col gap-3.5 md:gap-5">
-              <h2 className="text-lg font-bold">Interested in:</h2>
-              <ul>
+            <div className="flex flex-col gap-3.5">
+              <h2 className="text-lg  tracking-wider text-gray-800 font-semibold">
+                Interested in:
+              </h2>
+              <ul className="list-disc gap-2">
                 {interestsData.map((item, index) => (
-                  <li key={index} className="list-disc gap-2">
+                  <li key={index} className="text-slate-700">
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <p className="">
+              <p className="text-slate-700 tracking-wider -ml-3 font-medium">
                 We welcome individuals, groups, schools, NGOs and development
                 partners
               </p>
             </div>
           </div>
-          <div className="flex h-auto md:w-1/2 shadow-sm rounded-full">
+          <div className="flex h-auto md:w-1/2 shadow-md rounded-lg">
             {' '}
             <InquiryFormComponent formName="Send us an Inquiry" />
           </div>
         </section>
-        <div className="flex relative h-auto ">
-          <Image src={} alt="" className="" />
+        <div ref={ref} className="flex relative h-auto ">
+          <Image src={backgroundImage} alt="" className="" />
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4 tracking-wider leading-loose">
             {contactData.map((item, index) => (
-              <div key={index} className="flex  gap-2 md:gap-4 items-center">
-                <span className="flex "> {item.icon}</span>
+              <div
+                key={index}
+                className={`flex  gap-2 p-3 md:gap-4 items-center transform transition-transform duration-1000 ease-linear ${
+                  inView
+                    ? '-translate-x-10 opacity-100'
+                    : 'translate-x-0 opacity-0'
+                }`}
+              >
+                <span className="flex w-20 h-20 bg-primaryGreen justify-center items-center">
+                  <FontAwesomeIcon icon={item.icon} size="xl" />
+                </span>
                 <div className="flex flex-col gap-2">
                   <h2 className="text-lg font-bold">{item.locationHeading}</h2>
                   <p className="text-sm">{item.contactInfo}</p>

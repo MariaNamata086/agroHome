@@ -18,7 +18,7 @@ interface InquiryFormComponentProps {
 }
 
 function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<null | string>(null);
   const [successMessage, setSuccessMessage] = useState<null | string>(null);
@@ -60,24 +60,21 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
     <div className="flex flex-col gap-6 justify-center p-2 w-full h-auto">
       <div
         className="flex justify-between items-center"
-        onClick={() => setVisible(!visible)}
+        // onClick={() => setVisible(!visible)}
       >
-        <span className="flex text-sm md:text-lg text-slate-900 tracking-wider">
+        <span className="flex text-sm md:text-lg text-slate-800 font-semibold tracking-wider">
           {formName}
         </span>
-        {visible ? (
+        {/* {visible ? (
           <FontAwesomeIcon icon={faAngleUp} fontSize={12} color="black" />
         ) : (
           <FontAwesomeIcon icon={faAngleDown} fontSize={12} color="black" />
-        )}
+        )} */}
       </div>
       <div
         className="h-auto w-full flex flex-col gap-6"
-        style={{ display: visible ? 'block' : 'none' }}
+        // style={{ display: visible ? 'block' : 'none' }}
       >
-        <span className="flex text-sm md:text-md mb-3 text-slate-900 tracking-wider">
-          Inquiry form{' '}
-        </span>
         {errorMessage ||
           (successMessage && (
             <div
@@ -96,7 +93,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
           ))}
         <form
           onSubmit={formik.handleSubmit}
-          className=" text-black rounded-md border border-gray-200 p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 w-full "
+          className=" text-slate-800 rounded-md border border-gray-200 p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 w-full "
         >
           <FormInput
             name="name"

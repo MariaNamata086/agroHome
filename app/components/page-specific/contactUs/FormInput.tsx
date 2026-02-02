@@ -53,7 +53,7 @@ function FormInput(props: InputProps) {
   return (
     <div className="flex flex-col gap-[8px] w-full">
       {label && (
-        <label htmlFor={id} className="pl-[4px] text-slate-600 text-[11px]">
+        <label htmlFor={id} className="pl-[4px] text-slate-600 text-[11px] md:text-[13px]">
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}
@@ -64,12 +64,13 @@ function FormInput(props: InputProps) {
           style={{
             borderWidth: '0.5px',
             borderStyle: 'solid',
+            borderColor:'oklch(20.8% 0.042 265.755)',
             backgroundColor: '#e9e8e690',
             borderRadius: '3px',
             width: '100%',
             fontSize: '12px',
           }}
-          className={`flex transition-all duration-75 focus:border-[0.5px] focus:outline outline-slate-500 focus:shadow-sm focus:${borderColor} px-[10px] h-[40px]`}
+          className={`flex transition-all duration-75 focus:border-[0.5px] focus:outline outline-primaryGreen focus:shadow-sm focus:${borderColor} px-2.5 h-10`}
           type={
             type === 'password'
               ? passwordVisible
