@@ -85,20 +85,29 @@ const Aboutus = () => {
             <SectionSmallHeader headingContent="Our Story" />
           </p>
           <p className="tracking-wider text-slate-600 text-md md:text-[16px] leading-loose text-right">
-            From Ntangala village in Katikamu Sub-county, Luweero District,
-            Joseph Lwevuze has built more than a farm. He has built a model of
-            modern agriculture, a training institution, and a lasting legacy
-            rooted in discipline, innovation, and service.
+            I welcome you to this world of development and competition.I believe
+            we were created to make this world a better place, and wherever we
+            are, we must work to bring positive change. Progress requires
+            persistence — if you cannot run, walk; if you cannot walk, crawl —
+            but always keep moving. Our local saying,{' '}
+            <b>“Enkulakulana ejja lwampaka,” </b> reminds us that there is no
+            development without persistence and perseverance.
           </p>
           <p className="flex text-left tracking-wider leading-loose md:text-[16px] text-slate-600 text-[12px]">
-            What began as a family farming effort has grown into one of Uganda’s
-            most respected integrated farming and training centres — proving
-            that agriculture can be both profitable and sustainable when guided
-            by knowledge and integrity.
+            Back in school, difficult questions earned more marks than simple
+            ones — and life is no different. Without hard work, risk-taking, and
+            perseverance, we should not expect meaningful results. If we do not
+            create positive change in ourselves and in others, then our
+            existence loses its meaning.
           </p>
-          <i className="text-forestGreen tracking-wider font-semibold">
-            Enkulakulana Ejja Lwampaka
-          </i>
+          <p className="text-forestGreen tracking-wider font-semibold">
+            Strengthen unity. Never be prejudiced. Differences will always
+            exist, but when handled well, they can become a source of strength
+            rather than division. Unity, humility, and service to others
+            strengthen communities, while giving time to others’ benefit
+            enriches our own lives. Trust God, avoid comfort zones, work hard,
+            and walk your journey with purpose and integrity.
+          </p>
         </div>
       </div>
       <section className="flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
