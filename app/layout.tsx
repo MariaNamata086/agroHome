@@ -5,8 +5,8 @@ import React from 'react';
 // eslint-disable-next-line import/order
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Footer from './components/shared/Footer';
-import Navbar from './components/shared/Navbar';
+import Footer from '@components/shared/Footer';
+import Navbar from '@components/shared/Navbar';
 
 config.autoAddCss = false;
 

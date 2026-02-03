@@ -14,16 +14,17 @@ import { PiCaretUp, PiCaretDown } from 'react-icons/pi';
 import logo from '@assets/logo.svg';
 
 function Navbar() {
-  const [menuVisible, setMenuVisible] = useState<boolean>(false);
+  const [mobileMenuVisible, setMobileMenuVisible] = useState<boolean>(false);
   const [mobileProjectsVisible, setMobileProjectsVisible] =
     useState<boolean>(false);
+
+  const [projectsVisible, setProjectsVisible] = useState<boolean>(false);
 
   const pathName = usePathname();
 
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/aboutUs' },
-    { name: 'Projects', href: '/projects' },
     { name: 'Contact us', href: '/contactUs' },
     { name: 'News', href: '/news' },
   ];
@@ -49,15 +50,57 @@ function Navbar() {
 
             return (
               <Link
+                onMouseEnter={() => {
+                  setProjectsVisible(false);
+                }}
                 key={link.href}
                 href={link.href}
-                className={`${isActive ? 'text-primaryGreen' : 'black'} text-md`}
+                className={`${isActive ? 'text-primaryGreen' : 'text-slate-700'} text-md`}
               >
                 {link.name}
               </Link>
             );
           })}
         </div>
+        <div className="flex flex-col font-medium relative group">
+          <Link
+            href={'/projects'}
+            className={`${pathName === '/projects' ? 'text-primaryGreen' : 'text-slate-700'} font-semibold`}
+            onMouseEnter={() => {
+              setProjectsVisible(true);
+            }}
+          >
+            Our Projects
+          </Link>
+          <div
+            className={`${
+              projectsVisible ? 'flex ' : 'hidden'
+            }  bg-white absolute justify-center items-center  w-50 h-50  flex-col -ml-10 gap-4 text-slate-700 text-[14px] tracking-wider mt-10 rounded-lg shadow-xl`}
+            onMouseLeave={() => {
+              setProjectsVisible(false);
+            }}
+          >
+            <Link
+              className={'flex hover:bg-primaryGreen hover:text-white p-2'}
+              href="/app/projects/coffee"
+            >
+              Coffee Farming
+            </Link>
+            <Link
+              className={'flex hover:text-sky-400'}
+              href="/app/projects/poultry"
+            >
+              Poultry Farming
+            </Link>
+            <Link
+              className={'flex hover:text-sky-400'}
+              href="/app/projects/bananas"
+            >
+              Bananas project
+            </Link>
+          </div>
+        </div>
+        {/* our projects */}
         <Link
           href={'/app/contact-us'}
           className="flex items-center text-black gap-2 hover:text-white justify-around p-3.5 rounded-full w-[1/4] bg-amber-300 hover:bg-stone-500"
@@ -66,15 +109,16 @@ function Navbar() {
           <FontAwesomeIcon icon={faEnvelopeOpenText} />
         </Link>
       </div>
+
       <div className="flex md:hidden flex-col gap-3 p-2.5 ">
         <button
           type="button"
           className="text-4xl px-10"
           onClick={() => {
-            setMenuVisible(!menuVisible);
+            setMobileMenuVisible(!mobileMenuVisible);
           }}
         >
-          {menuVisible ? (
+          {mobileMenuVisible ? (
             <FontAwesomeIcon
               icon={faXmark}
               className="text-gray-700 hover:text-primaryGreen"
@@ -85,7 +129,7 @@ function Navbar() {
         </button>
         <div
           className={`${
-            menuVisible ? 'flex' : 'hidden'
+            mobileMenuVisible ? 'flex' : 'hidden'
           } flex-col gap-5 bg-white shadow-md shadow-sky-200 w-[65%] self-end h-auto text-black p-8 rounded-xl -mt-5`}
         >
           <Link href={'/aboutUs'} className="flex hover:text-primaryGreen">
