@@ -131,20 +131,22 @@ function PoultryProject() {
           </div>
         </div> */}
         {/* might need to remove this upper div */}
-        <div className="flexex-col gap-6 md:gap-10">
-          <h1 className="">Project Overview</h1>
-          <p>
+        <div className="flex flex-col self-center gap-6 -mt-14 px-6 ">
+          <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
+            Project Overview
+          </h1>
+          <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
             {' '}
             Our poultry project is the backbone of the farm. We specialize
             primarily in <b>layer birds,</b>reared using a{' '}
             <b>modern battery cage system</b>- a technology-driven approach that
             ensures efficiency, top-notch bird welfare and superior egg quality.
           </p>
-          <p className="mt-3">
+          <p className="tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
             This system allows us to manage over <b>10,000 birds</b> with
             precision, consistency, and strict hygiene standards
           </p>
-          <p className="">
+          <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
             Our layer enterprise serves both as a commercial operation and a
             training model for farmers seeking to transition to efficient,
             hygienic and profitable poultry production.
@@ -157,7 +159,7 @@ function PoultryProject() {
             alt="image showing poultry day old chicks in a brooder"
             style={{ objectFit: 'cover' }}
           />
-          <div className=" absolute inset-0 bg-black/50 flex gap-2 flex-col items-center justify-center h-auto text-white p-10 w-full tracking-wider leading-loose">
+          <div className=" absolute inset-0 bg-black/50 flex gap-2 flex-col items-center justify-center h-auto p-10 w-full tracking-wider leading-loose">
             <div className="flex flex-col  ">
               <h2 className="flex z-10 gap-4 text-primaryBrown font-semibold mb-4 text-xl md:text-4xl w-full md:w-[60%] text-center self-center leading-relaxed tracking-widest py-5">
                 Let's take you through the poultry farming journey
@@ -177,7 +179,7 @@ function PoultryProject() {
                           fontSize={40}
                         />
                       </span>
-                      <div className="flex flex-col gap-1.5 bg-slate-300 py-3.5 px-6 rounded-full">
+                      <div className="flex flex-col gap-1.5 bg-slate-200 py-3.5 px-8 rounded-full">
                         <h3
                           style={{
                             color:
@@ -185,7 +187,7 @@ function PoultryProject() {
                                 ? 'black'
                                 : 'oklch(55.4% 0.046 257.417)',
                           }}
-                          className="text-[13px] md:text-[15px] text-forestGreen"
+                          className="text-[13px] font-medium tracking-widest md:text-[15px] text-forestGreen"
                         >
                           {heading}
                         </h3>
@@ -193,17 +195,17 @@ function PoultryProject() {
                           style={{
                             color:
                               index === 0 || index === 1 || index === 2
-                                ? '#384D48'
+                                ? 'oklch(30.2% 0.056 229.695)'
                                 : 'oklch(37.2% 0.044 257.287)',
                           }}
-                          className="flex tracking-relaxed text-sm not-last:md:text-[13px]"
+                          className="flex tracking-relaxed text-sm md:text-[14px]"
                         >
                           {moreInfo}
                         </span>
                       </div>
                     </div>
                     <span
-                      className="flex -mt-5 w-0.5 h-11.25 md:h-18.25 bg-slate-300 ml-6"
+                      className="flex -mt-8 w-0.5 h-11.25 md:h-18.25 bg-slate-300 ml-6"
                       style={{
                         backgroundColor:
                           index === 0 || index === 1 || index === 2
