@@ -27,15 +27,17 @@ const Different = () => {
         </h2>
         <p
           ref={ref}
-          className={`text-sm md:text-[17px] max-w-xl text-left leading-relaxed
+          className={`text-sm md:text-[17px] md:w-[85%] text-left  leading-relaxed md:leading-10 tracking-wider
         transform transition-all duration-700 ease-out
         ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
       `}
         >
-          Malesuada elit laoreet quisque facilisi vivamus fringilla. Augue felis
-          nostra posuere urna si mattis ultrices natoque nulla curabitur
-          laoreet. Laculis ligula hendrerit millis eqestas vulputate inceptos
-          hac massa.
+          Unlike traditional agriculture,modern agriculture focuses on
+          scientific knowledge and technology to increase efficiency and
+          productivity. With a population that is growing exponentially,
+          advanced techniques are essential in meeting the increased demand for
+          food and ensuring that it is produced sustainably. That is our
+          specialty.
         </p>
         <CallToActionButton callToAction="Discover More" href="/app/projects" />
       </div>

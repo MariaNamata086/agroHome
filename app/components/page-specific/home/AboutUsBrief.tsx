@@ -3,6 +3,7 @@ import React from 'react';
 import bananaProjectPicture from '@assets/banana.jpeg';
 import poultryProjectPicture from '@assets/poultryPortrait.jpeg';
 import CallToActionButton from '../../shared/CallToActionButton';
+import Motion from '../../shared/Motion';
 import SectionSmallHeader from '../../shared/SectionSmallHeader';
 
 const AboutUsBrief = () => {
@@ -28,19 +29,23 @@ const AboutUsBrief = () => {
           className="mt-10 object-cover"
         />
       </div>
+
       <div className="flex flex-col gap-3 md:gap-6 md:w-1/2 ">
         <SectionSmallHeader headingContent="Who We Are" />
         <h2 className="font-bold text-black text-[20px] md:text-[25px] tracking-wider">
           Rooted in Diversity and Sustainability{' '}
         </h2>
-        <p className="text-[16px] md:text-[14px] tracking-wider leading-loose">
-          We are a diversified commercial agricultural enterprise based in
-          Luweero District, Uganda, specializing in layer poultry production,
-          Robusta coffee farming, banana farming and plantation forestry. Our
-          work blends <b>modern techology</b>, <b>organic farming principles</b>{' '}
-          and a deep commitment to <b>educating fellow farmers</b> on modern,
-          sustainable and productive agricultural methods.{' '}
-        </p>
+        <Motion direction="right">
+          <p className="text-[16px] md:text-[14px] tracking-wider leading-loose">
+            We are a diversified commercial agricultural enterprise based in
+            Luweero District, Uganda, specializing in layer poultry production,
+            Robusta coffee farming, banana farming and plantation forestry. Our
+            work blends <b>modern techology</b>,{' '}
+            <b>organic farming principles</b> and a deep commitment to{' '}
+            <b>educating fellow farmers</b> on modern, sustainable and
+            productive agricultural methods.{' '}
+          </p>
+        </Motion>
         <CallToActionButton callToAction="More About Us" href="/app/aboutUs" />
       </div>
     </section>

@@ -6,7 +6,7 @@ import React from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Navbar from '@/app/components/shared/navbar';
-import Footer from '@components/shared/Footer';
+import Footer from '@components/shared/footer';
 config.autoAddCss = false;
 
 const poppins = Poppins({

@@ -21,6 +21,7 @@ import CoreAreasSection from './components/page-specific/home/CoreAreasSection';
 import Different from './components/page-specific/home/Different';
 import HeroSection from './components/page-specific/home/HeroSection';
 import HorizontalLine from './components/shared/HorizontalLine';
+import Motion from './components/shared/Motion';
 
 export default function Home() {
   const impacthighlightsData = [
@@ -134,26 +135,28 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
-          <p className="flext font-semibold text-md md:text-lg ">
-            Want to learn modern farming techniques or partner with us?
-          </p>
-          <div className="flex items-center gap-3">
-            <Link
-              href={'/contactUs'}
-              className="hover:text-sky-500 text-sm hover:scale-105"
-            >
-              Contact Us
-            </Link>
-            <span className="font-bold">|</span>
-            <Link
-              href={'/projects'}
-              className="hover:text-sky-500 text-sm hover:scale-105"
-            >
-              Learn More
-            </Link>
+        <Motion direction="zoom">
+          <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
+            <p className="flext font-semibold text-md md:text-lg ">
+              Want to learn modern farming techniques or partner with us?
+            </p>
+            <div className="flex items-center gap-3">
+              <Link
+                href={'/contactUs'}
+                className="hover:text-sky-500 text-sm hover:scale-105"
+              >
+                Contact Us
+              </Link>
+              <span className="font-bold">|</span>
+              <Link
+                href={'/projects'}
+                className="hover:text-sky-500 text-sm hover:scale-105"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
-        </div>
+        </Motion>
       </div>
     </main>
   );

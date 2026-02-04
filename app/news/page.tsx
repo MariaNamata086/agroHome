@@ -10,6 +10,7 @@ import papalKnightArticleImage from '@assets/papalKnight.png';
 import poultryManureArticleImage from '@assets/poultryManure.png';
 import NewsArcticle from '../components/page-specific/news/NewsArcticle';
 import VideoComponent from '../components/page-specific/news/VideoComponent';
+import Motion from '../components/shared/Motion';
 import ProjectHeroSection from '../components/shared/ProjectHeroSection';
 
 function page() {
@@ -78,23 +79,27 @@ function page() {
       />
       <div className="flex flex-col gap-7 md:gap-13 p-5 md:px-20">
         <div className="flex flex-col  gap-8 md:gap-12 justify-center items-center tracking-wider leading-loose">
-          <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4">
-            <FontAwesomeIcon
-              icon={faStarHalfStroke}
-              size="lg"
-              className="mt-3"
-            />
-            <span>Be inspired with the events going on at our farm</span>
-          </h1>
-          <p className="tracking-wider leading-loose text-center md:px-12">
-            Our journey has not only transformed our farm — it has captured
-            national attention. From organic coffee success to farmer training
-            and climate-smart practices, our story has been featured by Uganda’s
-            leading media houses. These stories offer a closer look at the
-            people, passion, and practices behind the work. Dive into the
-            articles below and discover how one farm’s commitment to excellence
-            is creating ripples far beyond its fields.
-          </p>
+          <Motion direction="right">
+            <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4">
+              <FontAwesomeIcon
+                icon={faStarHalfStroke}
+                size="lg"
+                className="mt-3"
+              />
+              <span>Be inspired with the events going on at our farm</span>
+            </h1>
+          </Motion>
+          <Motion direction="up">
+            <p className="tracking-wider leading-relaxed md:leading-12 text-center md:px-12">
+              Our journey has not only transformed our farm — it has captured
+              national attention. From organic coffee success to farmer training
+              and climate-smart practices, our story has been featured by
+              Uganda’s leading media houses. These stories offer a closer look
+              at the people, passion, and practices behind the work. Dive into
+              the articles below and discover how one farm’s commitment to
+              excellence is creating ripples far beyond its fields.
+            </p>
+          </Motion>
           <div className="flex flex-col gap-6 md:gap-10">
             {newsArticlesData.map(
               (

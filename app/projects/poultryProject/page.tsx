@@ -15,6 +15,7 @@ import { GiBirdCage, GiCctvCamera } from 'react-icons/gi';
 import { TbClockStar } from 'react-icons/tb';
 import { useInView } from 'react-intersection-observer';
 import HeaderBanner from '@/app/components/shared/HeaderBanner';
+import Motion from '@/app/components/shared/Motion';
 import PointCard from '@/app/components/shared/Pointcard';
 import cleanEggsPicture from '@assets/batteryCageEggs.jpg';
 import poultryStagesImage from '@assets/broodingPipedWater.jpg';
@@ -114,44 +115,30 @@ function PoultryProject() {
       />
 
       <div className="flex flex-col bg-white gap-20 p-10 md:p-20">
-        {/* <div className="relative h-auto flex ">
-          <div className="">
-            <Image
-              src={poultryFarmingHero}
-              alt="picture of interiror of battery cage system"
-              style={{ objectFit: 'contain' }}
-              priority
-            />
-          </div>
-          <div className="absolute tracking-wider gap-10 text-white bg-black/20 flex flex-col z-10">
-            <h1 className="">Advanced Layer Poultry Farming</h1>
-            <p className="">
-              Precision, hygiene, and productivity at commercial scale
+        <Motion direction="right">
+          <div className="flex flex-col self-center gap-6 -mt-14 px-6 ">
+            <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
+              Project Overview
+            </h1>
+            <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
+              {' '}
+              Our poultry project is the backbone of the farm. We specialize
+              primarily in <b>layer birds,</b>reared using a{' '}
+              <b>modern battery cage system</b>- a technology-driven approach
+              that ensures efficiency, top-notch bird welfare and superior egg
+              quality.
+            </p>
+            <p className="tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
+              This system allows us to manage over <b>10,000 birds</b> with
+              precision, consistency, and strict hygiene standards
+            </p>
+            <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
+              Our layer enterprise serves both as a commercial operation and a
+              training model for farmers seeking to transition to efficient,
+              hygienic and profitable poultry production.
             </p>
           </div>
-        </div> */}
-        {/* might need to remove this upper div */}
-        <div className="flex flex-col self-center gap-6 -mt-14 px-6 ">
-          <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
-            Project Overview
-          </h1>
-          <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
-            {' '}
-            Our poultry project is the backbone of the farm. We specialize
-            primarily in <b>layer birds,</b>reared using a{' '}
-            <b>modern battery cage system</b>- a technology-driven approach that
-            ensures efficiency, top-notch bird welfare and superior egg quality.
-          </p>
-          <p className="tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
-            This system allows us to manage over <b>10,000 birds</b> with
-            precision, consistency, and strict hygiene standards
-          </p>
-          <p className=" tracking-wider text-slate-700 leading-relaxed text-md md:text-[16px]">
-            Our layer enterprise serves both as a commercial operation and a
-            training model for farmers seeking to transition to efficient,
-            hygienic and profitable poultry production.
-          </p>
-        </div>
+        </Motion>
 
         <div className="flex relative h-235">
           <Image
@@ -270,14 +257,16 @@ function PoultryProject() {
             >
               {poultryProjectOutcomesData.map((item, index) => {
                 return (
-                  <p className="flex items-center gap-3" key={index}>
-                    <FontAwesomeIcon
-                      icon={faCheckDouble}
-                      size="xl"
-                      color="#96CA2D"
-                    />
-                    <span className="">{item}</span>
-                  </p>
+                  <Motion direction="up" key={index}>
+                    <p className="flex items-center gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheckDouble}
+                        size="xl"
+                        color="#96CA2D"
+                      />
+                      <span className="">{item}</span>
+                    </p>
+                  </Motion>
                 );
               })}
             </div>

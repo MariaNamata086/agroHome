@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import notFoundImage from '@assets/notFound.jpg';
 import CallToActionButton from './components/shared/CallToActionButton';
+import Motion from './components/shared/Motion';
 
 function NotFound() {
   return (
@@ -24,14 +25,16 @@ function NotFound() {
           The page you are looking for does not exist. perhaps you can return to
           our homepage and see if you can find what you are looking for.
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16">
-          <CallToActionButton callToAction="Home Page" href="/" />
-          <CallToActionButton
-            callToAction="Contact Us"
-            href="/app/contactUs"
-            backgroundColor="bg-slate-200"
-          />
-        </div>
+        <Motion direction="up">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16">
+            <CallToActionButton callToAction="Home Page" href="/" />
+            <CallToActionButton
+              callToAction="Contact Us"
+              href="/app/contactUs"
+              backgroundColor="bg-slate-200"
+            />
+          </div>
+        </Motion>
       </div>
     </section>
   );

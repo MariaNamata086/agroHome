@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import CallToActionButton from '../../shared/CallToActionButton';
+import Motion from '../../shared/Motion';
 
 interface NewsArcticleProps {
   title: string;
@@ -22,9 +23,11 @@ const NewsArcticle = ({
   return (
     <div className="flex flex-col md:flex-row md:gap-5 bg-stone-100  tracking-wider leading-loose w-full justify-center h-80 md:h-100">
       <div className="flex flex-col gap-3.5 items-center justify-center px-4 md:px-8 md:gap-5">
-        <h2 className="text-xl text-center font-bold text-slate-700 tracking-wider leading-loose">
-          {title}
-        </h2>
+        <Motion direction="zoom">
+          <h2 className="text-xl text-center font-bold text-slate-700 tracking-wider leading-loose">
+            {title}
+          </h2>
+        </Motion>
         <p className="text-stone-700 text-right">{articleExcerpt}</p>
         <div className="flex md:-ml-28 items-center">
           <span className="text-sm text-gray-500 font-semibold">
