@@ -9,18 +9,18 @@ interface PointCardProp {
 
 function PointCard({ icon, moreInfo, description, point }: PointCardProp) {
   return (
-    <div className="flex flex-col gap-5 items-center justify-center h-87.5 shadow-sm rounded-full border-b bover:scale-105 border-slate-600 hover:border-primaryGreen">
+    <div className="flex flex-col gap-3 items-center justify-center shadow-lg rounded-full border-b-2 h-80 w-80 hover:scale-105 border-slate-600 p-4 hover:border-primaryGreen">
       <IconDot
         icon={icon}
-        circleDimensions="h-[20px] w-[20px]"
-        containerDimensions="h-[75px] w-[75px]"
-        iconSize="text-[50px]"
+        circleDimensions="h-[30px] w-[30px]"
+        containerDimensions="h-[90px] w-[90px]"
+        iconSize="text-[60px]"
       />
-      <div className="flex flex-col gap-7.5 p-3 tracking-wider">
-        <h2 className="font-semibold text-center text-xl md:text-xl">
+      <div className="flex justify-center items-center flex-col gap-7.5 p-3 tracking-widest">
+        <h2 className="font-semibold text-center text-xl md:text-2xl">
           {point}
         </h2>
-        <p className="text-slate-500 text-xs md:text-md text-center tracking-wider leading-loose">
+        <p className="flex text-slate-600 text-xs w-[80%] md:text-[16px] text-center tracking-wider leading-loose">
           {description}
         </p>
         {moreInfo && (

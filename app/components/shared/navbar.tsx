@@ -82,19 +82,19 @@ function Navbar() {
           >
             <Link
               className={'flex hover:bg-primaryGreen hover:text-white p-2'}
-              href="/app/projects/coffee"
+              href="/projects/coffeeProject"
             >
               Coffee Farming
             </Link>
             <Link
               className={'flex hover:text-sky-400'}
-              href="/app/projects/poultry"
+              href="/projects/poultryProject"
             >
               Poultry Farming
             </Link>
             <Link
               className={'flex hover:text-sky-400'}
-              href="/app/projects/bananas"
+              href="/projects/bananasProject"
             >
               Bananas project
             </Link>
@@ -159,19 +159,19 @@ function Navbar() {
                 Our Projects
               </Link>
               <Link
-                href={'/app/projects/bananas'}
+                href={'/app/projects/bananasProject'}
                 className="flex hover:text-primaryGreen"
               >
                 Bananas project
               </Link>
               <Link
-                href={'/app/projects/poultry'}
+                href={'/app/projects/poultryProject'}
                 className="flex hover:text-primaryGreen"
               >
                 Poultry project
               </Link>
               <Link
-                href={'/app/projects/coffee'}
+                href={'/app/projects/coffeeProject'}
                 className="flex hover:text-primaryGreen"
               >
                 Coffee project

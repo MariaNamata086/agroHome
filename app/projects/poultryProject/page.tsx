@@ -1,3 +1,5 @@
+'use client';
+
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import {
   faPumpMedical,
@@ -5,11 +7,13 @@ import {
   faEgg,
   faShieldVirus,
   faBowlFood,
+  faCheckDouble,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import { GiCctvCamera } from 'react-icons/gi';
+import { GiBirdCage, GiCctvCamera } from 'react-icons/gi';
 import { TbClockStar } from 'react-icons/tb';
+import { useInView } from 'react-intersection-observer';
 import HeaderBanner from '@/app/components/shared/HeaderBanner';
 import ImageBg from '@/app/components/shared/ImageBg';
 import PointCard from '@/app/components/shared/Pointcard';
@@ -18,9 +22,14 @@ import poultryStagesImage from '@assets/broodingPipedWater.jpg';
 import poultryFarmingHero from '@assets/poultryCage2.webp';
 
 function PoultryProject() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.4,
+  });
+
   const whyBatteryCageSysytemData = [
     {
-      advantage: 'Clean Feeding',
+      advantage: 'Hygienic Feeding',
       icon: faPumpMedical,
       moreInfo:
         'There is no mixing of feed with droppings, which would result into spread of diseases.',
@@ -98,17 +107,15 @@ function PoultryProject() {
     'Scalable and Sustainable Operations',
   ];
   return (
-    <main className="flex flex-col p-20">
-      <HeaderBanner page="Poultry Project" pageHeading="ENTERPRISE" />
-      <ImageBg
+    <main className="flex flex-col gap-10">
+      <HeaderBanner
+        page="Poultry Project"
+        pageHeading="From chick to crate - a complete poultry production journey . "
         src={poultryFarmingHero}
-        alt="picture of interiror of battery cage system"
-        componentHeading="Poultry Farming"
-        componentSubheading="From chick yo crate - a complete poultry production journey"
       />
-      {/* if header banner will not be necessary, we'll also remove the immediately following div container */}
-      <div className="flex flex-col bg-white gap-20">
-        <div className="relative h-auto flex ">
+
+      <div className="flex flex-col bg-white gap-20 p-10 md:p-20">
+        {/* <div className="relative h-auto flex ">
           <div className="">
             <Image
               src={poultryFarmingHero}
@@ -123,7 +130,7 @@ function PoultryProject() {
               Precision, hygiene, and productivity at commercial scale
             </p>
           </div>
-        </div>
+        </div> */}
         {/* might need to remove this upper div */}
         <div className="flexex-col gap-6 md:gap-10">
           <h1 className="">Project Overview</h1>
@@ -145,21 +152,21 @@ function PoultryProject() {
           </p>
         </div>
 
-        <div className="flex relative">
+        <div className="flex relative h-235">
           <Image
             src={poultryStagesImage}
             alt="image showing poultry day old chicks in a brooder"
             style={{ objectFit: 'cover' }}
           />
-          <div className="inset-0 bg-black/70 flex gap-2 flex-col items-center justify-center text-white p-10 w-full tracking-wider leading-loose">
-            <h2 className="">
-              Let's take you through the poultry farming journey
-            </h2>
-            <div className="flex absolute  ">
+          <div className=" absolute inset-0 bg-black/50 flex gap-2 flex-col items-center justify-center h-auto text-white p-10 w-full tracking-wider leading-loose">
+            <div className="flex flex-col  ">
+              <h2 className="flex z-10 gap-4 text-primaryBrown font-semibold mb-4 text-xl md:text-4xl w-full md:w-[60%] text-center self-center leading-relaxed tracking-widest py-5">
+                Let's take you through the poultry farming journey
+              </h2>
               {poultryJourneyStepsData.map(({ heading, moreInfo }, index) => {
                 return (
-                  <div className="flex flex-col relative" key={index}>
-                    <div className="flex items-center gap-5">
+                  <div className="flex flex-col relative " key={index}>
+                    <div className="flex items-center md:w-[70%] gap-5">
                       <span className="l-8 z-10">
                         <FontAwesomeIcon
                           icon={faSquareCheck}
@@ -168,33 +175,41 @@ function PoultryProject() {
                               ? '#96CA2D'
                               : '#d1d5db'
                           }
-                          fontSize={30}
+                          fontSize={40}
                         />
                       </span>
-                      <div className="flex flex-col gap-1.5 bg-slate-400 p-2 rounded-full">
+                      <div className="flex flex-col gap-1.5 bg-slate-300 py-3.5 px-6 rounded-full">
                         <h3
                           style={{
                             color:
                               index === 0 || index === 1 || index === 2
-                                ? '#1e293b'
+                                ? 'black'
                                 : 'oklch(55.4% 0.046 257.417)',
                           }}
-                          className="text-[13px] md:text-[18px]"
+                          className="text-[13px] md:text-[15px] text-forestGreen"
                         >
                           {heading}
                         </h3>
-                        <span className="flex text-sm md:text-md">
+                        <span
+                          style={{
+                            color:
+                              index === 0 || index === 1 || index === 2
+                                ? '#384D48'
+                                : 'oklch(37.2% 0.044 257.287)',
+                          }}
+                          className="flex tracking-relaxed text-sm not-last:md:text-[13px]"
+                        >
                           {moreInfo}
                         </span>
                       </div>
                     </div>
                     <span
-                      className="-mt-2 w-0.5 h-11.25 md:h-16.25 bg-slate-300 ml-3"
+                      className="flex -mt-5 w-0.5 h-11.25 md:h-18.25 bg-slate-300 ml-6"
                       style={{
                         backgroundColor:
-                          index === 0 || index === 1
+                          index === 0 || index === 1 || index === 2
                             ? '#96CA2D'
-                            : 'oklch(55.4% 0.046 257.417)',
+                            : '#d1d5db',
                       }}
                     />
                   </div>
@@ -203,16 +218,28 @@ function PoultryProject() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-5">
-          <h2 className="">Why Battery Cage Sysytem?</h2>
-          <div className="grid md:grid-col-2">
+        <div className="flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
+            <GiBirdCage />
+            <span>Why Battery Cage System?</span>
+          </h2>
+          <div ref={ref} className="grid md:grid-cols-2 gap-4 md:gap-6">
             {whyBatteryCageSysytemData.map(
               ({ advantage, icon, moreInfo }, index) => {
                 return (
-                  <div className="flex flex-col gap-4" key={index}>
-                    <div className="flex items-center gap-1">
-                      <h3 className="">{advantage}</h3>
-                      <FontAwesomeIcon icon={icon} size="" />
+                  <div
+                    className={`flex flex-col gap-4 py-2 px-3 md:px-6 shadow-lg rounded-md duration-1000 ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'} `}
+                    key={index}
+                  >
+                    <div className="flex items-center gap-2.5 p-2">
+                      <h3 className="font-semibold text-xl tracking-widest text-slate-700">
+                        {advantage}
+                      </h3>
+                      <FontAwesomeIcon
+                        icon={icon}
+                        size="2xl"
+                        color="oklch(37.3% 0.034 259.733)"
+                      />
                     </div>
                     <p className="tracking-wider leading-loose">{moreInfo}</p>
                   </div>
@@ -221,28 +248,56 @@ function PoultryProject() {
             )}
           </div>
         </div>
-        <ImageBg
-          src={cleanEggsPicture}
-          alt="a picture ashowing clean healthy eggs from the battery cage system"
-          componentHeading="Project Outcomes"
-          componentContent={poultryProjectOutcomesData}
-        />
+        <section className="relative mb-1 w-full h-87.5 md:h-130">
+          <Image
+            src={cleanEggsPicture}
+            alt="Image of faith, family and longterm thinking"
+            fill
+            className="object-fill"
+            priority
+          />
 
-        <div className="h-auto flex ">
-          <div className="flex flex-col gap-3">
-            <h1 className="">Technology & Management</h1>
-            <div className="flex flex-col md:flex-row md:items-center md:gap-2 ">
-              {managementData.map(({ Point, description, icon }, index) => {
+          <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center px-5 gap-4 md:gap-10 text-center text-gray-300">
+            <h2 className="font-semibold text-xl tracking-wider md:text-4xl">
+              Project Deliverables
+            </h2>
+            <div
+              // ref={ref}
+              className="flex flex-col text-sm md:text-[17px] text-center leading-loose
+              transform transition-all duration-700 ease-in-out 
+              gap-7"
+            >
+              {poultryProjectOutcomesData.map((item, index) => {
                 return (
-                  <PointCard
-                    key={index}
-                    point={Point}
-                    description={description}
-                    icon={icon}
-                  />
+                  <p className="flex items-center gap-3" key={index}>
+                    <FontAwesomeIcon
+                      icon={faCheckDouble}
+                      size="xl"
+                      color="#96CA2D"
+                    />
+                    <span className="">{item}</span>
+                  </p>
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        <div className="flex flex-col gap-3">
+          <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl">
+            Technology & Management
+          </h1>
+          <div className="flex flex-col md:flex-row md:items-center justify-between md:gap-2 ">
+            {managementData.map(({ Point, description, icon }, index) => {
+              return (
+                <PointCard
+                  key={index}
+                  point={Point}
+                  description={description}
+                  icon={icon}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
