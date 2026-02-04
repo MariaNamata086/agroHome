@@ -22,20 +22,20 @@ export default function Footer() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/app/aboutUs' },
     { name: 'Our Projects', href: '/app/projects' },
-    { name: 'Contact us', href: '/app/contact-us' },
+    { name: 'Contact us', href: '/app/contactUs' },
     { name: 'News', href: '/app/news' },
   ];
 
   const footerProjectsPagesLinksData = [
-    { name: 'Poultry Farming', href: '/app/projects/poultry' },
-    { name: 'Coffee Farming', href: '/app/projects/coffee' },
-    { name: 'Bananas', href: '/app/projects/bananas' },
+    { name: 'Poultry Farming', href: '/app/projects/poultryProject' },
+    { name: 'Coffee Farming', href: '/app/projects/coffeeProject' },
+    { name: 'Bananas', href: '/app/projects/bananasProject' },
     { name: 'Plantation Forestry', href: '/app/projects/plantationForestry' },
   ];
 
   const footerContactDetails: FooterContactDetails[] = [
     { icon: faLocationPin, contactInfo: 'Katikamu-Luweero' },
-    { icon: faEnvelope, contactInfo: 'hello@stjosephfarm.com' },
+    { icon: faEnvelope, contactInfo: 'info@stjosephruraltrainingcenter.com' },
     { icon: faPhone, contactInfo: '+256772628600' },
   ];
 
@@ -67,7 +67,7 @@ export default function Footer() {
               agriculture while empowering farmers and communities.
             </div>
             <p className="text-lime-300 text-xl font-semibold tracking-widest">
-              'Enkulakulana Ejja Lwampaka'{' '}
+              'Together in Development'{' '}
             </p>
             <div className="flex flex-col gap-4">
               {footerContactDetails.map(({ icon, contactInfo }, index) => {
@@ -158,7 +158,7 @@ export default function Footer() {
                 className="text-primaryGreen"
               />
               <span className="flex text-[13px]">
-                stjosephfarms086@gmail.com
+                info@stjosephruraltrainingcenter.com
               </span>
             </p>
           </div>

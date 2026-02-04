@@ -21,7 +21,7 @@ import SectionSmallHeader from '../components/shared/SectionSmallHeader';
 
 const Aboutus = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
   });
   const farmingPhilosophyData = [
@@ -72,7 +72,7 @@ const Aboutus = () => {
         pageHeading="Building a legacy of profitable, sustainable farming &mdash; and sharing it. "
       />
       <div className="flex flex-col gap-10 justify-center md:flex-row md:justify-between md:items-center   bg-slate-50 p-10 sm:w-full mx-auto">
-        <div className="flex flex-col h-80 w-[320px] md:w-[40%] md:h-118 rounded-full group bg-primaryGreen place-self-center mt-5 md:mt-0">
+        <div className="flex flex-col h-80 w-[320px] md:w-[45%] md:h-118 rounded-full group bg-primaryGreen place-self-center mt-5 md:mt-0">
           <Image
             src={proprietorImage}
             alt=""
@@ -90,17 +90,17 @@ const Aboutus = () => {
             are, we must work to bring positive change. Progress requires
             persistence — if you cannot run, walk; if you cannot walk, crawl —
             but always keep moving. Our local saying,{' '}
-            <b>“Enkulakulana ejja lwampaka,” </b> reminds us that there is no
+            <b>“Enkulakulana ejja lwa mpaka,” </b> reminds us that there is no
             development without persistence and perseverance.
           </p>
-          <p className="flex text-left tracking-wider leading-loose md:text-[16px] text-slate-600 text-[12px]">
+          <p className="text-right tracking-wider leading-loose md:text-[16px] text-slate-600 text-md">
             Back in school, difficult questions earned more marks than simple
             ones — and life is no different. Without hard work, risk-taking, and
             perseverance, we should not expect meaningful results. If we do not
             create positive change in ourselves and in others, then our
             existence loses its meaning.
           </p>
-          <p className="text-forestGreen tracking-wider font-semibold">
+          <p className=" text-slate-600 leading-loose tracking-wider text-md md:text-[16px] text-right ">
             Strengthen unity. Never be prejudiced. Differences will always
             exist, but when handled well, they can become a source of strength
             rather than division. Unity, humility, and service to others
@@ -108,6 +108,9 @@ const Aboutus = () => {
             enriches our own lives. Trust God, avoid comfort zones, work hard,
             and walk your journey with purpose and integrity.
           </p>
+          <i className="font-semibold text-md md:text-xl tracking-widest text-forestGreen">
+            'Together In Development'
+          </i>
         </div>
       </div>
       <section className="flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
@@ -176,7 +179,7 @@ const Aboutus = () => {
           <p
             ref={ref}
             className={`text-sm md:text-[17px] max-w-xl text-center leading-loose
-              transform transition-all duration-700 ease-in-out
+              transform transition-all duration-1500 ease-in-out
               ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
             `}
           >

@@ -27,7 +27,7 @@ const ContactUs = () => {
     {
       icon: faEnvelopeCircleCheck,
       locationHeading: 'Mail Us',
-      contactInfo: 'namatamaria086@gmail.com',
+      contactInfo: 'info@stjosephruraltrainingcenter.com',
     },
     {
       icon: faPhoneFlip,
