@@ -15,7 +15,6 @@ import { GiBirdCage, GiCctvCamera } from 'react-icons/gi';
 import { TbClockStar } from 'react-icons/tb';
 import { useInView } from 'react-intersection-observer';
 import HeaderBanner from '@/app/components/shared/HeaderBanner';
-import ImageBg from '@/app/components/shared/ImageBg';
 import PointCard from '@/app/components/shared/Pointcard';
 import cleanEggsPicture from '@assets/batteryCageEggs.jpg';
 import poultryStagesImage from '@assets/broodingPipedWater.jpg';
