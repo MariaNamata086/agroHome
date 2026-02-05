@@ -133,7 +133,7 @@ function page() {
             <FontAwesomeIcon
               icon={faYoutube}
               size="xl"
-              className="text-red-600"
+              className="text-red-600 animate-pulse"
             />
             <span>Check us out on YouTube</span>
           </h1>
