@@ -17,6 +17,7 @@ import headerBannerImage from '@assets/Sustainable-Agriculture.png';
 import WayOfFarmingCard from '../components/page-specific/aboutUs/FarmingPhilosophyCard';
 import HeaderBanner from '../components/shared/HeaderBanner';
 import ImageBg from '../components/shared/ImageBg';
+import Motion from '../components/shared/Motion';
 import SectionSmallHeader from '../components/shared/SectionSmallHeader';
 
 const Aboutus = () => {
@@ -100,15 +101,17 @@ const Aboutus = () => {
             create positive change in ourselves and in others, then our
             existence loses its meaning.
           </p>
-          <p className=" text-slate-600 leading-loose tracking-wider text-md md:text-[16px] text-right ">
-            Strengthen unity. Never be prejudiced. Differences will always
-            exist, but when handled well, they can become a source of strength
-            rather than division. Unity, humility, and service to others
-            strengthen communities, while giving time to others’ benefit
-            enriches our own lives. Trust God, avoid comfort zones, work hard,
-            and walk your journey with purpose and integrity.
-          </p>
-          <i className="font-semibold text-md md:text-xl tracking-widest text-forestGreen">
+          <Motion direction="up">
+            <p className=" text-slate-600 leading-loose tracking-wider text-md md:text-[16px] text-right ">
+              Strengthen unity. Never be prejudiced. Differences will always
+              exist, but when handled well, they can become a source of strength
+              rather than division. Unity, humility, and service to others
+              strengthen communities, while giving time to others’ benefit
+              enriches our own lives. Trust God, avoid comfort zones, work hard,
+              and walk your journey with purpose and integrity.
+            </p>
+          </Motion>
+          <i className="font-semibold text-md md:text-xl tracking-widest text-forestGreen animate-pulse">
             'Together In Development'
           </i>
         </div>
@@ -121,20 +124,19 @@ const Aboutus = () => {
         <div className="flex flex-col gap-3.5 md:gap-6">
           {ourImpactData.map(({ item, point }, index) => {
             return (
-              <p
-                className="flex items-center gap-4 md:gap-6 h-18 px-5 md:px-14 shadow-sm rounded-b-lg "
-                key={index}
-              >
-                <FontAwesomeIcon
-                  icon={faCircleCheck}
-                  size="xl"
-                  color="#96CA2D"
-                />
-                <p className="text-gray-600 text-[14px] md:text-[18px]">
-                  <b>{point} &mdash;</b>
-                  {item}
+              <Motion direction="right" key={index}>
+                <p className="flex items-center gap-4 md:gap-6 h-18 px-5 md:px-14 shadow-sm rounded-b-lg ">
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    size="xl"
+                    color="#96CA2D"
+                  />
+                  <p className="text-gray-600 text-[14px] md:text-[18px]">
+                    <b>{point} &mdash;</b>
+                    {item}
+                  </p>
                 </p>
-              </p>
+              </Motion>
             );
           })}
         </div>
@@ -153,12 +155,14 @@ const Aboutus = () => {
         <div className="grid md:grid-cols-2 md:gap-15">
           {farmingPhilosophyData.map(({ icon, heading, content }, index) => {
             return (
-              <WayOfFarmingCard
-                key={index}
-                heading={heading}
-                icon={icon}
-                content={content}
-              />
+              <Motion direction="up" key={index}>
+                {' '}
+                <WayOfFarmingCard
+                  heading={heading}
+                  icon={icon}
+                  content={content}
+                />
+              </Motion>
             );
           })}
         </div>

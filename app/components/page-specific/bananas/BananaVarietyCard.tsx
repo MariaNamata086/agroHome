@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Motion from '../../shared/Motion';
 
 interface BananaVarietyCardProps {
   name: string;
@@ -19,15 +20,16 @@ const BananaVarietyCard = ({
   varietyDetails2,
 }: BananaVarietyCardProps) => {
   return (
-    <div className="flex flex-col border-b-1.5 border-b-gray-600 hover:border-b-lime-300 shadow-sm">
-      Banana varieties
+    <div className="flex flex-col border-b-3 border-b-gray-600 hover:border-primaryGreen h-150 justify-start items-center rounded-b-lg shadow-sm">
       <Image
         src={varietyImage}
         alt={'image of banana variety'}
-        className="w-full h-[65%] object-cover"
+        className=" flex w-full h-[60%] object-cover mt-0"
       />
-      <div className="flex flex-col px-2.5 py-3 -mt-3.5 w-[85%] text-center tracking-wider leading-loose">
-        <h2 className="font-bold text-lg">{name}</h2>
+      <div className="flex flex-col p-5 rounded-lg shadow-t-xl -mt-7 gap-3 w-[85%] text-center tracking-wider leading-loose bg-white">
+        <h2 className="font-semibold tracking-widest text-slate-700 text-lg">
+          {name}
+        </h2>
 
         {varietyDetails1 ? (
           <ul className="list-disc">
@@ -42,9 +44,15 @@ const BananaVarietyCard = ({
           </ul>
         ) : (
           <div className="flex flex-col gap-1.5 ">
-            <p className="text-sm md:text-lg text-gray-500">{moreInfo1}</p>
+            <Motion direction="left">
+              <p className="text-sm md:text-md text-gray-600 tracking-widest leading-loose">
+                {moreInfo1}
+              </p>
+            </Motion>
             {moreInfo2 && (
-              <p className="text-sm md:text-lg text-gray-500">{moreInfo2}</p>
+              <p className="text-sm md:text-md text-gray-600 tracking-widest leading-loose">
+                {moreInfo2}
+              </p>
             )}
           </div>
         )}

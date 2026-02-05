@@ -38,9 +38,9 @@ const HeroSection = () => {
             Growing Food. Training Farmers, Building Legacies
           </h1>
           <p
-            className={`text-forestGreen text-md md:text-lg ${inView ? '-translate-y-5 opacity-100' : 'translate-y-6 opacity-0'} transform transition-transform ease-in duration-1500 delay-0`}
+            className={`text-forestGreen text-md leading-10 md:text-lg ${inView ? '-translate-y-5 opacity-100' : 'translate-y-6 opacity-0'} transform transition-transform ease-in duration-1500 delay-0`}
           >
-            A model farm and training center in Luweero District, Uganda &mdash;
+            A model farm and training center in Luweero District, Uganda;
             transforming agricluture through innovation, integrity, and impact.
           </p>
           <CallToActionButton

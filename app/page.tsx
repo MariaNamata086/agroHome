@@ -80,25 +80,28 @@ export default function Home() {
         <Different />
         <div className=" flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
           <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
-            <FontAwesomeIcon icon={faArrowTrendUp} size="lg" />
+            <FontAwesomeIcon
+              icon={faArrowTrendUp}
+              size="lg"
+              className="animate-bounce"
+            />
             <span>Our Impact</span>
           </h2>
           <div className="flex flex-col gap-3.5 md:gap-6">
             {impacthighlightsData.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 md:gap-6 h-22 px-5 md:px-14 shadow-sm rounded-b-md"
-                >
-                  <FontAwesomeIcon
-                    icon={faHandPointRight}
-                    size="xl"
-                    color="#96CA2D"
-                  />
-                  <span className="text-gray-600 text-[14px] md:text-[18px]">
-                    {item}
-                  </span>
-                </div>
+                <Motion direction="left" key={index}>
+                  <div className="flex items-center gap-4 md:gap-6 h-22 px-5 md:px-14 shadow-sm rounded-b-md">
+                    <FontAwesomeIcon
+                      icon={faHandPointRight}
+                      size="xl"
+                      color="#96CA2D"
+                    />
+                    <span className="text-gray-600 text-[14px] md:text-[18px]">
+                      {item}
+                    </span>
+                  </div>
+                </Motion>
               );
             })}
           </div>
@@ -117,20 +120,21 @@ export default function Home() {
           <div className="grid grid-cols-2 absolute justify-center items-center gap-4 md:gap-10 p-4 md:p-16 bg-black/40  z-10 tracking-wider leading-loose">
             {featuredInData.map(({ logo, name }, index) => {
               return (
-                <Link
-                  href={'/app/news'}
-                  className="flex flex-col md:flex-row gap-5 mt-14 h-auto md:items-center p-5 md:px-8"
-                  key={index}
-                >
-                  <Image
-                    src={logo}
-                    alt="Image showing partner logo"
-                    className="w-30 h-30"
-                  />
-                  <span className="flex text-white font-semibold tracking-widest ">
-                    {name}
-                  </span>
-                </Link>
+                <Motion direction="right" key={index}>
+                  <Link
+                    href={'/app/news'}
+                    className="flex flex-col md:flex-row gap-5 mt-14 h-auto md:items-center p-5 md:px-8"
+                  >
+                    <Image
+                      src={logo}
+                      alt="Image showing partner logo"
+                      className="w-30 h-30"
+                    />
+                    <span className="flex text-white font-semibold tracking-widest ">
+                      {name}
+                    </span>
+                  </Link>
+                </Motion>
               );
             })}
           </div>
@@ -143,14 +147,14 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Link
                 href={'/contactUs'}
-                className="hover:text-sky-500 text-sm hover:scale-105"
+                className="hover:text-primaryGreen text-sm hover:scale-105"
               >
                 Contact Us
               </Link>
               <span className="font-bold">|</span>
               <Link
                 href={'/projects'}
-                className="hover:text-sky-500 text-sm hover:scale-105"
+                className="hover:text-primaryGreen text-sm hover:scale-105"
               >
                 Learn More
               </Link>

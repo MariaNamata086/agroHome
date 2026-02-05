@@ -17,7 +17,7 @@ const Motion = ({
   direction = 'up',
   delay = 0,
   className = '',
-  threshold = 0.3,
+  threshold = 0.2,
 }: MotionProps) => {
   const { ref, inView } = useInView({
     triggerOnce: false,

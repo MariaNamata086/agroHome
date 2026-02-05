@@ -55,7 +55,7 @@ function Navbar() {
                 }}
                 key={link.href}
                 href={link.href}
-                className={`${isActive ? 'text-primaryGreen' : 'text-slate-700'} text-md`}
+                className={`${isActive ? 'text-primaryGreen' : 'text-slate-700'} text-md hover:text-primaryGreen`}
               >
                 {link.name}
               </Link>
@@ -65,7 +65,7 @@ function Navbar() {
         <div className="flex flex-col font-medium relative group">
           <Link
             href={'/projects'}
-            className={`${pathName === '/projects' ? 'text-primaryGreen' : 'text-slate-700'} font-semibold`}
+            className={`${pathName === '/projects' ? 'text-primaryGreen' : 'text-slate-700'} font-semibold hover:text-primaryGreen`}
             onMouseEnter={() => {
               setProjectsVisible(true);
             }}
@@ -75,25 +75,31 @@ function Navbar() {
           <div
             className={`${
               projectsVisible ? 'flex ' : 'hidden'
-            }  bg-white absolute justify-center items-center  w-50 h-50  flex-col -ml-10 gap-4 text-slate-700 text-[14px] tracking-wider mt-10 rounded-lg shadow-xl`}
+            } bg-white absolute  justify-center items-center  w-50 h-50  flex-col -ml-10 gap-4 text-slate-700 text-[14px] tracking-wider mt-10 rounded-lg shadow-2xl`}
             onMouseLeave={() => {
               setProjectsVisible(false);
             }}
           >
             <Link
-              className={'flex hover:bg-primaryGreen hover:text-white p-2'}
+              className={
+                ' hover:bg-primaryGreen w-full text-center p-2 hover:text-white py-2.5'
+              }
               href="/projects/coffeeProject"
             >
               Coffee Farming
             </Link>
             <Link
-              className={'flex hover:text-sky-400'}
+              className={
+                ' hover:bg-primaryGreen w-full text-center p-2 py-2.5 hover:text-white'
+              }
               href="/projects/poultryProject"
             >
               Poultry Farming
             </Link>
             <Link
-              className={'flex hover:text-sky-400'}
+              className={
+                ' hover:bg-primaryGreen w-full text-center p-2 hover:text-white py-2.5'
+              }
               href="/projects/bananasProject"
             >
               Bananas project

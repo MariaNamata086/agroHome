@@ -14,7 +14,7 @@ const WayOfFarmingCard = ({ icon, heading, content }: wayOfFarmingProps) => {
           <FontAwesomeIcon
             icon={icon}
             size="2xl"
-            className="text-primaryGreen"
+            className="text-primaryGreen animate-spin"
           />
         </span>
         <h2 className="text-gray-700 font-semibold text-lg md:text-xl tracking-wider">

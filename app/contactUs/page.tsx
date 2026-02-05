@@ -9,6 +9,7 @@ import contactUsHeroImage from '@assets/contact-us.jpg';
 import backgroundImage from '@assets/cookingBananas.jpeg';
 import InquiryFormComponent from '../components/page-specific/contactUs/InquiryFormComponent';
 import HeaderBanner from '../components/shared/HeaderBanner';
+import Motion from '../components/shared/Motion';
 import SectionSmallHeader from '../components/shared/SectionSmallHeader';
 
 const ContactUs = () => {
@@ -57,12 +58,15 @@ const ContactUs = () => {
             <h1 className="text-gray-800 tracking-wider font-semibold text-xl md:text-3xl leading-relaxed">
               Questions, ideas or projects? We're ready to help
             </h1>
-            <p className="text-slate-700 tracking-wider">
-              Whether you're looking for more information about our services,
-              have a specific project in mind, or just want to say hello, we're
-              here to assist you. Reach out to us through any of the following
-              methods, and we'll get back to you as soon as possible.
-            </p>
+            <Motion direction="left">
+              <p className="text-slate-700 tracking-wider">
+                Whether you're looking for more information about our services,
+                have a specific project in mind, or just want to say hello,
+                we're here to assist you. Reach out to us through any of the
+                following methods, and we'll get back to you as soon as
+                possible.
+              </p>
+            </Motion>
             <div className="flex flex-col gap-3.5">
               <h2 className="text-lg  tracking-wider text-gray-800 font-semibold">
                 Interested in:
@@ -74,11 +78,12 @@ const ContactUs = () => {
                   </li>
                 ))}
               </ul>
-
-              <p className="text-slate-700 tracking-wider -ml-3 font-medium">
-                We welcome individuals, groups, schools, NGOs and development
-                partners
-              </p>
+              <Motion direction="up">
+                <p className="text-slate-700 tracking-wider -ml-3 font-medium">
+                  We welcome individuals, groups, schools, NGOs and development
+                  partners
+                </p>
+              </Motion>
             </div>
           </div>
           <div className="flex h-auto md:w-1/2 shadow-xl border-t-4 border-t-primaryGreen">

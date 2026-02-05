@@ -50,13 +50,13 @@ const ImageBg = ({
           <h3 className="text-lg mb-4">{componentSubheading}</h3>
         )}
         {componentContent && (
-          <ul className="list-disc gap-2 md:gap-3 text-left">
+          <ol className="flex flex-col list-decimal gap-3 md:gap-5 text-left">
             {componentContent.map((item, index) => (
-              <li key={index} className="mb-1">
+              <li key={index} className="">
                 {item}
               </li>
             ))}
-          </ul>
+          </ol>
         )}
         {componentMoreInfo && (
           <p className="text-center md:w-[60%]">{componentMoreInfo}</p>

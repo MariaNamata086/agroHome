@@ -30,7 +30,7 @@ export default function Footer() {
     { name: 'Poultry Farming', href: '/app/projects/poultryProject' },
     { name: 'Coffee Farming', href: '/app/projects/coffeeProject' },
     { name: 'Bananas', href: '/app/projects/bananasProject' },
-    { name: 'Plantation Forestry', href: '/app/projects/plantationForestry' },
+    { name: 'Plantation Forestry', href: '/app/projects/plantationForesry' },
   ];
 
   const footerContactDetails: FooterContactDetails[] = [
@@ -100,7 +100,7 @@ export default function Footer() {
                   <Link
                     href={href}
                     key={index}
-                    className="hover:text-sky-500 text-[13px] hover:scale-105 hover:underline"
+                    className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
                   >
                     {name}
                   </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                   <Link
                     href={href}
                     key={index}
-                    className="hover:text-sky-500 text-[13px] hover:scale-105 hover:underline"
+                    className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
                   >
                     {name}
                   </Link>
