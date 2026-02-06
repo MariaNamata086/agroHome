@@ -19,7 +19,7 @@ import Motion from '@/app/components/shared/Motion';
 import PointCard from '@/app/components/shared/Pointcard';
 import cleanEggsPicture from '@assets/batteryCageEggs.jpg';
 import poultryStagesImage from '@assets/broodingPipedWater.jpg';
-import poultryFarmingHero from '@assets/poultryCage2.webp';
+import poultryFarmingHero from '@assets/cleanEggs2.png';
 
 function PoultryProject() {
   const { ref, inView } = useInView({

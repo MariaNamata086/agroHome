@@ -17,7 +17,7 @@ function IconDot({
     >
       <span className={`${iconSize} z-10`}>{icon}</span>
       <span
-        className={`absolute ${circleDimensions} bg-primaryGreen mt-8 -mr-8 rounded-full`}
+        className={`absolute ${circleDimensions} bg-primaryGreen animate-bounce mt-8 -mr-8 rounded-full`}
       />
     </div>
   );
