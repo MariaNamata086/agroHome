@@ -27,10 +27,10 @@ export default function Footer() {
   ];
 
   const footerProjectsPagesLinksData = [
-    { name: 'Poultry Farming', href: '/app/projects/poultryProject' },
-    { name: 'Coffee Farming', href: '/app/projects/coffeeProject' },
-    { name: 'Bananas', href: '/app/projects/bananasProject' },
-    { name: 'Plantation Forestry', href: '/app/projects/plantationForesry' },
+    { name: 'Poultry Farming', href: '/projects/poultryProject' },
+    { name: 'Coffee Farming', href: '/projects/coffeeProject' },
+    { name: 'Bananas', href: '/projects/bananasProject' },
+    { name: 'Plantation Forestry', href: '/projects/plantationForesry' },
   ];
 
   const footerContactDetails: FooterContactDetails[] = [

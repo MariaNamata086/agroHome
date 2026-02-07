@@ -25,7 +25,7 @@ function Carousel({
       {images?.map((img, index) => (
         <div
           key={index}
-          className={`w-full h-full absolute top-0 left-0 overflow-hidden transition-all ease-out duration-1000 ${
+          className={`w-full h-full absolute top-0 left-0 overflow-hidden transition-all ease-out duration-700 ${
             index === currentIndex ? 'opacity-90' : 'opacity-0'
           }`}
         >
