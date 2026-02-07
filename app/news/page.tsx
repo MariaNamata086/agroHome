@@ -80,7 +80,7 @@ function page() {
       <div className="flex flex-col gap-7 md:gap-13 p-5 md:px-20">
         <div className="flex flex-col  gap-8 md:gap-12 justify-center items-center tracking-wider leading-loose">
           <Motion direction="right">
-            <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4">
+            <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4 place-self-center">
               <FontAwesomeIcon
                 icon={faStarHalfStroke}
                 size="lg"
@@ -89,7 +89,7 @@ function page() {
               <span>Be inspired with the events going on at our farm</span>
             </h1>
           </Motion>
-          <Motion direction="up">
+          <Motion direction="left">
             <p className="tracking-wider leading-relaxed md:leading-12 text-center md:px-12">
               Our journey has not only transformed our farm — it has captured
               national attention. From organic coffee success to farmer training
@@ -135,9 +135,9 @@ function page() {
               size="xl"
               className="text-red-600 animate-pulse"
             />
-            <span>Check us out on YouTube</span>
+            <span className="text-slate-700">Check us out on YouTube</span>
           </h1>
-          <p className="tracking-wider w-[60%] md:text-[25px] font-semibold text-center text-lg text-stone-600 leading-loose">
+          <p className="tracking-wider w-[60%] md:text-[25px] font-semibold text-center text-lg text-black leading-loose">
             We bring you a close up view of both what was and is happening at
             our farm.
           </p>

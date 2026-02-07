@@ -15,8 +15,9 @@ const Different = () => {
     <section className="relative mt-5 md:mt-9 w-full h-87.5 md:h-125">
       <Image
         src={backgroundImage}
-        alt="Deep litter poultry house"
-        className="object-cover"
+        alt="Image of  modern battery cage poultry house"
+        className="flex h-full w-full"
+        style={{ objectFit: 'cover' }}
       />
 
       <div className="absolute inset-0 bg-black/50 flex flex-col  justify-center px-5 md:px-16 gap-4 md:gap-8 text-center text-white">

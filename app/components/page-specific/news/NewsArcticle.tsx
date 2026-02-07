@@ -29,7 +29,7 @@ const NewsArcticle = ({
           </h2>
         </Motion>
         <p className="text-stone-700 text-right">{articleExcerpt}</p>
-        <div className="flex md:-ml-28 items-center">
+        <div className="flex md:-ml-28 items-center self-end">
           <span className="text-sm text-gray-500 font-semibold">
             {publicationHouse}
           </span>

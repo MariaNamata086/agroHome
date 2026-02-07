@@ -10,22 +10,44 @@ import {
   faCheckDouble,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { GiBirdCage, GiCctvCamera } from 'react-icons/gi';
 import { TbClockStar } from 'react-icons/tb';
 import { useInView } from 'react-intersection-observer';
+import Carousel from '@/app/components/shared/Carousel';
 import HeaderBanner from '@/app/components/shared/HeaderBanner';
 import Motion from '@/app/components/shared/Motion';
 import PointCard from '@/app/components/shared/Pointcard';
+import carouselImage8 from '@assets/assembledEmpty.png';
+import carouselImage2 from '@assets/assembledEmpty2.png';
+import carouselImage3 from '@assets/assembledEmpty3.png';
 import cleanEggsPicture from '@assets/batteryCageEggs.jpg';
 import poultryStagesImage from '@assets/broodingPipedWater.jpg';
 import poultryFarmingHero from '@assets/cleanEggs2.png';
+import carouselImage1 from '@assets/emptyCages.png';
+import carouselImage4 from '@assets/henDrinking.png';
+import carouselImage7 from '@assets/maizeSheller.png';
+import carouselImage5 from '@assets/poultryHouse2.png';
+import carouselImage9 from '@assets/poultryHouseConstruction.png';
+import carouselImage6 from '@assets/waterSystem.png';
 
 function PoultryProject() {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.4,
   });
+  const poultryProjectImages: StaticImageData[] = [
+    cleanEggsPicture,
+    carouselImage9,
+    carouselImage1,
+    carouselImage8,
+    carouselImage2,
+    carouselImage3,
+    carouselImage6,
+    carouselImage4,
+    carouselImage5,
+    carouselImage7,
+  ];
 
   const whyBatteryCageSysytemData = [
     {
@@ -140,7 +162,7 @@ function PoultryProject() {
           </div>
         </Motion>
 
-        <div className="flex relative h-235">
+        <div className="flex relative h-250">
           <Image
             src={poultryStagesImage}
             alt="image showing poultry day old chicks in a brooder"
@@ -166,7 +188,15 @@ function PoultryProject() {
                           fontSize={40}
                         />
                       </span>
-                      <div className="flex flex-col gap-1.5 bg-slate-200 py-3.5 px-8 rounded-full">
+                      <div
+                        className="flex flex-col gap-1.5 py-5 px-9 rounded-full h-28"
+                        style={{
+                          backgroundColor:
+                            index === 0 || index === 1 || index === 2
+                              ? 'white'
+                              : 'oklch(92.9% 0.013 255.508)',
+                        }}
+                      >
                         <h3
                           style={{
                             color:
@@ -174,7 +204,7 @@ function PoultryProject() {
                                 ? 'black'
                                 : 'oklch(55.4% 0.046 257.417)',
                           }}
-                          className="text-[13px] font-medium tracking-widest md:text-[15px] text-forestGreen"
+                          className="text-[13px] font-medium tracking-widest text-center md:text-[15px] text-forestGreen"
                         >
                           {heading}
                         </h3>
@@ -185,14 +215,14 @@ function PoultryProject() {
                                 ? 'oklch(30.2% 0.056 229.695)'
                                 : 'oklch(37.2% 0.044 257.287)',
                           }}
-                          className="flex tracking-relaxed text-sm md:text-[14px]"
+                          className="flex tracking-relaxed text-sm md:text-[14px] text-center leading-relaxed mb-2"
                         >
                           {moreInfo}
                         </span>
                       </div>
                     </div>
                     <span
-                      className="flex -mt-8 w-0.5 h-11.25 md:h-18.25 bg-slate-300 ml-6"
+                      className="flex -mt-8 w-0.5 h-14.25 md:h-20.25 bg-slate-200 ml-6"
                       style={{
                         backgroundColor:
                           index === 0 || index === 1 || index === 2
@@ -288,6 +318,9 @@ function PoultryProject() {
               );
             })}
           </div>
+        </div>
+        <div className="flex flex-col  w-full h-[400px] md:h-[550px] relative">
+          <Carousel images={poultryProjectImages} />
         </div>
       </div>
     </main>

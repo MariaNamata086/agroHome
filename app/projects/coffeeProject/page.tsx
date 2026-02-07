@@ -12,7 +12,6 @@ import Link from 'next/link';
 import React from 'react';
 import { GiCoffeeBeans } from 'react-icons/gi';
 import HeaderBanner from '@/app/components/shared/HeaderBanner';
-import ImageBg from '@/app/components/shared/ImageBg';
 import Motion from '@/app/components/shared/Motion';
 import coffeeHeroImage from '@/public/assets/coffeeHarvesting.jpg';
 import wayOfFarmingImage from '@assets/bananaCoffeeIntercropping.png';
