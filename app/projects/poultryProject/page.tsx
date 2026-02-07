@@ -245,12 +245,11 @@ function PoultryProject() {
             priority
           />
 
-          <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center px-5 gap-4 md:gap-10 text-center text-gray-300">
+          <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center px-5 gap-4 md:gap-10 text-center text-gray-300">
             <h2 className="font-semibold text-xl tracking-wider md:text-4xl">
               Project Deliverables
             </h2>
             <div
-              // ref={ref}
               className="flex flex-col text-sm md:text-[17px] text-center leading-loose
               transform transition-all duration-700 ease-in-out 
               gap-7"

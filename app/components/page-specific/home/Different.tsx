@@ -16,9 +16,7 @@ const Different = () => {
       <Image
         src={backgroundImage}
         alt="Deep litter poultry house"
-        fill
         className="object-cover"
-        priority
       />
 
       <div className="absolute inset-0 bg-black/50 flex flex-col  justify-center px-5 md:px-16 gap-4 md:gap-8 text-center text-white">

@@ -91,10 +91,10 @@ export default function Footer() {
           </section>
 
           <div className="flex flex-col gap-3 md:gap-4 tracking-wider">
-            <h3 className="text-md md:text-[15px] font-semibold">
+            <h3 className="text-md md:text-[17px] font-semibold">
               Quick Links
             </h3>
-            <div className="flex flex-col gap-1 md:gap-3 align-left">
+            <div className="flex flex-col gap-2 md:gap-4 align-left">
               {footerPagesLinksData.map(({ href, name }, index) => {
                 return (
                   <Link
@@ -109,10 +109,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col gap-3 md:gap-4 ">
-            <h3 className="font-semibold tracking-wider text-md md:text-[15px]">
+            <h3 className="font-semibold tracking-wider text-md md:text-[17px] md:-mt-8">
               Our Projects
             </h3>
-            <div className="flex flex-col gap-1 md:gap-2 align-left">
+            <div className="flex flex-col gap-2 md:gap-4 align-left">
               {footerProjectsPagesLinksData.map(({ href, name }, index) => {
                 return (
                   <Link
@@ -126,7 +126,7 @@ export default function Footer() {
               })}
             </div>
           </div>
-          <div className="flex flex-col gap-3 md:gap-4  justify-center md:-ml-7 items-center">
+          <div className="flex flex-col gap-3 md:gap-4  justify-center md:-ml-7 items-center md:-mt-10">
             <span className="text-md md:text-[15px] tracking-wider font-semibold">
               Contact Us
             </span>

@@ -108,7 +108,7 @@ function BananaFarmingProject() {
   return (
     <main className="flex flex-col gap-15 md:gap-20">
       <HeaderBanner
-        page="Projects"
+        page="Bananas Project"
         pageHeading="Growing Nutrition, Income and Food Security &#8212; Sustainability"
         src={bananasProjectHero}
       />
