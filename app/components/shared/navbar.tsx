@@ -29,9 +29,9 @@ function Navbar() {
     { name: 'News', href: '/news' },
   ];
   return (
-    <nav className="flex justify-between align-center sticky top-0 z-50 bg-white px-10 py-4 h-30 shadow-md text-black">
+    <nav className="flex justify-between items-center align-center sticky top-0 z-50 bg-white md:px-10 md:py-4 h-30 shadow-md text-black">
       <div className="flex gap-1 items-center">
-        <Link href="/" className="w-36 rounded-full ">
+        <Link href="/" className="w-25 md:w-36 rounded-full ">
           <Image
             src={logo}
             alt="company logo"
@@ -39,8 +39,8 @@ function Navbar() {
             className="rounded-full bg-white"
           />
         </Link>
-        <span className="text-x md:text-[20px] tracking-wider">
-          St Joseph <b>Farms</b>
+        <span className="text-xl md:text-[20px] tracking-wider">
+          St Joseph <b>Farm</b>
         </span>
       </div>
       <div className="hidden md:flex justify-between gap-10 items-center">
@@ -106,7 +106,6 @@ function Navbar() {
             </Link>
           </div>
         </div>
-        {/* our projects */}
         <Link
           href={'/app/contact-us'}
           className="flex items-center text-black gap-2 hover:text-white justify-around p-3.5 rounded-full w-[1/4] bg-amber-300 hover:bg-stone-500"
@@ -116,10 +115,10 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="flex md:hidden flex-col gap-3 p-2.5 ">
+      <div className="flex flex-col relative md:hidden w-[40%]  py-3  ">
         <button
           type="button"
-          className="text-4xl px-10"
+          className="flex text-3xl place-self-center px-10"
           onClick={() => {
             setMobileMenuVisible(!mobileMenuVisible);
           }}
@@ -130,24 +129,33 @@ function Navbar() {
               className="text-gray-700 hover:text-primaryGreen"
             />
           ) : (
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon
+              icon={faBars}
+              className="text-gray-700 hover:text-primaryGreen"
+            />
           )}
         </button>
         <div
           className={`${
             mobileMenuVisible ? 'flex' : 'hidden'
-          } flex-col gap-5 bg-white shadow-md shadow-sky-200 w-[65%] self-end h-auto text-black p-8 rounded-xl -mt-5`}
+          } flex-col gap-5 bg-white absolute top-full left-0 w-full  h-auto text-black p-8 shadow-sm shadow-primaryGreen rounded-lg `}
         >
-          <Link href={'/aboutUs'} className="flex hover:text-primaryGreen">
+          <Link
+            href={'/aboutUs'}
+            className="flex hover:text-primaryGreen text-slate-700 text-[14px] tracking-widest"
+          >
             About us
           </Link>
-          <div className="flex flex-col font-medium relative group text-[13px]">
+          <div className="flex flex-col relative group text-[13px]">
             <div
               className="flex items-center justify-between "
               onClick={() => setMobileProjectsVisible(!mobileProjectsVisible)}
             >
-              <button type="button" className=" hover:text-primary text-start">
-                Projects
+              <button
+                type="button"
+                className=" hover:text-primaryGreen text-slate-700 text-[14px]  text-start"
+              >
+                Our Projects
               </button>
               <span>
                 {mobileProjectsVisible ? <PiCaretUp /> : <PiCaretDown />}
@@ -156,40 +164,43 @@ function Navbar() {
             <div
               className={`${
                 mobileProjectsVisible ? 'flex ' : 'hidden'
-              } flex-col w-full p-3 justify-start gap-4 text-[11px] tracking-wider mt-3 bg-slate-100 `}
+              } flex-col w-full py-3 px-4.5 justify-start gap-4 text-[11px] tracking-wider mt-3  bg-slate-100 `}
             >
               <Link
-                href={'/app/projects'}
-                className="flex hover:text-primaryGreen"
+                href={'/projects'}
+                className="flex hover:text-primaryGreen text-slate-700"
               >
-                Our Projects
+                Projects Overview
               </Link>
               <Link
-                href={'/app/projects/bananasProject'}
-                className="flex hover:text-primaryGreen"
+                href={'/projects/bananasProject'}
+                className="flex hover:text-primaryGreen text-slate-700"
               >
                 Bananas project
               </Link>
               <Link
-                href={'/app/projects/poultryProject'}
-                className="flex hover:text-primaryGreen"
+                href={'/projects/poultryProject'}
+                className="flex hover:text-primaryGreen text-slate-700"
               >
                 Poultry project
               </Link>
               <Link
-                href={'/app/projects/coffeeProject'}
-                className="flex hover:text-primaryGreen"
+                href={'/projects/coffeeProject'}
+                className="flex hover:text-primaryGreen text-slate-700"
               >
                 Coffee project
               </Link>
             </div>
           </div>
-          <Link href={'/app/news'} className="flex hover:text-primaryGreen">
+          <Link
+            href={'/news'}
+            className="flex hover:text-primaryGreen text-[14px] text-slate-700"
+          >
             Read about Us
           </Link>
           <Link
-            href={'/app/contact-us'}
-            className="flex hover:text-primaryGreen"
+            href={'/contact-us'}
+            className="flex hover:text-primaryGreen text-[14px] text-slate-700"
           >
             Contact Us
           </Link>
