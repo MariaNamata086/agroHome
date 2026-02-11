@@ -8,27 +8,29 @@ import SectionSmallHeader from '../../shared/SectionSmallHeader';
 
 const AboutUsBrief = () => {
   return (
-    <section className="flex flex-col md:flex-row md:gap-12">
-      <div className="flex flex-col w-full md:w-1/2 md:flex-row md:gap-4 gap-1">
-        <div className="relative w-full md:w-1/2 flex flex-col">
-          <Image
-            src={poultryProjectPicture}
-            alt="battery cage poultry farming picture"
-            className="mt-0 md:-mt-1.5 object-cover"
-          />
-          <div className="absolute flex flex-col z-5 w-1/2 h-16 p-14 items-center justify-center rounded-full bg-[rgb(150,202,45)] text-white -mt-1 ">
-            <span className="text-4xl font-bold">40+</span>
-            <span className="text-[12px] font-semibold">
-              Years Of Experience
-            </span>
+    <section className="flex flex-col-reverse gap-8 md:flex-row md:gap-12 h-auto">
+      <Motion direction="left">
+        <div className="flex w-full md:w-1/2 md:flex-row md:gap-4 gap-4">
+          <div className="relative w-1/2 flex overflow-hidden flex-col">
+            <Image
+              src={poultryProjectPicture}
+              alt="battery cage poultry farming picture"
+              className="mt-0 md:-mt-1.5 object-cover"
+            />
+            <div className="absolute flex flex-col z-5 w-36 h-30 p-14 items-center justify-center rounded-[43px] bg-[rgb(150,202,45)] text-white -top-8 -left-8 ">
+              <span className="text-4xl mt-6 ml-4 font-bold">40+</span>
+              <span className="text-[12px] ml-4 font-semibold">
+                Years Of Experience
+              </span>
+            </div>
           </div>
+          <Image
+            src={bananaProjectPicture}
+            alt="a picture of a banana farm project"
+            className="mt-10 object-cover"
+          />
         </div>
-        <Image
-          src={bananaProjectPicture}
-          alt="a picture of a banana farm project"
-          className="mt-10 object-cover"
-        />
-      </div>
+      </Motion>
 
       <div className="flex flex-col gap-3 md:gap-6 md:w-1/2 ">
         <SectionSmallHeader headingContent="Who We Are" />

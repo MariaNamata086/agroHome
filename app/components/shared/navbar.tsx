@@ -126,7 +126,9 @@ function Navbar() {
           {mobileMenuVisible ? (
             <FontAwesomeIcon
               icon={faXmark}
-              className="text-gray-700 hover:text-primaryGreen"
+              className="text-gray-700 hover:text-primaryGreen
+             "
+              size="lg"
             />
           ) : (
             <FontAwesomeIcon

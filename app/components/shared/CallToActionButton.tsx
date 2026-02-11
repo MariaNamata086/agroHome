@@ -14,7 +14,7 @@ const CallToActionButton = ({
 }: CallToActionButtonProps) => {
   return (
     <button
-      className={`flex p-2.5 bg-amber-300 w-46 items-center justify-center md:px-6 py-2 md:py-4  hover:bg-gray-700  text-black hover:text-white rounded-full ${backgroundColor}`}
+      className={`flex p-2.5 bg-amber-300 w-46 items-center justify-center md:px-6 py-3 md:py-4  hover:bg-gray-700  text-black hover:text-white rounded-full ${backgroundColor}`}
     >
       <Link
         href={href}
