@@ -47,7 +47,7 @@ export default function Footer() {
         className="absolute top-0 left-0 object-cover h-full w-full "
       />
       <div className="relative flex flex-col h-full z-10 inset-0 bg-black/60 text-white  p-8 md:px-10 md:py-12 justify-center md:justify-around tracking-wider">
-        <div className="flex flex-col justify-between md:flex-row md:items-center">
+        <div className="flex flex-col justify-between md:flex-row gap-8 md:gap-2 md:items-center">
           <section className="flex flex-col md:w-1/3 gap-6 ">
             <div className="flex items-center gap-2 md:gap-3">
               <Image
@@ -90,47 +90,49 @@ export default function Footer() {
             </div>
           </section>
 
-          <div className="flex flex-col gap-3 md:gap-4 tracking-wider">
-            <h3 className="text-md md:text-[17px] font-semibold">
-              Quick Links
-            </h3>
-            <div className="flex flex-col gap-2 md:gap-4 align-left">
-              {footerPagesLinksData.map(({ href, name }, index) => {
-                return (
-                  <Link
-                    href={href}
-                    key={index}
-                    className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
-                  >
-                    {name}
-                  </Link>
-                );
-              })}
+          <div className="flex justify-between gap-3">
+            <div className="flex flex-col gap-5.5 tracking-wider">
+              <h3 className="text-md md:text-[17px] font-semibold">
+                Quick Links
+              </h3>
+              <div className="flex flex-col gap-4 align-left">
+                {footerPagesLinksData.map(({ href, name }, index) => {
+                  return (
+                    <Link
+                      href={href}
+                      key={index}
+                      className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
+                    >
+                      {name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="flex flex-col gap-5.5 ">
+              <h3 className="font-semibold tracking-wider text-md md:text-[17px] md:-mt-8">
+                Our Projects
+              </h3>
+              <div className="flex flex-col gap-4 align-left">
+                {footerProjectsPagesLinksData.map(({ href, name }, index) => {
+                  return (
+                    <Link
+                      href={href}
+                      key={index}
+                      className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
+                    >
+                      {name}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          <div className="flex flex-col gap-3 md:gap-4 ">
-            <h3 className="font-semibold tracking-wider text-md md:text-[17px] md:-mt-8">
-              Our Projects
-            </h3>
-            <div className="flex flex-col gap-2 md:gap-4 align-left">
-              {footerProjectsPagesLinksData.map(({ href, name }, index) => {
-                return (
-                  <Link
-                    href={href}
-                    key={index}
-                    className="hover:text-primaryGreen text-[13px] hover:scale-105 hover:underline"
-                  >
-                    {name}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 md:gap-4  justify-center md:-ml-7 items-center md:-mt-10">
-            <span className="text-md md:text-[15px] tracking-wider font-semibold">
+          <div className="flex flex-col gap-3 md:gap-4 justify-start  md:justify-center md:-ml-7 md:-mt-10">
+            <h3 className="flex text-md md:text-[17px] tracking-wider font-semibold">
               Contact Us
-            </span>
-            <p className="flex w-full max-w-md gap-3 md:gap-5 items-center justify-around">
+            </h3>
+            <p className="flex w-full max-w-md gap-5 items-center">
               <FontAwesomeIcon
                 icon={faMapLocationDot}
                 fontSize={24}
@@ -141,7 +143,7 @@ export default function Footer() {
                 Uganda
               </span>
             </p>
-            <p className="flex w-full max-w-md gap-3 items-center ">
+            <p className="flex w-full max-w-md gap-5 items-center ">
               <FontAwesomeIcon
                 icon={faPhoneVolume}
                 fontSize={24}
@@ -151,7 +153,7 @@ export default function Footer() {
                 +256772628600 | +256741327070
               </span>
             </p>
-            <p className="flex w-full max-w-md gap-3 items-center ">
+            <p className="flex w-full max-w-md gap-5 items-center ">
               <FontAwesomeIcon
                 icon={faEnvelope}
                 fontSize={26}

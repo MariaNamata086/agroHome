@@ -91,7 +91,7 @@ export default function Home() {
             {impacthighlightsData.map((item, index) => {
               return (
                 <Motion direction="left" key={index}>
-                  <div className="flex items-center gap-4 md:gap-6 h-22 px-5 md:px-14 shadow-sm rounded-b-md">
+                  <div className="flex items-center gap-4 md:gap-6 h-22 px-5 md:px-14 shadow-sm hover:scale-105 rounded-b-md">
                     <FontAwesomeIcon
                       icon={faHandPointRight}
                       size="xl"
@@ -106,10 +106,10 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-87.5 md:h-150 md:mb-5">
+        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-140 md:h-150 md:mb-5">
           <Image
             src={featuredInSectionImage}
-            alt="Deep litter poultry house"
+            alt="Image of Mr. Lwevuze being interviewed by NTV Uganda"
             fill
             className="object-cover"
             priority
@@ -117,7 +117,7 @@ export default function Home() {
           <h2 className="flex text-2xl md:text-4xl font-bold tracking-widest justify-center text-white z-20 mt-8 ">
             Heard / Read About Us &#128522;?
           </h2>
-          <div className="grid grid-cols-2 absolute justify-center items-center gap-4 md:gap-10 p-4 md:p-16 bg-black/40  z-10 tracking-wider leading-loose">
+          <div className="grid grid-cols-2 absolute justify-center items-center md:gap-10 p-4 inset-0 md:p-16 bg-black/40  z-10 tracking-wider leading-loose">
             {featuredInData.map(({ logo, name }, index) => {
               return (
                 <Motion direction="right" key={index}>

@@ -10,7 +10,7 @@ const AboutUsBrief = () => {
   return (
     <section className="flex flex-col-reverse gap-8 md:flex-row md:gap-12 h-auto">
       <Motion direction="left">
-        <div className="flex w-full md:w-1/2 md:flex-row md:gap-4 gap-4">
+        <div className="flex w-full md:w-1/2 md:flex-row h-auto md:gap-4 gap-4">
           <div className="relative w-1/2 flex overflow-hidden flex-col">
             <Image
               src={poultryProjectPicture}
@@ -27,7 +27,7 @@ const AboutUsBrief = () => {
           <Image
             src={bananaProjectPicture}
             alt="a picture of a banana farm project"
-            className="mt-10 object-cover"
+            className="mt-14 md:mt-10 object-cover"
           />
         </div>
       </Motion>
@@ -38,7 +38,7 @@ const AboutUsBrief = () => {
           Rooted in Diversity and Sustainability{' '}
         </h2>
         <Motion direction="right">
-          <p className="text-[16px] md:text-[14px] tracking-wider leading-loose">
+          <p className="text-[13px] md:text-[14px] tracking-wider leading-loose">
             We are a diversified commercial agricultural enterprise based in
             Luweero District, Uganda, specializing in layer poultry production,
             Robusta coffee farming, banana farming and plantation forestry. Our
