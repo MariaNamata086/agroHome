@@ -60,7 +60,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="tracking-wider text-left text-[11px] md:text-[12.5px] leading-loose">
+            <div className="tracking-wider text-left text-[11.5px] md:text-[12.5px] leading-8">
               St. Joseph Ntangala Agricultural Training Centre is a model
               integrated farm and training hub in Luweero District, Uganda,
               dedicated to advancing modern, sustainable, and profitable

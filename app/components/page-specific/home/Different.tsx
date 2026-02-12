@@ -12,7 +12,7 @@ const Different = () => {
     threshold: 0.4,
   });
   return (
-    <section className="relative mt-5 md:mt-9 w-full h-87.5 md:h-125">
+    <section className="relative mt-5 md:mt-9 w-full h-125">
       <Image
         src={backgroundImage}
         alt="Image of  modern battery cage poultry house"
@@ -26,7 +26,7 @@ const Different = () => {
         </h2>
         <p
           ref={ref}
-          className={`text-sm md:text-[17px] md:w-[85%] text-left  leading-loose md:leading-10 tracking-widest
+          className={`text-sm md:text-[17px] md:w-[85%] text-left  leading-10.75 md:leading-12 tracking-widest
         transform transition-all duration-700 ease-out
         ${inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}
       `}

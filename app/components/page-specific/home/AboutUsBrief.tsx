@@ -38,7 +38,7 @@ const AboutUsBrief = () => {
           Rooted in Diversity and Sustainability{' '}
         </h2>
         <Motion direction="right">
-          <p className="text-[13px] md:text-[14px] tracking-wider leading-loose">
+          <p className="text-[13px] md:text-[14px] tracking-wider   leading-10.75 md:leading-loose">
             We are a diversified commercial agricultural enterprise based in
             Luweero District, Uganda, specializing in layer poultry production,
             Robusta coffee farming, banana farming and plantation forestry. Our
