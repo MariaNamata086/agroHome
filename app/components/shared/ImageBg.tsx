@@ -2,6 +2,7 @@ import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
+import Motion from './Motion';
 
 interface ImageBgProps {
   src: StaticImageData;
@@ -36,7 +37,7 @@ const ImageBg = ({
             <FontAwesomeIcon
               icon={faGlobeAmericas}
               size="lg"
-              className="text-lime-200"
+              className="text-lime-200 animate-spin"
             />
             <span>{componentHeading}</span>
           </h2>
@@ -59,7 +60,9 @@ const ImageBg = ({
           </ol>
         )}
         {componentMoreInfo && (
-          <p className="text-center md:w-[60%]">{componentMoreInfo}</p>
+          <Motion direction="down">
+            <p className="text-center md:w-[60%]">{componentMoreInfo}</p>
+          </Motion>
         )}
       </div>
     </div>

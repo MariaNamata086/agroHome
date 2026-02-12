@@ -90,7 +90,7 @@ export default function Footer() {
             </div>
           </section>
 
-          <div className="flex justify-between gap-3">
+          <div className="flex justify-between md:justify-around md:items-center md:w-1/3 gap-3 ">
             <div className="flex flex-col gap-5.5 tracking-wider">
               <h3 className="text-md md:text-[17px] font-semibold">
                 Quick Links

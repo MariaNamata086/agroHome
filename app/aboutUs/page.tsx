@@ -72,16 +72,20 @@ const Aboutus = () => {
         page="About Us"
         pageHeading="Building a legacy of profitable, sustainable farming &mdash; and sharing it. "
       />
-      <div className="flex flex-col gap-10 justify-center md:flex-row md:justify-between md:items-center   bg-slate-50 p-10 sm:w-full mx-auto">
-        <div className="flex flex-col h-80 w-[320px] md:w-[45%] md:h-118 rounded-full group bg-primaryGreen place-self-center mt-5 md:mt-0">
-          <Image
-            src={proprietorImage}
-            alt=""
-            className="object-cover h-full mt-5 z-10 rounded-full "
-            priority
-          />
+      <div className="flex flex-col gap-10 justify-center md:flex-row md:justify-between md:items-start mt-10  bg-slate-50 p-10 sm:w-full mx-auto">
+        <div className="flex h-80 w-[320px] md:w-[45%] md:mt-20 ">
+          <Motion direction="up">
+            <div className="flex flex-col h-130 rounded-full group bg-primaryGreen place-self-center ">
+              <Image
+                src={proprietorImage}
+                alt=""
+                className="object-cover h-full mt-5 z-10 rounded-full "
+                priority
+              />
+            </div>
+          </Motion>
         </div>
-        <div className="flex flex-col gap-10 p-8 md:w-[60%]">
+        <div className="flex flex-col gap-10 p-8 md:w-[55%]">
           <p className="flex items-center justify-end gap-2 mt-7.5">
             <SectionSmallHeader headingContent="Our Story" />
           </p>
@@ -130,6 +134,7 @@ const Aboutus = () => {
                     icon={faCircleCheck}
                     size="xl"
                     color="#96CA2D"
+                    className="animate-bounce"
                   />
                   <p className="text-gray-600 text-[14px] md:text-[18px]">
                     <b>{point} &mdash;</b>
