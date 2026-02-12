@@ -48,7 +48,7 @@ const Aboutus = () => {
   const ourImpactData = [
     {
       point: 'Institutional Partnerships',
-      item: 'Working with Caritas Uganda and Uganda Joint Christian Coouncil',
+      item: 'Working with Caritas Uganda and Uganda Joint Christian Council',
     },
     {
       point: '4000+ Farmers Trained',
@@ -72,10 +72,10 @@ const Aboutus = () => {
         page="About Us"
         pageHeading="Building a legacy of profitable, sustainable farming &mdash; and sharing it. "
       />
-      <div className="flex flex-col gap-10 justify-center md:flex-row md:justify-between md:items-start mt-10  bg-slate-50 p-10 sm:w-full mx-auto">
-        <div className="flex h-80 w-[320px] md:w-[45%] md:mt-20 ">
+      <div className="flex flex-col-reverse gap-10 justify-center md:flex-row md:justify-between md:items-start md:mt-10  bg-slate-50 p-10 sm:w-full mx-auto">
+        <div className="flex h-auto w-105 md:w-[45%] md:mt-20 ">
           <Motion direction="up">
-            <div className="flex flex-col h-130 rounded-full group bg-primaryGreen place-self-center ">
+            <div className="flex flex-col h-102.5 md:h-130 rounded-full group bg-primaryGreen place-self-center ">
               <Image
                 src={proprietorImage}
                 alt=""
@@ -85,20 +85,21 @@ const Aboutus = () => {
             </div>
           </Motion>
         </div>
-        <div className="flex flex-col gap-10 p-8 md:w-[55%]">
+        <div className="flex flex-col gap-6 md:gap-10 md:w-[55%]">
           <p className="flex items-center justify-end gap-2 mt-7.5">
             <SectionSmallHeader headingContent="Our Story" />
           </p>
-          <p className="tracking-wider text-slate-600 text-md md:text-[16px] leading-loose text-right">
-            I welcome you to this world of development and competition.I believe
-            we were created to make this world a better place, and wherever we
-            are, we must work to bring positive change. Progress requires
-            persistence — if you cannot run, walk; if you cannot walk, crawl —
-            but always keep moving. Our local saying,{' '}
+          <p className="tracking-wider md:text-slate-600 text-[15px] md:text-[16px] leading-loose md:text-right">
+            I welcome you to this world of development and competition. I
+            believe we were created to make this world a better place, and
+            wherever we are, we must work to bring positive change.{' '}
+            <span className="flex h-2" />
+            Progress requires persistence — if you cannot run, walk; if you
+            cannot walk, crawl — but always keep moving. Our local saying,{' '}
             <b>“Enkulakulana ejja lwa mpaka,” </b> reminds us that there is no
             development without persistence and perseverance.
           </p>
-          <p className="text-right tracking-wider leading-loose md:text-[16px] text-slate-600 text-md">
+          <p className="md:text-right tracking-wider leading-loose md:text-[16px] md:text-slate-600 text-[15px]">
             Back in school, difficult questions earned more marks than simple
             ones — and life is no different. Without hard work, risk-taking, and
             perseverance, we should not expect meaningful results. If we do not
@@ -106,7 +107,7 @@ const Aboutus = () => {
             existence loses its meaning.
           </p>
           <Motion direction="up">
-            <p className=" text-slate-600 leading-loose tracking-wider text-md md:text-[16px] text-right ">
+            <p className="md:text-slate-600 leading-loose tracking-wider text-[15px] md:text-[16px] md:text-right ">
               Strengthen unity. Never be prejudiced. Differences will always
               exist, but when handled well, they can become a source of strength
               rather than division. Unity, humility, and service to others
@@ -115,7 +116,7 @@ const Aboutus = () => {
               and walk your journey with purpose and integrity.
             </p>
           </Motion>
-          <i className="font-semibold text-md md:text-xl tracking-widest text-forestGreen animate-pulse">
+          <i className="font-semibold text-lg md:text-xl tracking-widest text-forestGreen animate-pulse">
             'Together In Development'
           </i>
         </div>
@@ -128,8 +129,8 @@ const Aboutus = () => {
         <div className="flex flex-col gap-3.5 md:gap-6">
           {ourImpactData.map(({ item, point }, index) => {
             return (
-              <Motion direction="right" key={index}>
-                <p className="flex items-center gap-4 md:gap-6 h-18 px-5 md:px-14 shadow-sm rounded-b-lg ">
+              <Motion direction="left" key={index}>
+                <p className="flex items-center gap-4 md:gap-6 md:h-18 p-5 md:px-14 shadow-sm rounded-b-lg ">
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     size="xl"
@@ -157,7 +158,7 @@ const Aboutus = () => {
         <h1 className="flex items-center tracking-widest text-gray-700 font-bold text-[28px] md:text-5xl gap-3.5">
           Our Way of Farming
         </h1>
-        <div className="grid md:grid-cols-2 md:gap-15">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-15">
           {farmingPhilosophyData.map(({ icon, heading, content }, index) => {
             return (
               <Motion direction="up" key={index}>

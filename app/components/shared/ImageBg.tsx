@@ -31,7 +31,7 @@ const ImageBg = ({
         className="w-full h-full object-cover"
         style={{ objectFit: 'fill' }}
       />
-      <div className="flex flex-col h-full items-left px-3 py-6 md:p-25 md:gap-8 z-10 absolute bg-linear-to-r from-stone-900/90 via-stone-900/80 to-transparent text-white tracking-widest leading-loose">
+      <div className="flex flex-col h-full items-left px-3 py-6 md:p-25  gap-5 md:gap-8 z-10 absolute bg-linear-to-r from-stone-900/90 via-stone-900/80 to-transparent text-white tracking-widest leading-loose">
         {componentHeading && (
           <h2 className="flex items-center tracking-widest p-3 md:p-5 text-white justif-center font-bold text-[28px] md:text-5xl gap-3.5">
             <FontAwesomeIcon
@@ -60,8 +60,10 @@ const ImageBg = ({
           </ol>
         )}
         {componentMoreInfo && (
-          <Motion direction="down">
-            <p className="text-center md:w-[60%]">{componentMoreInfo}</p>
+          <Motion direction="right">
+            <p className="text-right text-[15px] md:text-md md:text-center md:w-[60%]">
+              {componentMoreInfo}
+            </p>
           </Motion>
         )}
       </div>

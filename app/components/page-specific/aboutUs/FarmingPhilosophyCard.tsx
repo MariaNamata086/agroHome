@@ -21,7 +21,9 @@ const WayOfFarmingCard = ({ icon, heading, content }: wayOfFarmingProps) => {
           {heading}
         </h2>
       </div>
-      <p className="text-stone-700">{content}</p>
+      <p className="text-stone-700 text-[13.5px] md:text-[15px] tracking-widest">
+        {content}
+      </p>
     </div>
   );
 };
