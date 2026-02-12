@@ -14,14 +14,14 @@ const CoreAreasSection = ({
 }: coreAreasSectionProps) => {
   return (
     <div className="flex flex-col shadow-md p-2 items-center rounded-md h-80 md:h-60  w-1/3">
-      <span className="flex bg-[rgb(150,202,45)] items-center md:ml-40 justify-center shadow-md rounded-full p-[16.5px] w-14 md:w-18 h-14 md:h-24">
+      <div className="flex bg-[rgb(150,202,45)] items-center justify-center shadow-md md:animate-pulse rounded-full p-[16.5px] w-14 md:w-18 h-14 md:h-26">
         <FontAwesomeIcon icon={icon} color="#FFFFFF" size="2xl" />
-      </span>
+      </div>
       <div className="flex flex-col justify-center p-4 md:p-7 gap-1 md:gap-3">
         <h2 className="font-bold text-lg md:text-xl text-center text-black tracking-wider leading-relaxed">
           {heading}
         </h2>
-        <p className="text-stone-500 text-[13px] text-center md:text-[14px] tracking-wider leading-relaxed">
+        <p className="text-stone-500 text-[13px] text-center md:text-[14px] tracking-wider md:text-right leading-relaxed">
           {moreInfo}
         </p>
       </div>

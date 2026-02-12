@@ -9,30 +9,35 @@ import SectionSmallHeader from '../../shared/SectionSmallHeader';
 const AboutUsBrief = () => {
   return (
     <section className="flex flex-col-reverse gap-8 md:flex-row md:gap-12 h-auto">
-      <Motion direction="left">
-        <div className="flex w-full md:w-1/2 md:flex-row h-auto md:gap-4 gap-4">
-          <div className="relative w-1/2 flex overflow-hidden flex-col">
-            <Image
-              src={poultryProjectPicture}
-              alt="battery cage poultry farming picture"
-              className="mt-0 md:-mt-1.5 object-cover"
-            />
-            <div className="absolute flex flex-col z-5 w-36 h-30 p-14 items-center justify-center rounded-[43px] bg-[rgb(150,202,45)] text-white -top-8 -left-8 ">
-              <span className="text-4xl mt-6 ml-4 font-bold">40+</span>
-              <span className="text-[12px] ml-4 font-semibold">
-                Years Of Experience
-              </span>
+      <div className="w-full md:w-1/2 ">
+        <Motion direction="left">
+          <div className="flex w-full md:flex-row h-auto md:gap-4 gap-4">
+            <div className="relative w-1/2 flex overflow-hidden h-100 flex-col">
+              <Image
+                src={poultryProjectPicture}
+                alt="battery cage poultry farming picture"
+                className="mt-0 md:-mt-1.5 object-cover"
+              />
+              <div className="absolute flex flex-col z-5 w-36 h-30 p-14 items-center justify-center rounded-[43px] bg-[rgb(150,202,45)] text-white -top-8 -left-8 ">
+                <span className="text-4xl mt-6 ml-4 font-bold">40+</span>
+                <span className="text-[12px] ml-4 font-semibold">
+                  Years Of Experience
+                </span>
+              </div>
             </div>
+            <Image
+              src={bananaProjectPicture}
+              alt="a picture of a banana farm project"
+              className="mt-14 md:mt-10 object-cover"
+            />
           </div>
-          <Image
-            src={bananaProjectPicture}
-            alt="a picture of a banana farm project"
-            className="mt-14 md:mt-10 object-cover"
-          />
-        </div>
-      </Motion>
+        </Motion>
+      </div>
 
-      <div className="flex flex-col gap-3 md:gap-6 md:w-1/2 ">
+      <div
+        className="flex flex-col gap-3 md:gap-6 w-full md:w-1/2
+       "
+      >
         <SectionSmallHeader headingContent="Who We Are" />
         <h2 className="font-bold text-black text-[20px] md:text-[25px] tracking-wider">
           Rooted in Diversity and Sustainability{' '}

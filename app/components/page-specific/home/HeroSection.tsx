@@ -23,7 +23,7 @@ const HeroSection = () => {
         ref={ref}
         className="flex h-full items-center p-10 md:py-20 z-10 absolute bg-linear-to-r from-white via-white/70 to-transparent"
       >
-        <div className="relative z-20 h-full flex flex-col md:mt-20 w-full md:w-[55%] gap-8 md:gap-14 tracking-wider leading-loose">
+        <div className="relative z-20 h-full flex flex-col md:mt-20 w-full md:w-[55%] gap-10 md:gap-14 tracking-wider leading-loose">
           <div
             className={`flex gap-3 w-1/2  items-center  ${inView ? 'translate-y-8 opacity-100' : '-translate-y-7 opacity-0'} transform transition-transform ease-in duration-1500 delay-0`}
           >

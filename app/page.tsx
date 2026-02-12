@@ -53,7 +53,7 @@ export default function Home() {
     <main className="flex flex-col md:gap-5 items-center bg-white ">
       <HeroSection />
       <div className="flex flex-col gap-7 md:gap-13 p-5 md:px-12">
-        <div className="flex gap-2.5 flex-row justify-between p-5 md:px-15 items-center">
+        <div className="flex gap-2.5 flex-row justify-between md:justify-around p-5 items-center">
           <CoreAreasSection
             icon={faEgg}
             heading="Poultry Farming"
