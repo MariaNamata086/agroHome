@@ -20,7 +20,7 @@ function HeaderBanner({
           <div className="flex items-center">
             <span className="bg-primaryGreen h-2 w-2 rounded-full mt-2.5 ml-20 mr-3" />
 
-            <span className="mb-7.5 text-md md:text-[18px] mt-10 text-slate-800 md:text-forestGreen tracking-wider font-semibold leading-loose ">
+            <span className="mb-7.5 text-lg md:text-[18px] mt-10 text-slate-700 md:text-forestGreen tracking-wider font-semibold leading-loose ">
               {pageHeading}
             </span>
           </div>

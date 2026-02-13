@@ -17,10 +17,10 @@ function PointCard({ icon, moreInfo, description, point }: PointCardProp) {
         iconSize="text-[60px]"
       />
       <div className="flex justify-center items-center flex-col gap-7.5 p-3 tracking-widest">
-        <h2 className="font-semibold text-center text-xl md:text-2xl">
+        <h2 className="font-semibold text-center text-black text-2xl">
           {point}
         </h2>
-        <p className="flex text-slate-600 text-xs w-[80%] md:text-[16px] text-center tracking-wider leading-loose">
+        <p className="flex text-slate-700 text-[14px] w-[80%] md:text-[16px] text-center tracking-wider leading-loose">
           {description}
         </p>
         {moreInfo && (

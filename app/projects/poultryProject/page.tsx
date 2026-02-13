@@ -141,7 +141,7 @@ function PoultryProject() {
       <div className="flex flex-col bg-white gap-20 justify-center items-center p-10 md:p-20">
         <div className="flex flex-col w-full md:w-[80%] h-auto">
           <Motion direction="right">
-            <div className="flex flex-col gap-6 -mt-14 px-6 md:text-5xl ">
+            <div className="flex flex-col gap-6 -mt-14 md:text-5xl ">
               <h1 className="flex items-center tracking-widest p-3 md:p-5 text-slate-800 justify-center font-bold text-[35px] md:text-5xl md:gap-6 bg-amber200 text-center">
                 <FontAwesomeIcon
                   icon={faBinoculars}
@@ -151,7 +151,7 @@ function PoultryProject() {
                 />
                 <span> Project Overview</span>
               </h1>
-              <p className=" tracking-widest text-slate-700 leading-loose text-md md:text-[16px]">
+              <p className=" tracking-widest text-slate-700 leading-8 md:leading-loose text-sm md:text-[15px]">
                 {' '}
                 Our poultry project is the backbone of the farm. We specialize
                 primarily in <b>layer birds,</b>reared using a{' '}
@@ -159,11 +159,11 @@ function PoultryProject() {
                 that ensures efficiency, top-notch bird welfare and superior egg
                 quality.
               </p>
-              <p className="tracking-widest text-slate-700 leading-loose text-md md:text-[16px]">
+              <p className="tracking-widest text-slate-700 leading-8 md:leading-loose text-sm md:text-[15px]">
                 This system allows us to manage over <b>10,000 birds</b> with
                 precision, consistency, and strict hygiene standards
               </p>
-              <p className=" tracking-widest text-slate-700 leading-loose text-md md:text-[16px]">
+              <p className=" tracking-widest text-slate-700 leading-8 md:leading-loose text-sm md:text-[15px]">
                 Our layer enterprise serves both as a commercial operation and a
                 training model for farmers seeking to transition to efficient,
                 hygienic and profitable poultry production.
@@ -178,10 +178,10 @@ function PoultryProject() {
             alt="image showing poultry day old chicks in a brooder"
             style={{ objectFit: 'cover' }}
           />
-          <div className=" absolute inset-0 bg-black/50 flex gap-2 flex-col items-center justify-center h-auto p-10 w-full tracking-wider leading-loose">
+          <div className="absolute inset-0 bg-black/50 flex gap-2 flex-col items-center justify-center h-auto p-6 md:p-10 w-full tracking-wider leading-loose">
             <div className="flex flex-col  ">
               <Motion direction="left">
-                <h2 className="flex items-center tracking-widest p-3 md:p-5 text-slate-200 leading-18 justify-center font-bold text-[35px] md:text-5xl md:gap-6 bg-amber200 mb-4 text-center">
+                <h2 className="flex items-center tracking-widest md:p-5 text-white md:text-slate-200 md:leading-18 justify-center font-bold text-[28px] md:text-5xl gap-2 md:gap-6 bg-amber200 mb-4 text-center">
                   <FontAwesomeIcon icon={faRoute} beat size="xl" />
                   <span>
                     {' '}
@@ -206,7 +206,7 @@ function PoultryProject() {
                         />
                       </span>
                       <div
-                        className="flex flex-col gap-1.5 py-5 px-9 rounded-full h-28"
+                        className="flex flex-col gap-1.5 p-2 md:py-5 md:px-9 rounded-full md:h-28 "
                         style={{
                           backgroundColor:
                             index === 0 || index === 1 || index === 2
@@ -222,7 +222,7 @@ function PoultryProject() {
                                   ? 'black'
                                   : 'oklch(55.4% 0.046 257.417)',
                             }}
-                            className="text-[13px] font-medium tracking-widest text-center md:text-[15px] text-forestGreen"
+                            className="text-[12px] font-medium tracking-widest text-center md:text-[15px] text-forestGreen"
                           >
                             {heading}
                           </h3>
@@ -234,7 +234,7 @@ function PoultryProject() {
                                 ? 'oklch(30.2% 0.056 229.695)'
                                 : 'oklch(37.2% 0.044 257.287)',
                           }}
-                          className="flex tracking-relaxed text-sm md:text-[14px] text-center leading-relaxed mb-2"
+                          className="flex tracking-relaxed text-[11px] md:text-[14px] text-center leading-relaxed mb-2"
                         >
                           {moreInfo}
                         </span>
@@ -257,21 +257,21 @@ function PoultryProject() {
         </div>
         <div className="flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
           <Motion direction="right">
-            <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
-              <GiBirdCage />
+            <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[34px] md:text-5xl gap-3.5">
+              <GiBirdCage className="text-amber-500 text-[80px]" />
               <span>Why Battery Cage System?</span>
             </h2>
           </Motion>
-          <div ref={ref} className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div ref={ref} className="grid md:grid-cols-2 gap-6">
             {whyBatteryCageSysytemData.map(
               ({ advantage, icon, moreInfo }, index) => {
                 return (
                   <div
-                    className={`flex flex-col gap-4 py-2 px-3 md:px-6 shadow-lg rounded-md duration-1000 ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'} `}
+                    className={`flex flex-col gap-4 py-3 px-4 md:px-6 shadow-lg rounded-md hover:scale-103 duration-1000 ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'} `}
                     key={index}
                   >
                     <div className="flex items-center gap-2.5 p-2">
-                      <h3 className="font-semibold text-xl tracking-widest text-slate-700">
+                      <h3 className="font-semibold text-[19px] md:text-xl tracking-widest text-slate-700">
                         {advantage}
                       </h3>
                       <FontAwesomeIcon
@@ -280,7 +280,9 @@ function PoultryProject() {
                         color="oklch(37.3% 0.034 259.733)"
                       />
                     </div>
-                    <p className="tracking-wider leading-loose">{moreInfo}</p>
+                    <p className="tracking-wider text-[15px] text-right md:text-[17px] leading-loose">
+                      {moreInfo}
+                    </p>
                   </div>
                 );
               },
@@ -297,7 +299,7 @@ function PoultryProject() {
           />
 
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center px-5 gap-4 md:gap-10 text-center text-gray-300">
-            <h2 className="font-semibold text-xl tracking-wider md:text-4xl">
+            <h2 className="font-semibold  text-white text-2xl tracking-widest md:text-4xl">
               Project Deliverables
             </h2>
             <div
@@ -323,8 +325,8 @@ function PoultryProject() {
           </div>
         </section>
 
-        <div className="flex flex-col gap-3">
-          <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl">
+        <div className="flex flex-col justify-center items-center gap-3">
+          <h1 className="flex tracking-widest p-3 md:p-5 text-gray-700 justify-center text-center font-bold text-[36px] md:text-5xl">
             Technology & Management
           </h1>
           <div className="flex flex-col md:flex-row md:items-center justify-between md:gap-2 ">
@@ -340,9 +342,9 @@ function PoultryProject() {
             })}
           </div>
         </div>
-        <div className="flex flex-col  w-full h-[400px] md:h-[550px] relative">
-          <Carousel images={poultryProjectImages} />
-        </div>
+      </div>
+      <div className="flex flex-col  w-full h-100 md:h-137.5 relative">
+        <Carousel images={poultryProjectImages} />
       </div>
     </main>
   );
