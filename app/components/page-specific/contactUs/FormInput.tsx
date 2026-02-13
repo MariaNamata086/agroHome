@@ -55,7 +55,7 @@ function FormInput(props: InputProps) {
       {label && (
         <label
           htmlFor={id}
-          className="pl-1 text-slate-600 text-[12px] md:text-[15px]"
+          className="pl-1 md:text-slate-600 text-[12px] md:text-[15px]"
         >
           {label} {required && <span className="text-red-500">*</span>}
         </label>
@@ -64,7 +64,7 @@ function FormInput(props: InputProps) {
         {' '}
         {/* Wrap the input and the icon in a div */}
         <input
-          className={`flex transition-all duration-700 w-full text-[13px] bg-[#e6e7e990] rounded-2xl focus:shadow-sm focus:${borderColor} px-3.5 focus:border focus:border-gray-300 md:p-6 h-10`}
+          className={`flex transition-all hover:scale-105 duration-700 w-full text-[13px] bg-[#e6e7e990] rounded-2xl focus:shadow-sm focus:${borderColor} px-3.5 focus:border focus:border-gray-300 md:p-6 h-10`}
           type={
             type === 'password'
               ? passwordVisible
