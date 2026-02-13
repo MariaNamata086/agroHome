@@ -159,9 +159,6 @@ function Navbar() {
               <button
                 type="button"
                 className=" hover:text-primaryGreen text-slate-700 text-[14px]  text-start"
-                onClick={() => {
-                  setMobileMenuVisible(false);
-                }}
               >
                 Our Projects
               </button>
@@ -222,7 +219,7 @@ function Navbar() {
             Read about Us
           </Link>
           <Link
-            href={'/contact-us'}
+            href={'/contactUs'}
             className="flex hover:text-primaryGreen text-[14px] text-slate-700"
             onClick={() => {
               setMobileMenuVisible(false);
