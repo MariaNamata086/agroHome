@@ -128,7 +128,7 @@ function Navbar() {
               icon={faXmark}
               className="text-gray-700 hover:text-primaryGreen
              "
-              size="lg"
+              size="sm"
             />
           ) : (
             <FontAwesomeIcon
@@ -145,6 +145,9 @@ function Navbar() {
           <Link
             href={'/aboutUs'}
             className="flex hover:text-primaryGreen text-slate-700 text-[14px] tracking-widest"
+            onClick={() => {
+              setMobileMenuVisible(false);
+            }}
           >
             About us
           </Link>
@@ -156,6 +159,9 @@ function Navbar() {
               <button
                 type="button"
                 className=" hover:text-primaryGreen text-slate-700 text-[14px]  text-start"
+                onClick={() => {
+                  setMobileMenuVisible(false);
+                }}
               >
                 Our Projects
               </button>
@@ -171,24 +177,36 @@ function Navbar() {
               <Link
                 href={'/projects'}
                 className="flex hover:text-primaryGreen text-slate-700"
+                onClick={() => {
+                  setMobileMenuVisible(false);
+                }}
               >
                 Projects Overview
               </Link>
               <Link
                 href={'/projects/bananasProject'}
                 className="flex hover:text-primaryGreen text-slate-700"
+                onClick={() => {
+                  setMobileMenuVisible(false);
+                }}
               >
                 Bananas project
               </Link>
               <Link
                 href={'/projects/poultryProject'}
                 className="flex hover:text-primaryGreen text-slate-700"
+                onClick={() => {
+                  setMobileMenuVisible(false);
+                }}
               >
                 Poultry project
               </Link>
               <Link
                 href={'/projects/coffeeProject'}
                 className="flex hover:text-primaryGreen text-slate-700"
+                onClick={() => {
+                  setMobileMenuVisible(false);
+                }}
               >
                 Coffee project
               </Link>
@@ -197,12 +215,18 @@ function Navbar() {
           <Link
             href={'/news'}
             className="flex hover:text-primaryGreen text-[14px] text-slate-700"
+            onClick={() => {
+              setMobileMenuVisible(false);
+            }}
           >
             Read about Us
           </Link>
           <Link
             href={'/contact-us'}
             className="flex hover:text-primaryGreen text-[14px] text-slate-700"
+            onClick={() => {
+              setMobileMenuVisible(false);
+            }}
           >
             Contact Us
           </Link>
