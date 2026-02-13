@@ -21,8 +21,8 @@ const NewsArcticle = ({
   imageSrc,
 }: NewsArcticleProps) => {
   return (
-    <div className="flex flex-col md:flex-row md:gap-5 bg-stone-100  tracking-wider leading-loose w-full justify-center h-80 md:h-100">
-      <div className="flex flex-col gap-3.5 items-center justify-center px-4 md:px-8 md:gap-5">
+    <div className="flex flex-col md:flex-row gap-5 bg-stone-100  tracking-wider leading-loose w-full justify-center h-auto md:h-100">
+      <div className="flex flex-col gap-3.5 items-center justify-center p-4 md:px-8 md:gap-5">
         <Motion direction="zoom">
           <h2 className="text-xl text-center font-bold text-slate-700 tracking-wider leading-loose">
             {title}

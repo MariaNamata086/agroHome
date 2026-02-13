@@ -71,16 +71,16 @@ function page() {
   ];
 
   return (
-    <main className="flex flex-col md:gap-5 items-center bg-white ">
+    <main className="flex flex-col gap-5 md:gap-20 items-center bg-white ">
       <ProjectHeroSection
         heroImage={newsHeroImage}
         projectHeading="News & Media"
         projectTagline="Our journey, milestones, and national recognition"
       />
-      <div className="flex flex-col gap-7 md:gap-13 p-5 md:px-20">
-        <div className="flex flex-col  gap-8 md:gap-12 justify-center items-center tracking-wider leading-loose">
+      <div className="flex flex-col gap-10 h-auto md:gap-15 p-5 md:px-20">
+        <div className="flex flex-col md:-mt-13 gap-5 justify-center items-center tracking-wider leading-loose">
           <Motion direction="right">
-            <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4 place-self-center">
+            <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center w-full md:w-[65%] text-center font-bold text-[22px] md:text-4xl gap-3.5 md:gap-4 place-self-center">
               <FontAwesomeIcon
                 icon={faStarHalfStroke}
                 size="lg"
@@ -90,7 +90,7 @@ function page() {
             </h1>
           </Motion>
           <Motion direction="left">
-            <p className="tracking-wider leading-relaxed md:leading-12 text-center md:px-12">
+            <p className="tracking-wider leading-8 md:leading-12 text-center text-[14px] md:text-lg md:px-12">
               Our journey has not only transformed our farm — it has captured
               national attention. From organic coffee success to farmer training
               and climate-smart practices, our story has been featured by
@@ -100,36 +100,36 @@ function page() {
               excellence is creating ripples far beyond its fields.
             </p>
           </Motion>
-          <div className="flex flex-col gap-6 md:gap-10">
-            {newsArticlesData.map(
-              (
-                {
-                  title,
-                  articleExcerpt,
-                  publicationHouse,
-                  publicationDate,
-                  link,
-                  imageSrc,
-                },
-                index,
-              ) => {
-                return (
-                  <NewsArcticle
-                    key={index}
-                    title={title}
-                    articleExcerpt={articleExcerpt}
-                    publicationHouse={publicationHouse}
-                    publicationDate={publicationDate}
-                    link={link}
-                    imageSrc={imageSrc}
-                  />
-                );
+        </div>
+        <div className="flex flex-col gap-6 md:gap-10">
+          {newsArticlesData.map(
+            (
+              {
+                title,
+                articleExcerpt,
+                publicationHouse,
+                publicationDate,
+                link,
+                imageSrc,
               },
-            )}
-          </div>
+              index,
+            ) => {
+              return (
+                <NewsArcticle
+                  key={index}
+                  title={title}
+                  articleExcerpt={articleExcerpt}
+                  publicationHouse={publicationHouse}
+                  publicationDate={publicationDate}
+                  link={link}
+                  imageSrc={imageSrc}
+                />
+              );
+            },
+          )}
         </div>
         <section className="flex flex-col justify-center items-center gap-5 mb-10">
-          <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center items-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl gap-3.5 md:gap-4 ">
+          <h1 className="flex tracking-widest leading-relaxed p-3 md:p-5 text-gray-700 justify-center md:items-center w-full md:w-[65%] text-center font-bold text-[28px] md:text-4xl md:gap-4 ">
             <FontAwesomeIcon
               icon={faYoutube}
               size="xl"
@@ -137,7 +137,7 @@ function page() {
             />
             <span className="text-slate-700">Check us out on YouTube</span>
           </h1>
-          <p className="tracking-wider w-[60%] md:text-[25px] font-semibold text-center text-lg text-black leading-loose">
+          <p className="tracking-wider md:w-[60%] md:text-[25px] font-semibold text-center text-lg text-black leading-loose">
             We bring you a close up view of both what was and is happening at
             our farm.
           </p>
