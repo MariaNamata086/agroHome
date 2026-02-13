@@ -18,9 +18,9 @@ function HeaderBanner({
         <HeaderButtons pageName={page} />
         <Motion direction="up">
           <div className="flex items-center">
-            <span className="bg-primaryGreen h-3 w-3 rounded-full mt-2.5 ml-20 mr-3" />
+            <span className="bg-primaryGreen h-2 w-2 rounded-full mt-2.5 ml-20 mr-3" />
 
-            <span className="mb-7.5 text-md md:text-[18px] mt-10 text-forestGreen tracking-wider font-semibold leading-loose">
+            <span className="mb-7.5 text-md md:text-[18px] mt-10 text-slate-800 md:text-forestGreen tracking-wider font-semibold leading-loose ">
               {pageHeading}
             </span>
           </div>

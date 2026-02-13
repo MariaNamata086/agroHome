@@ -47,31 +47,30 @@ const CoffeeProject = () => {
     'Strong market demand',
   ];
   return (
-    <main className="flex flex-col gap-15 bg-white">
+    <main className="flex flex-col gap-8 md:gap-15 bg-white">
       <HeaderBanner
         src={coffeeHeroImage}
         page="Coffee Project"
         pageHeading="From soil to cup &#8212; profitable, organic, and sustainable"
       />
-      <div className="flex flex-col gap-20 p-5 md:px-20 w-full">
-        <section className="flex flex-col gap-4 md:gap-10 md:flex-row">
+      <div className="flex flex-col gap-10 md:gap-20 p-5 md:px-20 w-full">
+        <section className="flex flex-col-reverse gap-8 md:gap-14 md:flex-row md:items-center">
           <Image
             src={coffeeImage}
             alt="Image of a young coffee plant surrounded by poultry manure "
-            className="w-full md:w-1/2 h-auto rounded-md md:h-150 shadow-md"
+            className="w-full md:w-1/2 h-120 rounded-md md:h-150 shadow-md"
           />
           <Motion direction="right">
-            <div className="flex flex-col  gap-2.55 md:gap-3.5 tracking-wider leading-loose ">
-              <h1 className="flex text-slate-700 font-bold justify-self-start tracking-widest text-2xl leading-loose md:text-5xl ">
+            <div className="flex flex-col gap-2 md:gap-3.5 tracking-wider leading-loose ">
+              <h1 className="flex text-slate-700 font-bold justify-self-start tracking-widest text-4xl leading-loose md:text-5xl ">
                 Project Overview
               </h1>
-              <h1 className="text-3xl md:text-5xl font-bold"></h1>
-              <p className="tracking-wider  leading-relaxed md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 Our coffee project demonstrates how organic, irrigated, and well
                 managed coffee farming can generate consistent income while
                 restoring soil health and supporting rural livelihoods.
               </p>
-              <p className="tracking-wider  leading-relaxed md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 According to
                 <Link
                   href={
@@ -88,7 +87,7 @@ const CoffeeProject = () => {
                 further pressure.
               </p>
 
-              <p className="tracking-wider  leading-relaxed md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 Our farming approach not only enhances the flavor and aroma of
                 the coffee beans but also, eliminates the need and cost for
                 chemical fertiliser inputs, while producing high-yielding strong
@@ -97,7 +96,7 @@ const CoffeeProject = () => {
             </div>
           </Motion>
         </section>
-        <div className="flex flex-col p-4 md:p-10 md:px-24 shadow-lg rounded-lg gap-3 md:gap-5 bg-stone-100">
+        <div className="flex flex-col p-4  md:p-10 md:px-24 shadow-lg rounded-lg gap-3 md:gap-5 bg-stone-100">
           <Motion direction="zoom">
             <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
               <GiCoffeeBeans />
@@ -106,7 +105,7 @@ const CoffeeProject = () => {
           </Motion>
           <Motion direction="down">
             <div className="flex flex-col gap-3">
-              <p className="tracking-wider  leading-relaxed md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 We specialise in Robusta coffee
                 <i className="ml-2 underline">(Coffea </i>
                 <i className="mx-2 underline">canephora)</i>
@@ -115,7 +114,7 @@ const CoffeeProject = () => {
                 well-deistributed rainfall annually.
               </p>
 
-              <p className="tracking-wider  leading-relaxed md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 The variety is more resilient to climate changes, has lower
                 acidity, a higher caffeine content, and offers a distinct bold
                 flavor profile that appeals to a wide range of consumers.
@@ -123,7 +122,7 @@ const CoffeeProject = () => {
             </div>
           </Motion>
         </div>
-        <div className="relative mt-5 md:mt-9 w-full h-87.5 md:h-140 bg-amber-200">
+        <div className="relative mt-5 md:mt-9 w-full h-170 md:h-140">
           <Image
             src={wayOfFarmingImage}
             alt="image of a banana-coffee intercropped garden"
@@ -131,7 +130,7 @@ const CoffeeProject = () => {
             priority
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center px-5 md:px-16 gap-4 md:gap-8 text-center text-white">
-            <h2 className=" tracking-widest p-3 text-slate-200 md:p-5 justify-center font-bold text-[28px] md:text-6xl">
+            <h2 className="tracking-widest p-3 text-white md:p-5 justify-center font-bold text-[34px] md:text-6xl">
               Our way of farming
             </h2>
 
@@ -139,18 +138,18 @@ const CoffeeProject = () => {
               {featuresSectionData.map(({ point, icon, moreInfo }, index) => {
                 return (
                   <Motion direction="up" key={index}>
-                    <div className="flex flex-col gap-2.5 shadow-lg rounded-lg py-2 px-3 md:px-8 h-40 justify-center items-center border-b-3 bg-white border-primaryGreen hover:scale-105">
+                    <div className="flex flex-col md:gap-2.5 shadow-lg rounded-lg py-2 px-3 md:px-8 h-auto md:h-40 justify-center items-center border-b-3 bg-white border-primaryGreen hover:scale-105">
                       <div className="flex flex-row-reverse items-center gap-2.5 p-2">
-                        <h3 className="font-semibold text-xl tracking-widest text-slate-700">
+                        <h3 className="font-semibold text-lg md:text-xl tracking-widest text-slate-700">
                           {point}
                         </h3>
                         <FontAwesomeIcon
                           icon={icon}
                           size="2xl"
-                          className="flex self-start text-slate-700"
+                          className="flex self-start animate-pulse text-slate-700"
                         />
                       </div>
-                      <p className="tracking-wider leading-loose w-[80%] text-gray-600">
+                      <p className="tracking-wider text-[13px] md:text-[16px] leading-loose w-[80%] text-gray-600">
                         {moreInfo}
                       </p>
                     </div>
@@ -161,17 +160,17 @@ const CoffeeProject = () => {
           </div>
         </div>
         <section className="flex flex-col gap-3 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5 md:gap-6">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl md:gap-6 bg-amber200 text-center">
             <FontAwesomeIcon
               icon={faShoppingBasket}
-              size="lg"
+              size="xl"
               className="animate-pulse text-primaryGreen"
             />
             <span>What you can expect</span>
           </h2>
           {projectOutComesData.map((item, index) => {
             return (
-              <Motion direction="up" key={index}>
+              <Motion direction="right" key={index}>
                 <div className="flex items-center gap-4 md:gap-6 h-26 px-5 md:px-14 shadow-sm rounded-b-md">
                   <FontAwesomeIcon
                     icon={faHandPointRight}
@@ -179,7 +178,7 @@ const CoffeeProject = () => {
                     color="#96CA2D"
                     className="animate-bounce"
                   />
-                  <span className="text-gray-600 text-[14px] md:text-[18px]">
+                  <span className="text-gray-600 text-[15px] md:text-[18px]">
                     {item}
                   </span>
                 </div>
@@ -187,7 +186,7 @@ const CoffeeProject = () => {
             );
           })}
         </section>
-        <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
+        <div className="flex flex-col gap-3 px-10 text-center tracking-wider leading-loose md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
           <p className="flext font-semibold text-md md:text-lg ">
             Want to learn modern farming techniques or partner with us?
           </p>
