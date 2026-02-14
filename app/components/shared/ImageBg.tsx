@@ -12,6 +12,7 @@ interface ImageBgProps {
   componentContent?: string[];
   componentMoreInfo?: string;
   quote?: string;
+  icon?: any;
 }
 
 const ImageBg = ({
@@ -22,9 +23,10 @@ const ImageBg = ({
   componentContent,
   componentMoreInfo,
   quote,
+  icon,
 }: ImageBgProps) => {
   return (
-    <div className="flex md:h-130 relative">
+    <div className="flex h-auto md:h-130 relative">
       <Image
         src={src}
         alt={alt}
@@ -35,9 +37,9 @@ const ImageBg = ({
         {componentHeading && (
           <h2 className="flex items-center tracking-widest p-3 md:p-5 text-white justif-center font-bold text-[28px] md:text-5xl gap-3.5">
             <FontAwesomeIcon
-              icon={faGlobeAmericas}
+              icon={icon || faGlobeAmericas}
               size="lg"
-              className="text-lime-200 animate-spin"
+              className="text-lime-200"
             />
             <span>{componentHeading}</span>
           </h2>
@@ -51,7 +53,7 @@ const ImageBg = ({
           <h3 className="text-lg mb-4">{componentSubheading}</h3>
         )}
         {componentContent && (
-          <ol className="flex flex-col list-decimal gap-3 md:gap-5 text-left">
+          <ol className="flex flex-col list-decimal gap-2 md:gap-5 px-6">
             {componentContent.map((item, index) => (
               <li key={index} className="">
                 {item}

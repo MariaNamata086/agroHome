@@ -20,7 +20,7 @@ const BananaVarietyCard = ({
   varietyDetails2,
 }: BananaVarietyCardProps) => {
   return (
-    <div className="flex flex-col border-b-3 border-b-gray-600 hover:border-primaryGreen h-150 justify-start items-center rounded-b-lg shadow-sm">
+    <div className="flex flex-col border-b-3 border-b-gray-600 hover:border-primaryGreen md:h-150 justify-start items-center rounded-b-lg shadow-sm">
       <Image
         src={varietyImage}
         alt={'image of banana variety'}

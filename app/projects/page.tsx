@@ -53,7 +53,7 @@ function OurProjects() {
       <div className="hidden md:flex">
         <HeaderBanner
           page="Our projects"
-          pageHeading="Integrated farming systems designed for productivity, sustainability, and farmer education"
+          pageHeading="Integrated farming systems designed for productivity and sustainability"
           src={headerBannerImage}
         />
       </div>
