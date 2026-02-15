@@ -10,7 +10,7 @@ export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset' | undefined;
   style?: React.CSSProperties;
   className?: string;
-  intent?: 'primary' | 'secondary' |'text';
+  intent?: 'primary' | 'secondary' | 'text';
   size?: 'small' | 'medium';
   textColor?: string;
 };
@@ -21,7 +21,6 @@ export default function Button({
   disabled,
   textColor = 'text-white',
   type = 'submit',
-  className,
   size = 'medium',
   ...props
 }: ButtonProps) {

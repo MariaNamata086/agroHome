@@ -44,14 +44,12 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
       try {
         setLoading(true);
         setSuccessMessage('Inquiry successfully Submitted');
-        //submit form data
       } catch (error) {
         setLoading(false);
-        //handle Error
       } finally {
         setLoading(false);
         formik.resetForm();
-         setTimeout(() => setLoading(false), 2500);
+        setTimeout(() => setLoading(false), 2500);
         setTimeout(() => setSuccessMessage(null), 5000);
         setTimeout(() => setErrorMessage(null), 4000);
       }
@@ -59,10 +57,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
   });
   return (
     <div className="flex flex-col gap-4 justify-center p-2 w-full h-auto">
-      <div
-        className="flex justify-between items-center"
-        // onClick={() => setVisible(!visible)}
-      >
+      <div className="flex justify-between items-center">
         <span className="flex text-sm md:text-[22px] text-slate-800 font-semibold tracking-widest p-5 md:p-8 md:-mb-7">
           {formName}
         </span>
