@@ -18,7 +18,7 @@ const CallToActionButton = ({
     >
       <Link
         href={href}
-        className="flex text-sm font-semibold justify-center  items-center"
+        className="flex text-xs md:text-sm font-semibold justify-center  items-center"
       >
         {callToAction}
       </Link>
