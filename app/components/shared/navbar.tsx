@@ -25,7 +25,6 @@ function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/aboutUs' },
-    { name: 'Contact Us', href: '/contactUs' },
     { name: 'In the Media', href: '/news' },
   ];
   return (
@@ -40,10 +39,10 @@ function Navbar() {
           />
         </Link>
         <div className="flex flex-col justify-start ">
-          <span className="text-lg md:text-[16px] tracking-wider">
+          <span className="text-lg md:text-[22px] md:text-slate-800 tracking-wider">
             St Joseph
           </span>
-          <span className="text-lg md:text-[16px] font-semibold tracking-wider">
+          <span className="text-lg md:text-[22px] md:text-slate-800 font-semibold tracking-wider">
             Agricultural Farm
           </span>
         </div>
@@ -112,10 +111,10 @@ function Navbar() {
           </div>
         </div>
         <Link
-          href={'/app/contact-us'}
+          href={'/contactUs'}
           className="flex items-center text-black gap-2 hover:text-white justify-around p-3.5 rounded-full w-[1/4] bg-amber-300 hover:bg-stone-500"
         >
-          <span className="text-sm">Get in touch</span>
+          <span className="text-sm font-semibold">Contact Us</span>
           <FontAwesomeIcon icon={faEnvelopeOpenText} />
         </Link>
       </div>

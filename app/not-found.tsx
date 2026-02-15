@@ -15,7 +15,7 @@ function NotFound() {
       />
 
       <div className="absolute inset-0 bg-black/70 flex flex-col  justify-center px-10 md:px-20 h-auto gap-6 md:gap-8 text-center text-white">
-        <h1 className="font-bold text-7xl text-left tracking-widest md:text-9xl">
+        <h1 className="font-bold text-7xl text-left tracking-widest md:text-9xl text-red-300">
           404
         </h1>
         <h2 className="flex font-semibold tracking-wider text-2xl md:text-4xl">
