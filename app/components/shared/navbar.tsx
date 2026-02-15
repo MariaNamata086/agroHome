@@ -131,14 +131,14 @@ function Navbar() {
           {mobileMenuVisible ? (
             <FontAwesomeIcon
               icon={faXmark}
-              className="text-gray-700 hover:text-primaryGreen
+              className="text-gray-800 hover:text-primaryGreen
              "
               size="sm"
             />
           ) : (
             <FontAwesomeIcon
               icon={faBars}
-              className="text-gray-700 hover:text-primaryGreen"
+              className="text-gray-800 hover:text-primaryGreen"
             />
           )}
         </button>
@@ -147,6 +147,15 @@ function Navbar() {
             mobileMenuVisible ? 'flex' : 'hidden'
           } flex-col gap-5 bg-white absolute top-full left-0 w-full  h-auto text-black p-8 shadow-sm shadow-primaryGreen rounded-lg `}
         >
+          <Link
+            href={'/'}
+            className="flex hover:text-primaryGreen text-slate-700 text-[14px] tracking-widest"
+            onClick={() => {
+              setMobileMenuVisible(false);
+            }}
+          >
+            Home
+          </Link>
           <Link
             href={'/aboutUs'}
             className="flex hover:text-primaryGreen text-slate-700 text-[14px] tracking-widest"
