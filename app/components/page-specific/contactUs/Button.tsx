@@ -10,7 +10,7 @@ export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset' | undefined;
   style?: React.CSSProperties;
   className?: string;
-  intent?: 'primary' | 'secondary' | 'outline' | 'text';
+  intent?: 'primary' | 'secondary' |'text';
   size?: 'small' | 'medium';
   textColor?: string;
 };
@@ -30,7 +30,7 @@ export default function Button({
       disabled={loading || disabled}
       type={type}
       {...props}
-      className={`h-10 font-semibold border-none w-[60%] color-white justify-center items-center bg-primaryBrown py-2 px-4 rounded-full hover:scale-105 hover:bg-gray-700 text-black hover:text-white ${textColor}`}
+      className={`h-10 font-semibold w-[60%] color-white justify-center items-center bg-primaryBrown py-2 px-4 rounded-full hover:scale-105 hover:bg-gray-700 text-black hover:text-white ${textColor}`}
       style={{
         cursor: disabled ? 'not-allowed' : 'pointer',
         fontSize: size === 'small' ? 10 : 14,
