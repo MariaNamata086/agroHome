@@ -27,7 +27,7 @@ const BananaVarietyCard = ({
         className=" flex w-full h-[60%] object-cover mt-0"
       />
       <div className="flex flex-col p-5 rounded-lg shadow-t-xl -mt-7 gap-3 w-[85%] text-center tracking-wider leading-loose bg-white">
-        <h2 className="font-semibold tracking-widest text-slate-700 text-lg">
+        <h2 className="font-semibold tracking-widest text-slate-700  text-[20px] md:text-lg">
           {name}
         </h2>
 

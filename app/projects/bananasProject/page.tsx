@@ -54,30 +54,29 @@ function BananaFarmingProject() {
     {
       practice: 'Regular Pruning',
       description:
-        ': Improves air circulation and reduces pest and disease pressure.',
+        'Improves air circulation and reduces pest and disease pressure.',
     },
     {
       practice: 'Desuckering',
       description:
-        ': Maintains optimal plant populations and directs energy to fruiting stems.',
+        'Maintains optimal plant populations and directs energy to fruiting stems.',
     },
     {
       practice: 'Thinning',
-      description: ': Ensures adequate spacing and uniform bunch development.',
+      description: 'Ensures adequate spacing and uniform bunch development.',
     },
     {
       practice: 'Proper Spacing',
-      description:
-        ': Minimizes competition for nutrients, water, and sunlight.',
+      description: 'Minimizes competition for nutrients, water, and sunlight.',
     },
     {
       practice: 'Responsible Harvesting',
       description:
-        ': Ensures maximum fruit quality, shelf life, and market value.',
+        'Ensures maximum fruit quality, shelf life, and market value.',
     },
     {
       practice: 'Quality Propagation Material',
-      description: ': Only top-grade, disease-free planting material is used.',
+      description: 'Only top-grade, disease-free planting material is used.',
     },
   ];
 
@@ -113,7 +112,7 @@ function BananaFarmingProject() {
         src={bananasProjectHero}
       />
       <div className="flex flex-col gap-10 md:gap-20 p-5 md:px-20 ">
-        <section className="flex flex-col gap-4 -mt-8 md:mt-0  md:flex-row">
+        <section className="flex flex-col gap-4 md:gap-8 -mt-8 md:mt-0  md:flex-row">
           <Motion direction="down">
             <div className="flex flex-col gap-2.5 md:gap-4">
               <h1 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center gap-3.5">
@@ -180,7 +179,7 @@ function BananaFarmingProject() {
               science-based agricultural practices:
             </p>
           </Motion>
-          <div className="flex flex-col gap-4 md:gap-4.5 mb-3 md:mb-8 text-gray-700 ">
+          <div className="flex flex-col gap-5 md:gap-7 mb-3 md:mt-3 md:mb-8 text-gray-700 ">
             {howWeWorkData.map(({ practice, description }, index) => {
               return (
                 <div
@@ -192,8 +191,10 @@ function BananaFarmingProject() {
                     size="lg"
                     className="text-primaryGreen self-start md:self-center animate-bounce"
                   />
-                  <p className="flex text-[12px] md:text-md tracking-wider">
-                    <b className="hidden md:flex">{practice}</b>
+                  <p className="flex flex-col md:flex-row text-[12px] md:text-[14px] tracking-widest gap-1">
+                    <span className="text-[14px] font-semibold md:text-[16px] tracking-widest">
+                      {practice}
+                    </span>
                     {''}
                     {description}
                   </p>
@@ -202,7 +203,7 @@ function BananaFarmingProject() {
             })}
           </div>
         </section>
-        <div className="flex flex-col gap-3.5 md:gap-4.5 tracking-wider leading-loose shadow-xl px-8 md:px-16 py-5 -mt-6 ">
+        <div className="flex flex-col gap-3.5 items-center justify-center md:gap-4.5 rounded-lg shadow-2xl px-8 md:px-16 py-5 -mt-6 ">
           <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5 md:gap-6">
             <FontAwesomeIcon
               icon={faRecycle}
@@ -212,18 +213,19 @@ function BananaFarmingProject() {
             />
             <span>Sustainability</span>
           </h2>
-          <p className="text-[15px] md:text-[17.5px] text-center font-semibold tracking-widest text-slate-700">
-            Banana production is powered by a <b>closed-loop farming system </b>
-            , where waste from one enterprise fuels productivity in another.
+          <p className="text-[15px] md:text-[17.5px] text-center w-full md:w-[80%]  tracking-widest leading-loose font-md text-slate-700">
+            Our production system is powered by a{' '}
+            <b>closed-loop farming system </b>, where waste from one enterprise
+            fuels productivity in another.
           </p>
           <Motion direction="left">
-            <div className="flex items-center text-gray-700 tracking-wider gap-5.5 p-1">
+            <div className="flex items-center w-full md:w-[80%] text-gray-700 tracking-wider gap-4 md:gap-5.5 p-1">
               <FontAwesomeIcon
                 icon={faHandPointRight}
                 size="xl"
-                className="animate-bounce"
+                className="self-start"
               />
-              <p className="text-[14px] md:text-md text-justify">
+              <p className="text-[14px] md:text-md text-center text-gray-700 tracking-widest leading-loose">
                 <b>Poultry manure </b>is composted and applied to banana gardens
                 to restore soil nutrients, improve structure, and increase
                 moisture retention.
@@ -231,13 +233,13 @@ function BananaFarmingProject() {
             </div>
           </Motion>
           <Motion direction="right">
-            <div className="flex items-center text-gray-700  gap-5.5 p-1 mb-5">
+            <div className="flex items-center w-full md:w-[80%] text-gray-700  gap-4 md:gap-5.5 p-1 mb-5">
               <FontAwesomeIcon
                 icon={faHandPointRight}
                 size="xl"
-                className="animate-bounce"
+                className="self-start"
               />
-              <p className="text-[14px] md:text-md text-justify">
+              <p className="text-[14px] md:text-md text-center text-gray-700 tracking-widest leading-loose">
                 This organic fertilization approach reduces reliance on chemical
                 inputs while improving long-term soil health and productivity.
               </p>
@@ -280,7 +282,7 @@ function BananaFarmingProject() {
         <div className="  flex w-full relative h-80 shadow-lg ">
           <Image
             src={bananaArtImage}
-            alt="an image of bananas drwn using pencil art"
+            alt="an image of bananas drawn using pencil art"
             style={{ objectFit: 'contain' }}
             className="flex h-full w-full"
           />
