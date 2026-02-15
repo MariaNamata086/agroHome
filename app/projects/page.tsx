@@ -20,7 +20,7 @@ function OurProjects() {
         'Organic Robusta coffee grown using farm nurtured cutting seedlings and poultry manure ',
       image: coffeeProjectImage,
       alt: 'picture of coffee farm project',
-      href: '/app/projects/coffee',
+      href: '/projects/coffeeProject',
     },
     {
       projectName: 'Bananas Farming',
@@ -28,7 +28,7 @@ function OurProjects() {
         'Medium scale cooking bananas farming, interspersed with Juice, Gonja and Ndiizi bananas',
       image: bananasProjectImage,
       alt: 'picture of bananas farm project',
-      href: '/app/projects/bananas',
+      href: '/projects/bananasProject',
     },
     {
       projectName: 'Poultry Production',
@@ -36,7 +36,7 @@ function OurProjects() {
         'Large-scale Layer poultry production using advanced battery cage systems',
       image: poultryProjectImage,
       alt: 'picture of poultry house',
-      href: '/app/projects/poultry',
+      href: '/projects/poultryProject',
     },
     {
       projectName: 'Plantation Forestry',
@@ -44,7 +44,7 @@ function OurProjects() {
         'Commercial Eucalyptus forestry for pole and timber production',
       image: plantationForestryImage,
       alt: 'picture of the eucalptus garden project',
-      href: '/app/projects/plantationForestry',
+      href: '/projects/plantationForestry',
     },
   ];
 

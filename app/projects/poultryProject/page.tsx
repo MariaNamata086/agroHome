@@ -151,7 +151,7 @@ function PoultryProject() {
                 />
                 <span> Project Overview</span>
               </h1>
-              <p className=" tracking-widest text-justify text-slate-700 leading-8 md:leading-loose text-sm md:text-[15px]">
+              <p className=" tracking-widest text-justify text-slate-700 leading-8 md:leading-loose text-sm md:text-[17px]">
                 {' '}
                 Our poultry project is the backbone of the farm. We specialize
                 primarily in <b>layer birds,</b>reared using a{' '}
@@ -159,11 +159,11 @@ function PoultryProject() {
                 that ensures efficiency, top-notch bird welfare and superior egg
                 quality.
               </p>
-              <p className="tracking-widest text-slate-700 text-justify leading-8 md:leading-loose text-sm md:text-[15px]">
+              <p className="tracking-widest text-slate-700 text-justify leading-8 md:leading-loose text-sm md:text-[17px]">
                 This system allows us to manage over <b>10,000 birds</b> with
                 precision, consistency, and strict hygiene standards
               </p>
-              <p className=" tracking-widest text-slate-700 text-justify leading-8 md:leading-loose text-sm md:text-[15px]">
+              <p className=" tracking-widest text-slate-700 text-justify leading-8 md:leading-loose text-sm md:text-[17px]">
                 Our layer enterprise serves both as a commercial operation and a
                 training model for farmers seeking to transition to efficient,
                 hygienic and profitable poultry production.
@@ -343,7 +343,7 @@ function PoultryProject() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col  w-full h-100 md:h-137.5 relative">
+      <div className="flex flex-col  w-full h-100 md:h-137.5 mb-4 relative">
         <Carousel images={poultryProjectImages} />
       </div>
     </main>

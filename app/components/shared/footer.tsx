@@ -20,10 +20,10 @@ interface FooterContactDetails {
 export default function Footer() {
   const footerPagesLinksData = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/app/aboutUs' },
-    { name: 'Our Projects', href: '/app/projects' },
-    { name: 'Contact us', href: '/app/contactUs' },
-    { name: 'News', href: '/app/news' },
+    { name: 'About Us', href: '/aboutUs' },
+    { name: 'Our Projects', href: '/projects' },
+    { name: 'Contact us', href: '/contactUs' },
+    { name: 'News', href: '/news' },
   ];
 
   const footerProjectsPagesLinksData = [
