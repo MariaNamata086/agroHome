@@ -13,7 +13,7 @@ const CoreAreasSection = ({
   moreInfo,
 }: coreAreasSectionProps) => {
   return (
-    <div className="flex flex-col shadow-md p-2 items-center rounded-md h-80 md:h-60  w-1/3">
+    <div className="flex flex-col shadow-md p-2 items-center rounded-md h-95 md:h-60  w-1/3">
       <div className="flex bg-[rgb(150,202,45)] items-center justify-center shadow-md md:animate-pulse rounded-full p-[16.5px] w-14 md:w-18 h-14 md:h-26">
         <FontAwesomeIcon icon={icon} color="#FFFFFF" size="2xl" />
       </div>

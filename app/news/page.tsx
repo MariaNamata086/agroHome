@@ -90,7 +90,7 @@ function page() {
             </h1>
           </Motion>
           <Motion direction="left">
-            <p className="tracking-wider leading-8 md:leading-12 text-center text-[14px] md:text-lg md:px-12">
+            <p className="tracking-wider leading-8 md:leading-12 text-justify text-[14px] md:text-lg md:px-12">
               Our journey has not only transformed our farm — it has captured
               national attention. From organic coffee success to farmer training
               and climate-smart practices, our story has been featured by

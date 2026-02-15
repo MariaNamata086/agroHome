@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { PiCaretUp, PiCaretDown } from 'react-icons/pi';
-import logo from '@assets/logo.svg';
+import logo from '@assets/logo3.png';
 
 function Navbar() {
   const [mobileMenuVisible, setMobileMenuVisible] = useState<boolean>(false);
@@ -25,13 +25,13 @@ function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/aboutUs' },
-    { name: 'Contact us', href: '/contactUs' },
-    { name: 'News', href: '/news' },
+    { name: 'Contact Us', href: '/contactUs' },
+    { name: 'In the Media', href: '/news' },
   ];
   return (
     <nav className="flex justify-between items-center align-center sticky top-0 z-50 bg-white md:px-10 md:py-4 h-30 shadow-md text-black">
-      <div className="flex gap-1 items-center">
-        <Link href="/" className="w-25 md:w-36 rounded-full ">
+      <div className="flex gap-2 ml-4 md:ml-0 md:gap-1 items-center">
+        <Link href="/" className="w-25 rounded-full ">
           <Image
             src={logo}
             alt="company logo"
@@ -39,9 +39,14 @@ function Navbar() {
             className="rounded-full bg-white"
           />
         </Link>
-        <span className="text-xl md:text-[20px] tracking-wider">
-          St Joseph <b>Farm</b>
-        </span>
+        <div className="flex flex-col justify-start ">
+          <span className="text-lg md:text-[16px] tracking-wider">
+            St Joseph
+          </span>
+          <span className="text-lg md:text-[16px] font-semibold tracking-wider">
+            Agricultural Farm
+          </span>
+        </div>
       </div>
       <div className="hidden md:flex justify-between gap-10 items-center">
         <div className=" flex items-center justify-between gap-12 font-semibold ">

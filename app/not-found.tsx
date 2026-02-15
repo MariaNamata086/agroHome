@@ -14,23 +14,23 @@ function NotFound() {
         priority
       />
 
-      <div className="absolute inset-0 bg-black/70 flex flex-col  justify-center px-10 md:px-20 h-auto gap-4 md:gap-8 text-center text-white">
-        <h1 className="font-bold text-xl text-left tracking-widest md:text-9xl">
+      <div className="absolute inset-0 bg-black/70 flex flex-col  justify-center px-10 md:px-20 h-auto gap-6 md:gap-8 text-center text-white">
+        <h1 className="font-bold text-7xl text-left tracking-widest md:text-9xl">
           404
         </h1>
-        <h2 className="flex font-semibold tracking-wider text-xl md:text-4xl">
+        <h2 className="flex font-semibold tracking-wider text-2xl md:text-4xl">
           Sorry, page not found
         </h2>
-        <p className="flex tracking-wider w-full leading-loose md:w-[60%] text-left">
+        <p className="flex tracking-widest w-full leading-loose text-[15px] md:text-xl md:w-[60%] text-left">
           The page you are looking for does not exist. perhaps you can return to
           our homepage and see if you can find what you are looking for.
         </p>
         <Motion direction="up">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <CallToActionButton callToAction="Home Page" href="/" />
             <CallToActionButton
               callToAction="Contact Us"
-              href="/app/contactUs"
+              href="/contactUs"
               backgroundColor="bg-slate-200"
             />
           </div>

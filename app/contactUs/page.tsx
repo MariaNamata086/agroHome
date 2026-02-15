@@ -59,7 +59,7 @@ const ContactUs = () => {
               Questions, ideas or projects? We're ready to help
             </h1>
             <Motion direction="left">
-              <p className="md:text-slate-700 text-[14px] md:text-[16px] tracking-wider">
+              <p className="md:text-slate-700 text-[14px] text-justify md:text-[16px] tracking-wider">
                 Whether you're looking for more information about our services,
                 have a specific project in mind, or just want to say hello,
                 we're here to assist you. Reach out to us through any of the

@@ -65,12 +65,12 @@ const CoffeeProject = () => {
               <h1 className="flex text-slate-700 font-bold justify-self-start tracking-widest text-4xl leading-loose md:text-5xl ">
                 Project Overview
               </h1>
-              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 Our coffee project demonstrates how organic, irrigated, and well
                 managed coffee farming can generate consistent income while
                 restoring soil health and supporting rural livelihoods.
               </p>
-              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 According to
                 <Link
                   href={
@@ -87,7 +87,7 @@ const CoffeeProject = () => {
                 further pressure.
               </p>
 
-              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
                 Our farming approach not only enhances the flavor and aroma of
                 the coffee beans but also, eliminates the need and cost for
                 chemical fertiliser inputs, while producing high-yielding strong
@@ -105,7 +105,7 @@ const CoffeeProject = () => {
           </Motion>
           <Motion direction="down">
             <div className="flex flex-col gap-3">
-              <p className="tracking-widest leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest leading-loose text-justify md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 We specialise in Robusta coffee
                 <i className="ml-2 underline">(Coffea </i>
                 <i className="mx-2 underline">canephora)</i>
@@ -114,7 +114,7 @@ const CoffeeProject = () => {
                 well-deistributed rainfall annually.
               </p>
 
-              <p className="tracking-widest  leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 The variety is more resilient to climate changes, has lower
                 acidity, a higher caffeine content, and offers a distinct bold
                 flavor profile that appeals to a wide range of consumers.

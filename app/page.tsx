@@ -46,7 +46,7 @@ export default function Home() {
     },
     {
       logo: MAAIFLogo,
-      name: 'Government of Uganda Agricultural Programs',
+      name: 'G.O.U Agricultural Programs',
     },
   ];
   return (
@@ -79,7 +79,7 @@ export default function Home() {
         <AboutUsBrief />
         <Different />
         <div className=" flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5">
             <FontAwesomeIcon
               icon={faArrowTrendUp}
               size="lg"
@@ -97,7 +97,7 @@ export default function Home() {
                       size="xl"
                       color="#96CA2D"
                     />
-                    <span className="text-gray-600 text-[14px] md:text-[18px]">
+                    <span className="text-gray-600 text-[15px] md:text-[18px]">
                       {item}
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-140 md:h-150 md:mb-5">
+        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-150 md:mb-5">
           <Image
             src={featuredInSectionImage}
             alt="Image of Mr. Lwevuze being interviewed by NTV Uganda"
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
         <Motion direction="zoom">
-          <div className="flex flex-col gap-3 md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
+          <div className="flex flex-col gap-3 px-10 text-center tracking-wider leading-loose md:gap-6 justify-center items-center text-stone-600 mb-5 md:mb-10">
             <p className="flext font-semibold text-md md:text-lg ">
               Want to learn modern farming techniques or partner with us?
             </p>

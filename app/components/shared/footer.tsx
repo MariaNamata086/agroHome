@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 import footerBackground from '@/public/assets/coffeeBag.jpg';
-import Logo from '@assets/logo.svg';
+import Logo from '@assets/logo3.png';
 
 interface FooterContactDetails {
   icon: IconDefinition;
@@ -55,9 +55,15 @@ export default function Footer() {
                 alt="StJosephFarms Logo"
                 className="w-23 h-23 rounded-full"
               />
-              <p className="text-2xl font-semibold">
-                St Joseph <b>Farms</b>
-              </p>
+
+              <div className="flex flex-col gap-1 justify-start ">
+                <span className="text-xl md:text-[16px] tracking-wider">
+                  St Joseph
+                </span>
+                <span className="text-xl md:text-[16px] font-bold tracking-wider">
+                  Agricultural Farm
+                </span>
+              </div>
             </div>
 
             <div className="tracking-wider text-left text-[11.5px] md:text-[12.5px] leading-8">

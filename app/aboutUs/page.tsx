@@ -89,7 +89,7 @@ const Aboutus = () => {
           <p className="flex items-center justify-end gap-2 mt-7.5">
             <SectionSmallHeader headingContent="Our Story" />
           </p>
-          <p className="tracking-wider md:text-slate-600 text-[15px] md:text-[16px] leading-loose md:text-right">
+          <p className="tracking-wider md:text-slate-600 text-justify text-[15px] md:text-[16px] leading-loose md:text-right">
             I welcome you to this world of development and competition. I
             believe we were created to make this world a better place, and
             wherever we are, we must work to bring positive change.{' '}
@@ -99,7 +99,7 @@ const Aboutus = () => {
             <b>“Enkulakulana ejja lwa mpaka,” </b> reminds us that there is no
             development without persistence and perseverance.
           </p>
-          <p className="md:text-right tracking-wider leading-loose md:text-[16px] md:text-slate-600 text-[15px]">
+          <p className="md:text-right tracking-wider text-justify leading-loose md:text-[16px] md:text-slate-600 text-[15px]">
             Back in school, difficult questions earned more marks than simple
             ones — and life is no different. Without hard work, risk-taking, and
             perseverance, we should not expect meaningful results. If we do not
@@ -107,7 +107,7 @@ const Aboutus = () => {
             existence loses its meaning.
           </p>
           <Motion direction="up">
-            <p className="md:text-slate-600 leading-loose tracking-wider text-[15px] md:text-[16px] md:text-right ">
+            <p className="md:text-slate-600 text-justify leading-loose tracking-wider text-[15px] md:text-[16px] md:text-right ">
               Strengthen unity. Never be prejudiced. Differences will always
               exist, but when handled well, they can become a source of strength
               rather than division. Unity, humility, and service to others
@@ -189,7 +189,7 @@ const Aboutus = () => {
           <p
             ref={ref}
             className={`text-sm md:text-[17px] max-w-xl text-center leading-loose
-              transform transition-all duration-1500 ease-in-out
+              transform transition-all duration-1500 ease-in-out 
               ${inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}
             `}
           >

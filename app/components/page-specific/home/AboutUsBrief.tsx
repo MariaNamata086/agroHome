@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import bananaProjectPicture from '@assets/banana.jpeg';
+import bananaProjectPicture from '@assets/banana.webp';
 import poultryProjectPicture from '@assets/poultryPortrait.jpeg';
 import CallToActionButton from '../../shared/CallToActionButton';
 import Motion from '../../shared/Motion';
@@ -16,7 +16,7 @@ const AboutUsBrief = () => {
               <Image
                 src={poultryProjectPicture}
                 alt="battery cage poultry farming picture"
-                className="mt-0 md:-mt-1.5 object-cover"
+                className="mt-0 md:-mt-1.5 h-[90%] object-cover"
               />
               <div className="absolute flex flex-col z-5 w-36 h-30 p-14 items-center justify-center rounded-[43px] bg-[rgb(150,202,45)] text-white -top-8 -left-8 ">
                 <span className="text-4xl mt-6 ml-4 font-bold">40+</span>
@@ -28,7 +28,7 @@ const AboutUsBrief = () => {
             <Image
               src={bananaProjectPicture}
               alt="a picture of a banana farm project"
-              className="mt-14 md:mt-10 object-cover"
+              className="mt-10 w-1/2 object-cover"
             />
           </div>
         </Motion>
@@ -39,11 +39,11 @@ const AboutUsBrief = () => {
        "
       >
         <SectionSmallHeader headingContent="Who We Are" />
-        <h2 className="font-bold text-black text-[20px] md:text-[25px] tracking-wider">
+        <h2 className="font-bold text-black text-[20px] md:text-[25px] tracking-wider px-4 md:px-0">
           Rooted in Diversity and Sustainability{' '}
         </h2>
         <Motion direction="right">
-          <p className="text-[13px] md:text-[14px] tracking-wider   leading-10.75 md:leading-loose">
+          <p className="text-[13px] md:text-[14px] px-4 md:px-0 tracking-wider text-justify leading-8.75 md:leading-loose ">
             We are a diversified commercial agricultural enterprise based in
             Luweero District, Uganda, specializing in layer poultry production,
             Robusta coffee farming, banana farming and plantation forestry. Our
