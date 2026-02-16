@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import sectionImage from '@assets/farmingPhilosophy.png';
 
 const WhyChooseUs = () => {
   const whatMakesUsStandOutData = [
@@ -30,7 +30,10 @@ const WhyChooseUs = () => {
           })}
         </div>
       </div>
-      <Image src={} alt="an image showing what makes us stand out" />
+      <Image
+        src={sectionImage}
+        alt="an image showing what makes us stand out"
+      />
     </section>
   );
 };

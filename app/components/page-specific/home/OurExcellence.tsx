@@ -1,6 +1,7 @@
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import React from 'react';
+import sectionImage from '@assets/newsHeroImage.png';
 import CallToActionButton from '../../shared/CallToActionButton';
 
 const OurExcellence = () => {
@@ -13,9 +14,9 @@ const OurExcellence = () => {
         <CallToActionButton callToAction="Discover More" href="" />
       </div>
       <div className="relative flex flex-col">
-        <Image src={} alt="" className="" />
+        <Image src={sectionImage} alt="" className="" />
         <div className="flex p-1 -mr-1 absolute z-10 -mb-2 itema-center rounded-l-lg">
-          <FontAwesomeIcon icon={} />
+          <FontAwesomeIcon icon={faStar} />
           <span className="">Agricultural Leader</span>
         </div>
       </div>

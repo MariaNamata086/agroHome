@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import React from 'react';
+import sectionImage from '@assets/notFound.jpg';
 import CallToActionButton from '../../shared/CallToActionButton';
 
 const SustainableAgricultureSecrets = () => {
   return (
     <div className="relative flex h-auto w-full ">
       <Image
-        src={}
+        src={sectionImage}
         alt="a picture showing our sustainable agriculture implementation"
         fill
       />
