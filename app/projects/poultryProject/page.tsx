@@ -292,7 +292,7 @@ function PoultryProject() {
         <section className="relative mb-1 w-full h-87.5 md:h-130">
           <Image
             src={cleanEggsPicture}
-            alt="Image of faith, family and longterm thinking"
+            alt="Image of a poultry house showing battery cages with cloean eggs ready for collection"
             fill
             className="object-fill"
             priority
