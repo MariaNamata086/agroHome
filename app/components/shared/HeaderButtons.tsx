@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function HeaderButtons({ pageName }: { pageName: string }) {
   return (
-    <div className="flex items-center gap-5 mt-50 ml-20">
+    <div className="flex items-center gap-5 mt-50 px-10 md:px-20">
       <Link
         href="/"
         className="flex font-semibold text-[14px] md:text-[16px] text-white hover:text-primaryGreen md:text-forestGreen tracking-widest hover:scale-105"

@@ -12,12 +12,13 @@ const HeroSection = () => {
     threshold: 0.2,
   });
   return (
-    <section className="flex relative bg-lime-200 h-auto md:h-170 w-full tracking-wider mt-2">
+    <section className="flex relative h-120  md:h-170 w-full tracking-wider mt-2">
       <Image
         src={heroImage}
         alt="hero image"
-        className="h-full w-full object-cover"
+        className="object-cover"
         priority
+        fill
       />
       <div
         ref={ref}
@@ -43,10 +44,10 @@ const HeroSection = () => {
             A model farm and training center in Luweero District, Uganda;
             transforming agricluture through innovation, integrity, and impact.
           </p>
-          <div className="-mt-12">
+          <div className="">
             <CallToActionButton
               callToAction="Explore Our Work"
-              href="/app/projects"
+              href="/projects"
             />
           </div>
         </div>

@@ -116,8 +116,8 @@ function BananaFarmingProject() {
           <Motion direction="down">
             <div className="flex flex-col gap-2.5 md:gap-4">
               <h1 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center gap-3.5">
-                <GiOpenBook className="text-5xl" />
-                <span className="font-bold text-[40px] md:text-5xl ">
+                <GiOpenBook className="text-7xl md:text-5xl" />
+                <span className="font-bold text-[35px] text-center md:text-5xl ">
                   Our Project Story
                 </span>
               </h1>
@@ -145,7 +145,7 @@ function BananaFarmingProject() {
         </section>
         <div className="flex flex-col gap-2 md:gap-12 p-3 ">
           <Motion direction="right">
-            <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[32px] md:text-5xl gap-3.5">
+            <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[30px] md:text-5xl gap-3.5">
               <FontAwesomeIcon
                 icon={faBasketShopping}
                 size="xl"
@@ -168,9 +168,9 @@ function BananaFarmingProject() {
             })}
           </div>
         </div>
-        <section className="flex flex-col gap-3 md:gap-4 bg-slate-100 py-6 px-8 md:px-16">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5 md:gap-6">
-            <FaClipboardList />
+        <section className="flex flex-col gap-4 bg-slate-100 py-6 px-8 md:px-16">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] text-center md:text-5xl gap-3.5 md:gap-6">
+            <FaClipboardList className="text-7xl md:text-5xl" />
             <span>How we work</span>
           </h2>
           <Motion direction="zoom">
@@ -204,7 +204,7 @@ function BananaFarmingProject() {
           </div>
         </section>
         <div className="flex flex-col gap-3.5 items-center justify-center md:gap-4.5 rounded-lg shadow-2xl px-8 md:px-16 py-5 -mt-6 ">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5 md:gap-6">
+          <h2 className="flex flex-col md:flex-row items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl gap-3 md:gap-6">
             <FontAwesomeIcon
               icon={faRecycle}
               color="limegreen"
@@ -213,7 +213,7 @@ function BananaFarmingProject() {
             />
             <span>Sustainability</span>
           </h2>
-          <p className="text-[15px] md:text-[17.5px] text-center w-full md:w-[80%]  tracking-widest leading-loose font-md text-slate-700">
+          <p className="text-5 md:text-[17.5px] text-center w-full md:w-[80%]  tracking-widest leading-loose font-md text-slate-700">
             Our production system is powered by a{' '}
             <b>closed-loop farming system </b>, where waste from one enterprise
             fuels productivity in another.
@@ -225,7 +225,7 @@ function BananaFarmingProject() {
                 size="xl"
                 className="self-start"
               />
-              <p className="text-[14px] md:text-md text-center text-gray-700 tracking-widest leading-loose">
+              <p className="text-4 md:text-md text-center text-gray-700 tracking-widest leading-loose">
                 <b>Poultry manure </b>is composted and applied to banana gardens
                 to restore soil nutrients, improve structure, and increase
                 moisture retention.
@@ -254,17 +254,17 @@ function BananaFarmingProject() {
           icon={faArrowTrendUp}
         />
         <div className="flex flex-col  p-6 gap-5 md:py-8 md:px-18 shadow-xl bg-slate-100 rounded-xl border-b-4 hover:border-b-primaryGreen">
-          <h2 className="flex items-center p-3 md:p-5 text-gray-700 justify-center animate-bounce font-bold text-[34px] md:text-5xl gap-3.5 md:gap-6">
+          <h2 className="flex items-center p-3 md:p-5 text-gray-700 justify-center animate-bounce font-bold text-[35px] md:text-5xl gap-6">
             <FontAwesomeIcon icon={faEarthAmerica} color="green" size="lg" />
             <span className="tracking-widest">Our Philosophy</span>
           </h2>
-          <p className="font-semibold text-[17px] md:text-4xl tracking-widest leading-loose text-center text-slate-700">
+          <p className="font-semibold text-xl md:text-4xl tracking-widest leading-loose text-center text-slate-700">
             We believe banana farming should be:
           </p>
           <ol className="flex flex-col gap-3.5 list-decimal text-slate-700">
             {philosophyData.map(({ point, explanation }, index) => {
               return (
-                <li key={index} className="flex tracking-wider text-[14px]">
+                <li key={index} className="flex tracking-wider text-5">
                   <b>{point}</b>
                   {explanation}
                 </li>
@@ -272,7 +272,7 @@ function BananaFarmingProject() {
             })}
           </ol>
           <Motion direction="up">
-            <p className="text-slate-700 flex tracking-widest text-[14px] text-justify md:text-[17.5px] leading-loose">
+            <p className="text-slate-700 flex tracking-widest text-5 text-left md:text-justify md:text-8 leading-loose">
               Through disciplined management and responsible farming, we are
               growing more than bananas — we are growing livelihoods, skills,
               and future farmers.

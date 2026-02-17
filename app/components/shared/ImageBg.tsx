@@ -26,7 +26,7 @@ const ImageBg = ({
   icon,
 }: ImageBgProps) => {
   return (
-    <div className="flex h-auto md:h-130 relative">
+    <div className="flex h-120 md:h-130 relative">
       <Image
         src={src}
         alt={alt}

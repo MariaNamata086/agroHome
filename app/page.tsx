@@ -79,7 +79,7 @@ export default function Home() {
         <AboutUsBrief />
         <Different />
         <div className=" flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[32px] md:text-5xl gap-3.5">
             <FontAwesomeIcon
               icon={faArrowTrendUp}
               size="lg"
@@ -97,7 +97,7 @@ export default function Home() {
                       size="xl"
                       color="#96CA2D"
                     />
-                    <span className="text-gray-600 text-[15px] md:text-[18px]">
+                    <span className="text-gray-600 text-5 md:text-[18px]">
                       {item}
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col gap-8 relative mt-5 md:mt-9 w-full h-150 md:mb-5">
+        <div className="flex flex-col relative mt-5 md:mt-9 w-full h-180 md:h-150 md:mb-5">
           <Image
             src={featuredInSectionImage}
             alt="Image of Mr. Lwevuze being interviewed by NTV Uganda"
@@ -114,7 +114,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <h2 className="flex text-2xl md:text-4xl font-bold tracking-widest justify-center text-white z-20 mt-8 ">
+          <h2 className="flex text-2xl md:text-4xl px-5 md:px-0 text-center font-bold tracking-widest justify-center text-white z-20 mt-6 md:mt-8 ">
             Heard / Read About Us &#128522;?
           </h2>
           <div className="grid grid-cols-2 absolute justify-center items-center md:gap-10 p-4 inset-0 md:p-16 bg-black/40  z-10 tracking-wider leading-loose">

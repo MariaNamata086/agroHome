@@ -73,7 +73,7 @@ const Aboutus = () => {
         pageHeading="Building a legacy of profitable, sustainable farming &mdash; and sharing it. "
       />
       <div className="flex flex-col-reverse gap-10 justify-center md:flex-row md:justify-between md:items-start md:mt-10  bg-slate-50 p-10 sm:w-full mx-auto">
-        <div className="flex h-auto w-105 md:w-[45%] md:mt-20 ">
+        <div className="flex w-full max-w-[420px]  md:mt-20 ">
           <Motion direction="up">
             <div className="flex flex-col h-102.5 md:h-130 rounded-full group bg-primaryGreen place-self-center ">
               <Image
