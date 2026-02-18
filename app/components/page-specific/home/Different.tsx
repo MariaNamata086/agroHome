@@ -29,7 +29,7 @@ const Different = () => {
         </h2>
         <p
           ref={ref}
-          className={`text-lg md:text-[17px] md:w-[85%] text-left  leading-9 md:leading-12 tracking-widest 
+          className={`text-5 md:text-[17px] md:w-[85%] text-left  leading-9 md:leading-12 tracking-widest 
         transform transition-all duration-700 ease-out
         ${inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}
       `}
