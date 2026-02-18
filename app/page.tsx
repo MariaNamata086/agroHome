@@ -79,7 +79,7 @@ export default function Home() {
         <AboutUsBrief />
         <Different />
         <div className=" flex flex-col gap-3 md:gap-10 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl gap-3.5">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[38px] md:text-5xl gap-3.5">
             <FontAwesomeIcon
               icon={faArrowTrendUp}
               size="lg"

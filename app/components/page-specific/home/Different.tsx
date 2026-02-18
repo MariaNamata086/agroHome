@@ -13,7 +13,7 @@ const Different = () => {
   });
   return (
     <section
-      className="relative mt-5 md:mt-9 w-full min-h-190 md:min-h-120
+      className="relative mt-5 md:mt-9 w-full min-h-180 md:min-h-120
 "
     >
       <Image
@@ -24,7 +24,7 @@ const Different = () => {
       />
 
       <div className="absolute inset-0 bg-black/60 flex flex-col  justify-center px-5 md:px-16 gap-5 md:gap-8 text-center text-white">
-        <h2 className="font-bold text-2xl text-left md:text-4xl">
+        <h2 className="font-bold text-3xl text-left md:text-4xl">
           Discover Modern Agriculture
         </h2>
         <p
