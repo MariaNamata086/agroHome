@@ -24,7 +24,7 @@ const Different = () => {
       />
 
       <div className="absolute inset-0 bg-black/60 flex flex-col  justify-center px-5 md:px-16 gap-5 md:gap-8 text-center text-white">
-        <h2 className="font-bold text-3xl text-left md:text-4xl">
+        <h2 className="font-bold text-3xl tracking-widest leading-relaxed text-left md:text-4xl">
           Discover Modern Agriculture
         </h2>
         <p
