@@ -28,7 +28,7 @@ const AboutUsBrief = () => {
             <Image
               src={bananaProjectPicture}
               alt="a picture of a banana farm project"
-              className="mt-10 w-1/2 object-cover"
+              className="mt-10 w-1/2 h-80 object-cover"
             />
           </div>
         </Motion>
@@ -53,7 +53,7 @@ const AboutUsBrief = () => {
             productive agricultural methods.{' '}
           </p>
         </Motion>
-        <CallToActionButton callToAction="More About Us" href="/app/aboutUs" />
+        <CallToActionButton callToAction="More About Us" href="/aboutUs" />
       </div>
     </section>
   );
