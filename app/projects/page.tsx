@@ -44,7 +44,7 @@ function OurProjects() {
         'Commercial Eucalyptus forestry for pole and timber production',
       image: plantationForestryImage,
       alt: 'picture of the eucalptus garden project',
-      href: '/projects/plantationForestry',
+      href: '/projects/platationForestry',
     },
   ];
 

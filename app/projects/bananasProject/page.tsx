@@ -204,7 +204,7 @@ function BananaFarmingProject() {
           </div>
         </section>
         <div className="flex flex-col gap-3.5 items-center justify-center md:gap-4.5 rounded-lg shadow-2xl px-8 md:px-16 py-5 -mt-6 ">
-          <h2 className="flex flex-col md:flex-row items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl gap-3 md:gap-6">
+          <h2 className="flex flex-col md:flex-row items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[33px] md:text-5xl gap-3 md:gap-6">
             <FontAwesomeIcon
               icon={faRecycle}
               color="limegreen"
@@ -254,11 +254,11 @@ function BananaFarmingProject() {
           icon={faArrowTrendUp}
         />
         <div className="flex flex-col  p-6 gap-5 md:py-8 md:px-18 shadow-xl bg-slate-100 rounded-xl border-b-4 hover:border-b-primaryGreen">
-          <h2 className="flex items-center p-3 md:p-5 text-gray-700 justify-center animate-bounce font-bold text-[35px] md:text-5xl gap-6">
+          <h2 className="flex items-center p-3 md:p-5 text-gray-700 justify-center animate-bounce font-bold text-[37px] md:text-6xl gap-6">
             <FontAwesomeIcon icon={faEarthAmerica} color="green" size="lg" />
             <span className="tracking-widest">Our Philosophy</span>
           </h2>
-          <p className="font-semibold text-xl md:text-4xl tracking-widest leading-loose text-center text-slate-700">
+          <p className="font-semibold text-[25px] md:text-4xl tracking-widest leading-loose text-center text-slate-700">
             We believe banana farming should be:
           </p>
           <ol className="flex flex-col gap-3.5 list-decimal text-slate-700">
