@@ -296,14 +296,9 @@ function BananaFarmingProject() {
                 grow productive, profitable, and sustainable banana enterprises.
               </p>
             </Motion>
-            <CallToActionButton
-              callToAction="Contact Us"
-              href="/app/contact-us"
-            />
+            <CallToActionButton callToAction="Contact Us" href="/contactUs" />
           </div>
         </div>
-        {/* <ImageBg src={} alt="Image of a section of the banana plantation" />
-        <div className=""></div> */}
       </div>
     </main>
   );

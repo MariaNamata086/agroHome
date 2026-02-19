@@ -41,7 +41,7 @@ const Different = () => {
           food and ensuring that it is produced sustainably. That is our
           specialty.
         </p>
-        <CallToActionButton callToAction="Discover More" href="/app/projects" />
+        <CallToActionButton callToAction="Discover More" href="/projects" />
       </div>
     </section>
   );
