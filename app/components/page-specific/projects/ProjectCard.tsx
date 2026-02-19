@@ -36,7 +36,7 @@ const ProjectCard = ({
         <p className="text-center text-gray-600 text-[14px] md:text-[16px] tracking-wider">
           {shortDescription}
         </p>
-        <CallToActionButton href="href" callToAction="View Project" />
+        <CallToActionButton href={href} callToAction="View Project" />
       </div>
     </Link>
   );

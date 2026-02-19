@@ -12,7 +12,7 @@ const HeroSection = () => {
     threshold: 0.2,
   });
   return (
-    <section className="flex relative h-120  md:h-170 w-full tracking-wider mt-2">
+    <section className="flex relative h-120  md:h-180 w-full tracking-wider mt-2">
       <Image
         src={heroImage}
         alt="hero image"

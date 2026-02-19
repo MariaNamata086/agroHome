@@ -33,9 +33,9 @@ function OurProjects() {
     {
       projectName: 'Poultry Production',
       shortDescription:
-        'Large-scale Layer poultry production using advanced battery cage systems',
+        'Large-scale Layer poultry production using both deep litter and advanced battery cage systems',
       image: poultryProjectImage,
-      alt: 'picture of poultry house',
+      alt: 'picture of battery poultry house',
       href: '/projects/poultryProject',
     },
     {
@@ -78,7 +78,7 @@ function OurProjects() {
             and innovation across Uganda's agricultural value chain.
           </p>
         </Motion>
-        <div className="grid md:grid-cols-2 p-3 gap-8">
+        <div className="grid md:grid-cols-2 p-3 gap-12 md:gap-8">
           {projectsData.map(
             ({ projectName, shortDescription, image, alt, href }, index) => {
               return (

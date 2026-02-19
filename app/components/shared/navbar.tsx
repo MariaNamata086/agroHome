@@ -119,7 +119,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="flex flex-col relative md:hidden w-[60%]  py-3  ">
+      <div className="flex flex-col relative md:hidden  py-3  ">
         <button
           type="button"
           className="flex text-3xl place-self-center px-10"
@@ -144,7 +144,7 @@ function Navbar() {
         <div
           className={`${
             mobileMenuVisible ? 'flex' : 'hidden'
-          } flex-col gap-5 bg-white absolute top-full left-0 w-full  h-auto text-black p-8 shadow-sm shadow-primaryGreen rounded-lg `}
+          } flex-col gap-5 bg-white absolute top-full left-0 w-50 -ml-20 mt-3  h-auto text-black p-8 shadow-sm shadow-primaryGreen rounded-lg `}
         >
           <Link
             href={'/'}
@@ -171,7 +171,7 @@ function Navbar() {
             >
               <button
                 type="button"
-                className=" hover:text-primaryGreen text-slate-700 text-[14px]  text-start"
+                className=" hover:text-primaryGreen text-slate-700 text-[14px] text-start"
               >
                 Our Projects
               </button>

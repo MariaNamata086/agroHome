@@ -122,7 +122,7 @@ export default function Home() {
               return (
                 <Motion direction="right" key={index}>
                   <Link
-                    href={'/app/news'}
+                    href={'/news'}
                     className="flex flex-col md:flex-row gap-5 mt-14 h-auto md:items-center p-5 md:px-8"
                   >
                     <Image
