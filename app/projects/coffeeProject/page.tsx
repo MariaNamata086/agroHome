@@ -62,15 +62,15 @@ const CoffeeProject = () => {
           />
           <Motion direction="right">
             <div className="flex flex-col gap-2 md:gap-3.5 tracking-wider leading-loose ">
-              <h1 className="flex text-slate-700 font-bold justify-self-start tracking-widest text-4xl leading-loose md:text-5xl ">
-                Project Overview
+              <h1 className="flex text-slate-700 font-bold justify-self-start tracking-widest text-4xl text-center leading-loose md:text-5xl ">
+                Sustainable Coffee Farming
               </h1>
-              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-[15px] md:text-[17px]">
                 Our coffee project demonstrates how organic, irrigated, and well
                 managed coffee farming can generate consistent income while
                 restoring soil health and supporting rural livelihoods.
               </p>
-              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[15px]">
+              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-[13px] md:text-[15px]">
                 According to
                 <Link
                   href={
@@ -99,13 +99,13 @@ const CoffeeProject = () => {
         <div className="flex flex-col p-4  md:p-10 md:px-24 shadow-lg rounded-lg gap-3 md:gap-5 bg-stone-100">
           <Motion direction="zoom">
             <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[28px] md:text-5xl gap-3.5">
-              <GiCoffeeBeans />
+              <GiCoffeeBeans className="text-8xl" />
               <span> Why Robusta Coffee?</span>
             </h2>
           </Motion>
           <Motion direction="down">
             <div className="flex flex-col gap-3">
-              <p className="tracking-widest leading-loose text-justify md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest leading-loose md:text-justify md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 We specialise in Robusta coffee
                 <i className="ml-2 underline">(Coffea </i>
                 <i className="mx-2 underline">canephora)</i>
@@ -114,7 +114,7 @@ const CoffeeProject = () => {
                 well-deistributed rainfall annually.
               </p>
 
-              <p className="tracking-widest text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
+              <p className="tracking-widest md:text-justify leading-loose md:leading-10 text-gray-700 text-sm md:text-[16px]">
                 The variety is more resilient to climate changes, has lower
                 acidity, a higher caffeine content, and offers a distinct bold
                 flavor profile that appeals to a wide range of consumers.
@@ -122,7 +122,7 @@ const CoffeeProject = () => {
             </div>
           </Motion>
         </div>
-        <div className="relative mt-5 md:mt-9 w-full h-170 md:h-140">
+        <div className="relative mt-5 md:mt-9 w-full h-220 md:h-140">
           <Image
             src={wayOfFarmingImage}
             alt="image of a banana-coffee intercropped garden"
@@ -160,7 +160,7 @@ const CoffeeProject = () => {
           </div>
         </div>
         <section className="flex flex-col gap-3 bg-gray-100 p-6 md:p-10 rounded-b-xl tracking-wider leading-loose">
-          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl md:gap-6 bg-amber200 text-center">
+          <h2 className="flex items-center tracking-widest p-3 md:p-5 text-gray-700 justify-center font-bold text-[35px] md:text-5xl gap-2 md:gap-6 bg-amber200 text-center">
             <FontAwesomeIcon
               icon={faShoppingBasket}
               size="xl"
@@ -178,7 +178,7 @@ const CoffeeProject = () => {
                     color="#96CA2D"
                     className="animate-bounce"
                   />
-                  <span className="text-gray-600 text-[15px] md:text-[18px]">
+                  <span className="text-gray-600 text-[17px] md:text-[18px]">
                     {item}
                   </span>
                 </div>
