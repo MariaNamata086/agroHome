@@ -14,7 +14,7 @@ function HeaderBanner({
 }) {
   return (
     <div className=" h-100 md:h-120 w-full relative">
-      <div className="z-20 text-slate-800 h-full bg-linear-to-r from-black/75 md:from-white md:via-slate-300/40 via-black/60 to-transparent w-full absolute flex-col gap-10">
+      <div className="z-20 text-slate-800 h-full bg-linear-to-r from-black/60 md:from-white md:via-slate-300/40 via-black/50 to-transparent w-full absolute flex-col gap-10">
         <HeaderButtons pageName={page} />
         <Motion direction="up">
           <div className="flex items-center px-8 md:px-20">

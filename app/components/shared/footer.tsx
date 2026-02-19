@@ -29,7 +29,7 @@ export default function Footer() {
   const footerProjectsPagesLinksData = [
     { name: 'Poultry Farming', href: '/projects/poultryProject' },
     { name: 'Coffee Farming', href: '/projects/coffeeProject' },
-    { name: 'Bananas', href: '/projects/bananasProject' },
+    { name: 'Bananas Farming', href: '/projects/bananasProject' },
     { name: 'Plantation Forestry', href: '/projects/plantationForesry' },
   ];
 

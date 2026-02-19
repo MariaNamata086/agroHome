@@ -53,7 +53,7 @@ function OurProjects() {
       <div className="hidden md:flex">
         <HeaderBanner
           page="Our projects"
-          pageHeading="Integrated farming systems designed for productivity and sustainability"
+          pageHeading="Integrated farming systems designed for productivity, sustainability, and farmer education"
           src={headerBannerImage}
         />
       </div>
@@ -61,7 +61,7 @@ function OurProjects() {
         <ProjectHeroSection
           heroImage={headerBannerImage}
           projectHeading="Our projects"
-          projectTagline="Integrated farming systems designed for productivity, sustainability, and farmer education"
+          projectTagline="Integrated farming systems designed for productivity and sustainability"
         />
       </div>
       <div className="flex flex-col gap-6 md:gap-10 p-6 md:px-20 tracking-wider leading-loose bg-slate-100">

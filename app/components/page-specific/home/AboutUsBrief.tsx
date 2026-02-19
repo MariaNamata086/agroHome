@@ -28,7 +28,7 @@ const AboutUsBrief = () => {
             <Image
               src={bananaProjectPicture}
               alt="a picture of a banana farm project"
-              className="mt-10 w-1/2 h-100 object-cover"
+              className="mt-10 w-1/2 h-90 object-cover"
             />
           </div>
         </Motion>

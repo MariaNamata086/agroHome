@@ -119,7 +119,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="flex flex-col relative md:hidden w-[40%]  py-3  ">
+      <div className="flex flex-col relative md:hidden w-[60%]  py-3  ">
         <button
           type="button"
           className="flex text-3xl place-self-center px-10"
