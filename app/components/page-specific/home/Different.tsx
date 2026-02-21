@@ -13,7 +13,7 @@ const Different = () => {
   });
   return (
     <section
-      className="relative mt-5 md:mt-9 w-full min-h-180 md:min-h-120
+      className="relative mt-5 md:mt-9 w-full min-h-190 md:min-h-120
 "
     >
       <Image

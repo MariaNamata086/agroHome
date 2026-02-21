@@ -172,13 +172,14 @@ function PoultryProject() {
           </Motion>
         </div>
 
-        <div className="flex relative h-300 md:h-250">
+        <div className="relative h-300 md:h-250 w-full">
           <Image
             src={poultryStagesImage}
             alt="image showing poultry day old chicks in a brooder"
+            fill
             style={{ objectFit: 'cover' }}
           />
-          <div className="absolute inset-0 bg-black/60 flex gap-2 flex-col items-center justify-center h-auto p-4 md:p-10 w-full tracking-wider leading-loose">
+          <div className="absolute inset-0 bg-black/60 flex gap-2 flex-col items-center justify-center p-4 md:p-10 w-full tracking-wider leading-loose">
             <div className="flex flex-col  ">
               <Motion direction="left">
                 <h2 className="flex items-center tracking-widest md:p-5 text-white md:text-slate-200 font-bold text-[28px] md:text-5xl md:leading-18 justify-center  gap-2 md:gap-6 bg-amber200 mb-4 text-center">
@@ -255,6 +256,7 @@ function PoultryProject() {
             </div>
           </div>
         </div>
+       
         <div className="flex flex-col gap-3 md:gap-10 bg-gray-100 px-6 md:px-20 rounded-b-xl tracking-wider leading-loose ">
           <Motion direction="right">
             <h2 className="flex items-center tracking-widest leading-loose p-3 md:p-5 text-gray-700 justify-center text-center font-bold text-[35px] md:text-5xl gap-3.5">
