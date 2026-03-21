@@ -25,8 +25,11 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
 
   const validationSchema = yup.object({
     name: yup.string().required('Please enter your name'),
-    phoneNumber: yup.string().optional(),
-    emailAddress: yup.string().email().required('Email is required'),
+    phoneNumber: yup.string().optional().min(10),
+    emailAddress: yup
+      .string()
+      .email('Email address is invalid')
+      .required('Email is required'),
     inquiry: yup.string().required('Please enter your inquiry'),
     subject: yup.string().optional(),
   });
@@ -43,9 +46,12 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
     onSubmit: async () => {
       try {
         setLoading(true);
+
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         setSuccessMessage('Inquiry successfully Submitted');
       } catch (error) {
         setLoading(false);
+        setErrorMessage('Something went wrong');
       } finally {
         setLoading(false);
         formik.resetForm();
@@ -61,45 +67,27 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
         <span className="flex text-sm md:text-[22px] text-slate-800 font-semibold tracking-widest p-5 md:p-8 md:-mb-7">
           {formName}
         </span>
-        {/* {visible ? (
-          <FontAwesomeIcon icon={faAngleUp} fontSize={12} color="black" />
-        ) : (
-          <FontAwesomeIcon icon={faAngleDown} fontSize={12} color="black" />
-        )} */}
       </div>
       <div
         className="h-auto w-full flex flex-col gap-6"
         // style={{ display: visible ? 'block' : 'none' }}
       >
-        {errorMessage ||
-          (successMessage && (
-            <div
-              className={`flex w-full border ${
-                successMessage
-                  ? 'bg-[#f7fee7] text-primaryGreen border-primaryGreen'
-                  : 'border-[#fbdad0] bg-[rgb(251,218,208)] text-[#853236]'
-              } rounded text-[11px] px-4 py-2 gap-3 items-center mb-3`}
-            >
-              <FontAwesomeIcon
-                icon={successMessage ? faCircleInfo : faCircleExclamation}
-                className="text-[18px]"
-              />
-              {successMessage || `${errorMessage}, please try again`}
-            </div>
-          ))}
         <form
           onSubmit={formik.handleSubmit}
           className=" text-slate-800 rounded-md p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 md:gap-6 w-full "
+          action="https://formsubmit.co/namatamaria086@gmail.com"
+          method="POST"
         >
           <FormInput
             name="name"
             type="text"
             required
-            id={formik.values.name}
+            id={'name'}
             placeholder="Enter your name"
             label="Full Name"
             value={formik.values.name}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             error={formik.touched.name && Boolean(formik.errors.name)}
           />
           <FormInput
@@ -111,8 +99,12 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             type="email"
             value={formik.values.emailAddress}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             error={
               formik.touched.emailAddress && Boolean(formik.errors.emailAddress)
+            }
+            errorText={
+              formik.touched.emailAddress ? formik.errors.emailAddress : ''
             }
           />
           <FormInput
@@ -123,8 +115,12 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             label="Phone number"
             value={formik.values.phoneNumber}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             error={
               formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)
+            }
+            errorText={
+              formik.touched.phoneNumber ? formik.errors.phoneNumber : ''
             }
           />
           <FormInput
@@ -135,6 +131,8 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             label="Subject"
             value={formik.values.subject}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            errorText={formik.touched.subject ? formik.errors.subject : ''}
           />
 
           <FormTextArea
@@ -143,17 +141,33 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
             placeholder="Enter your inquiry"
             value={formik.values.inquiry}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             error={formik.touched.inquiry && Boolean(formik.errors.inquiry)}
+            errorText={formik.touched.inquiry ? formik.errors.inquiry : ''}
           />
           <Button
             loading={loading}
-            disabled={loading}
+            disabled={!formik.isValid || !formik.dirty}
             type="submit"
             textColor="text-black"
-            // onClick={() => console.log('button clicked')}
           >
             Send Message
           </Button>
+          {(errorMessage || successMessage) && (
+            <div
+              className={`flex w-full border ${
+                successMessage
+                  ? 'bg-[#f7fee7] text-primaryGreen border-primaryGreen'
+                  : 'border-[#fbdad0] bg-[rgb(251,218,208)] text-[#853236]'
+              } rounded-xl shadow-lg tracking-widest font-semibold text-[12px] md:text-[16px] px-6 py-4 gap-3 items-center mb-3`}
+            >
+              <FontAwesomeIcon
+                icon={successMessage ? faCircleInfo : faCircleExclamation}
+                className="text-[18px]"
+              />
+              {successMessage || `${errorMessage}, please try again`}
+            </div>
+          )}
         </form>
       </div>
     </div>

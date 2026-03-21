@@ -17,21 +17,25 @@ export type ButtonProps = {
 
 export default function Button({
   children,
-  loading,
-  disabled,
+  loading = false,
+  disabled = false,
   textColor = 'text-white',
   type = 'submit',
   size = 'medium',
+  className = '',
   ...props
 }: ButtonProps) {
+  const isDisabled = loading || disabled;
+
   return (
     <button
-      disabled={loading || disabled}
       type={type}
+      disabled={isDisabled}
       {...props}
-      className={`h-10 font-semibold w-[60%] color-white justify-center items-center bg-primaryBrown py-2 px-4 rounded-full hover:scale-105 hover:bg-gray-700 text-black hover:text-white ${textColor}`}
+      className={`h-10 font-semibold w-[60%] flex justify-center items-center bg-primaryBrown py-2 px-4 rounded-full transition 
+      ${isDisabled ? 'opacity-60 cursor-not-allowed' : 'hover:scale-105 hover:bg-gray-700 cursor-pointer'} 
+      text-black hover:text-white ${textColor} ${className}`}
       style={{
-        cursor: disabled ? 'not-allowed' : 'pointer',
         fontSize: size === 'small' ? 10 : 14,
       }}
     >

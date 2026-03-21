@@ -12,43 +12,33 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 function FormInput(props: InputProps) {
   const {
-    type,
+    type = 'text',
     placeholder,
     label,
     name,
     id,
     value,
     onChange,
+    onBlur,
     error,
     helperText,
     required,
     errorText,
   } = props;
 
-  const [number, setNumber] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const formatNumber = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (type === 'number') {
-      let formattedValue = event.target.value.replace(/[^0-9.]/g, '');
-
-      const parts = formattedValue.split('.');
-
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-      formattedValue = parts.join('.');
-
-      setNumber(formattedValue);
-
-      event.target.value = formattedValue.replace(/,/g, '');
+      const rawValue = event.target.value.replace(/,/g, '');
+      event.target.value = rawValue;
     }
 
-    if (onChange) {
-      onChange(event);
-    }
+    onChange?.(event);
   };
 
-  const borderColor = error ? '#e53e3e' : 'oklch(87.2% 0.01 258.338)';
+  const inputType =
+    type === 'password' ? (passwordVisible ? 'text' : 'password') : type;
 
   return (
     <div className="flex flex-col gap-2 w-full">
@@ -60,39 +50,39 @@ function FormInput(props: InputProps) {
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}
+
       <div className="relative">
-        {' '}
-        {/* Wrap the input and the icon in a div */}
         <input
-          className={`flex transition-all hover:scale-105 duration-700 w-full text-[13px] bg-[#e6e7e990] rounded-2xl focus:shadow-sm focus:${borderColor} px-3.5 focus:border focus:border-gray-300 md:p-6 h-10`}
-          type={
-            type === 'password'
-              ? passwordVisible
-                ? 'text'
-                : 'password'
-              : 'text'
-          }
-          value={type === 'number' ? number : value}
-          onChange={formatNumber}
+          className={`w-full text-[13px] bg-[#e6e7e990] rounded-2xl px-3.5 md:p-6 h-10 transition-all duration-300
+          ${error ? 'border border-red-500' : 'border border-gray-300'}
+          focus:outline-none focus:ring-2 ${
+            error ? 'focus:ring-red-300' : 'focus:ring-gray-300'
+          }`}
+          type={inputType}
+          value={value}
+          onChange={handleChange}
+          onBlur={onBlur}
           id={id}
           name={name}
           placeholder={placeholder}
         />
+
         {type === 'password' && (
           <div
-            className="absolute inset-y-0 right-0 pr-2 flex items-center cursor-pointer "
+            className="absolute inset-y-0 right-0 pr-2 flex items-center cursor-pointer"
             onClick={() => setPasswordVisible(!passwordVisible)}
           >
             <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
           </div>
         )}
       </div>
+
       <span
         className={`pl-2 text-[10px] ${
-          errorText ? 'text-red-500' : 'text-gray-400'
+          error ? 'text-red-500' : 'text-gray-400'
         }`}
       >
-        {errorText || helperText}
+        {error ? errorText : helperText}
       </span>
     </div>
   );
