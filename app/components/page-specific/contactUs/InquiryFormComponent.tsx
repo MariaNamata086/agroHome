@@ -43,21 +43,50 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
       inquiry: '',
     },
     validationSchema,
-    onSubmit: async () => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         setLoading(true);
 
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        const response = await fetch(
+          'https://formsubmit.co/ajax/namatamaria086@gmail.com',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({
+              Name: values.name,
+              'Email Address': values.emailAddress,
+              'Phone Number': values.phoneNumber,
+              Inquiry: values.inquiry,
+              _subject: 'New Inquiry from Website',
+              _template: 'table',
+            }),
+          },
+        );
+        const data = await response.json();
+        console.log('FormSubmit response:', data);
+
+        if (!response.ok || data.success !== 'true') {
+          throw new Error(data.message || 'Submission failed');
+        }
+
         setSuccessMessage('Inquiry successfully Submitted');
-      } catch (error) {
+        resetForm();
+      } catch (error: any) {
         setLoading(false);
-        setErrorMessage('Something went wrong');
+        if (error instanceof Error) {
+          setErrorMessage(error.message);
+        } else {
+          setErrorMessage('Something went wrong, please try again');
+        }
       } finally {
         setLoading(false);
-        formik.resetForm();
+        // formik.resetForm();
         setTimeout(() => setLoading(false), 2500);
         setTimeout(() => setSuccessMessage(null), 5000);
-        setTimeout(() => setErrorMessage(null), 4000);
+        setTimeout(() => setErrorMessage(null), 10000);
       }
     },
   });
@@ -75,8 +104,6 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
         <form
           onSubmit={formik.handleSubmit}
           className=" text-slate-800 rounded-md p-2 lg:p-8 text-[11px] h-full flex flex-col gap-4 md:gap-6 w-full "
-          action="https://formsubmit.co/namatamaria086@gmail.com"
-          method="POST"
         >
           <FormInput
             name="name"
@@ -159,7 +186,7 @@ function InquiryFormComponent({ formName }: InquiryFormComponentProps) {
                 successMessage
                   ? 'bg-[#f7fee7] text-primaryGreen border-primaryGreen'
                   : 'border-[#fbdad0] bg-[rgb(251,218,208)] text-[#853236]'
-              } rounded-xl shadow-lg tracking-widest font-semibold text-[12px] md:text-[16px] px-6 py-4 gap-3 items-center mb-3`}
+              } rounded-xl shadow-lg tracking-widest font-semibold text-[12px] md:text-[15px] px-5 py-3 gap-3 items-center mb-3`}
             >
               <FontAwesomeIcon
                 icon={successMessage ? faCircleInfo : faCircleExclamation}
